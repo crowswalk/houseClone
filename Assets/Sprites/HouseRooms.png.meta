@@ -133,7 +133,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 302
+        y: 303
         width: 192
         height: 176
       alignment: 0
@@ -154,7 +154,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 235
-        y: 302
+        y: 303
         width: 178
         height: 160
       alignment: 0
@@ -175,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 425
-        y: 422
+        y: 423
         width: 16
         height: 32
       alignment: 7
@@ -195,8 +195,8 @@ TextureImporter:
       name: Bathroom
       rect:
         serializedVersion: 2
-        x: 5
-        y: 168
+        x: 4
+        y: 170
         width: 102
         height: 130
       alignment: 0
@@ -217,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 111
-        y: 169
+        y: 170
         width: 334
         height: 130
       alignment: 0
@@ -238,7 +238,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 458
-        y: 246
+        y: 247
         width: 52
         height: 30
       alignment: 7
@@ -259,8 +259,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 456
-        y: 174
-        width: 107
+        y: 175
+        width: 108
         height: 56
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -280,7 +280,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 36
+        y: 37
         width: 244
         height: 130
       alignment: 0
@@ -301,7 +301,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 253
-        y: 4
+        y: 5
         width: 244
         height: 162
       alignment: 0
@@ -322,7 +322,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 505
-        y: 103
+        y: 104
         width: 34
         height: 62
       alignment: 7

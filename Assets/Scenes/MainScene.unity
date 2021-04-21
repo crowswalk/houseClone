@@ -882,15 +882,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.87, y: 0}
-  - {x: -0.64, y: 0}
-  - {x: -0.64, y: -0.37}
-  - {x: 0.093, y: -0.37}
-  - {x: 0.093, y: 0}
-  - {x: 0.867, y: 0}
-  - {x: 0.867, y: -0.777}
-  - {x: -0.87, y: -0.777}
-  - {x: -0.87, y: -0.015}
+  - {x: -87, y: 0}
+  - {x: -64, y: 0}
+  - {x: -64, y: -38}
+  - {x: 9, y: -38}
+  - {x: 9, y: 0}
+  - {x: 87, y: 0}
+  - {x: 87, y: -78}
+  - {x: -87, y: -78}
+  - {x: -87, y: 0}
 --- !u!1 &1381790368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,6 +1287,7 @@ GameObject:
   - component: {fileID: 1865587566}
   - component: {fileID: 1865587565}
   - component: {fileID: 1865587564}
+  - component: {fileID: 1865587567}
   m_Layer: 0
   m_Name: Kitchen
   m_TagString: Room
@@ -1385,6 +1386,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1865587567
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865587563}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -120, y: -79}
+  - {x: -120, y: 16}
+  - {x: -29, y: 16}
+  - {x: -29, y: -9}
+  - {x: 6, y: -9}
+  - {x: 6, y: -1}
+  - {x: 92, y: -1}
+  - {x: 92, y: -49}
+  - {x: 120, y: -49}
+  - {x: 120, y: -79}
+  - {x: -120, y: -79}
 --- !u!1 &2115710892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,19 +1447,19 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -54, y: 28}
-  - {x: -41, y: 28}
+  - {x: -53, y: 27}
+  - {x: -41, y: 27}
   - {x: -41, y: 43}
   - {x: 41, y: 43}
-  - {x: 41, y: 28}
-  - {x: 53, y: 28}
-  - {x: 53, y: 5}
-  - {x: 40, y: 5}
+  - {x: 41, y: 27}
+  - {x: 53, y: 27}
+  - {x: 53, y: 6}
+  - {x: 40, y: 6}
   - {x: 40, y: 0}
   - {x: -40, y: 0}
   - {x: -40, y: 6}
   - {x: -53, y: 6}
-  - {x: -53, y: 28}
+  - {x: -53, y: 27}
 --- !u!212 &2115710894
 SpriteRenderer:
   m_ObjectHideFlags: 0
