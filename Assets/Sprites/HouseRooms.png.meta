@@ -32,6 +32,36 @@ TextureImporter:
   - first:
       213: 7088775802892661715
     second: Fridge
+  - first:
+      213: 5551202721799329819
+    second: HouseRooms_10
+  - first:
+      213: 3279677229860977651
+    second: HouseRooms_11
+  - first:
+      213: -4712586633241780315
+    second: BowlingBall
+  - first:
+      213: -1528485433762725511
+    second: BearTrap_Closed
+  - first:
+      213: -9125724705527432125
+    second: BearTrap_Open
+  - first:
+      213: -3322372718149536879
+    second: BearTrap_displayed
+  - first:
+      213: 7039094588665631670
+    second: Axe
+  - first:
+      213: 5073936973241692828
+    second: Shotgun
+  - first:
+      213: -3962632555123594662
+    second: Key
+  - first:
+      213: 7270706284840363348
+    second: Slingshot
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +136,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,7 +148,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -334,6 +364,216 @@ TextureImporter:
       bones: []
       spriteID: 3d33dc7e804606260800000000000000
       internalID: 7088775802892661715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HouseRooms_10
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 423
+        width: 16
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18d705c675d90d40800000000000000
+      internalID: 5551202721799329819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HouseRooms_11
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 420
+        width: 91
+        height: 27
+      alignment: 9
+      pivot: {x: 0.50549453, y: 0.11111111}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbfcc76011c38d20800000000000000
+      internalID: 3279677229860977651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BowlingBall
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 338
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af9e58ec67899eb0800000000000000
+      internalID: -4712586633241780315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearTrap_Closed
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 326
+        width: 23
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.1875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971c634a89ab9cae0800000000000000
+      internalID: -1528485433762725511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearTrap_Open
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 319
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cf7010bb9ea5180800000000000000
+      internalID: -9125724705527432125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearTrap_displayed
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 320
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937f339d9f84e1d0800000000000000
+      internalID: -3322372718149536879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axe
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 323
+        width: 17
+        height: 10
+      alignment: 9
+      pivot: {x: 0.4117647, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b31ac1db33efa160800000000000000
+      internalID: 7039094588665631670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shotgun
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 310
+        width: 26
+        height: 7
+      alignment: 9
+      pivot: {x: 0.1923077, y: 0.42857146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92bac65bce3a6640800000000000000
+      internalID: 5073936973241692828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 342
+        width: 7
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5aa570afa6e109c0800000000000000
+      internalID: -3962632555123594662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingshot
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 334
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4552c1e18dcb6e460800000000000000
+      internalID: 7270706284840363348
       vertices: []
       indices: 
       edges: []
