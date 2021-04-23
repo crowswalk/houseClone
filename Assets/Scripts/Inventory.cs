@@ -9,14 +9,14 @@ public class Inventory : MonoBehaviour
     public GameObject detectingObj; //the object that raycasting is detecting
     public GameObject holdingObj; //the object that player is holding
 
-    public GameObject shortcutBG;
+    public GameObject backpackBG;
     public GameObject indicator; //indicates which item player is selecting
 
-    public List<GameObject> shortcut; //this is the first line of backpack. During normal mode, only this line will show at the bottom
-    public List<GameObject> icon; //this is the objects's icon that shows in shortcut & backpack, has the same index with them
+    public List<GameObject> backpack; //all objects that player picked up will be in backpack
+    public List<GameObject> icon; //this is the objects's icon that shows in backpackBG, has the same index with them in List backpack
 
     //backpack size
-    public int shortcutMax;
+    public int backpackMax; //max number of items that player can pack
     public int rowSize; //the size of one row in backpack 
 
     //raycasting
@@ -25,19 +25,19 @@ public class Inventory : MonoBehaviour
     //backpack item drawing
     [SerializeField]
     [Range(0, 10.0f)]
-    float initX, initY; //initY only exist in backpack mode, not shortcut
-    Vector2 initPos;
+    float initX, initY; //use to determine where icon should draw
+    Vector2 initPos; //vector 2 of the starting position of drawing icon
 
     [SerializeField]
-    float gapX, gapY;
+    float gapX, gapY; //use to determine gap between icons
 
     // Start is called before the first frame update
     void Start()
     {
-        List<GameObject> shortcut = new List<GameObject>();
+        List<GameObject> backpack = new List<GameObject>();
         List<GameObject> icon = new List<GameObject>();
 
-        initPos = new Vector2(shortcutBG.transform.position.x - initX, shortcutBG.transform.position.y - initY);
+        initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
 
     // Update is called once per frame
@@ -47,8 +47,8 @@ public class Inventory : MonoBehaviour
         clearLastEmpty(); //remove all empty space at the end of the list
 
         pickUp(); //press [c] or [left click] to changing detectingObj to holdingObj
-        drawIconOnNormal();
-        selectObjInShortcut();
+        drawIconInGame(); //make icon stay where they should stay
+        selectObjInBackpack(); //use [1] to [0] to select items in backpack
         useHoldingObj(); //currently only for testing: press [x] to use item
 
         //making holdingObj always stay with player
@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
             holdingObj.transform.position = gameObject.transform.position;
             holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         }
-        initPos = new Vector2(shortcutBG.transform.position.x - initX, shortcutBG.transform.position.y - initY);
+        initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
 
     void detectItem() //only detect objects that has tag "Item"
@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour
     void pickUp() //press [c] or [left click] to changing detectingObj to holdingObj
     {
         detectItem();
-        if (detectingObj != null && (shortcut.Count < shortcutMax || checkEmptySpace(shortcut, shortcutMax)))
+        if (detectingObj != null && (backpack.Count < backpackMax || checkEmptySpace(backpack, backpackMax)))
         {
             if (Input.GetKeyDown(KeyCode.C) || (Input.GetMouseButtonDown(0)))
             {
@@ -95,29 +95,29 @@ public class Inventory : MonoBehaviour
                 detectingObj = null;
 
                 //when picking up, object goes into shortcut
-                int shortcutIndex = getNearestEmpty(shortcut, shortcutMax);
+                int shortcutIndex = getNearestEmpty(backpack, backpackMax);
                 if (shortcutIndex > -1)
                 {
-                    shortcut.Insert(shortcutIndex, holdingObj);
-                    clearInsert(shortcut, shortcutIndex);
-                    drawIconToShort(holdingObj);
+                    backpack.Insert(shortcutIndex, holdingObj);
+                    clearInsert(backpack, shortcutIndex);
+                    drawIcon(holdingObj);
                 }
             }
         }
     }
 
-    void drawIconToShort(GameObject g)
+    void drawIcon(GameObject g) //draw icon to the backpackBG
     {
-        Vector2 pos = new Vector2(shortcutBG.transform.position.x - gapX, shortcutBG.transform.position.y + gapY);
+        Vector2 pos = new Vector2(backpackBG.transform.position.x - gapX, backpackBG.transform.position.y + gapY);
         GameObject o = Instantiate(g, pos, transform.rotation);
-        o.GetComponent<SpriteRenderer>().sortingLayerName = "Objects on Interface";
-        icon.Insert(shortcut.IndexOf(holdingObj), o);
-        clearInsert(icon, shortcut.IndexOf(holdingObj));
+        o.GetComponent<SpriteRenderer>().sortingOrder = g.GetComponent<SpriteRenderer>().sortingOrder + 1;
+        icon.Insert(backpack.IndexOf(holdingObj), o);
+        clearInsert(icon, backpack.IndexOf(holdingObj));
         o.transform.position = new Vector2(initPos.x + (gapX * icon.IndexOf(o)), initPos.y);
         indicator.transform.position = o.transform.position;
     }
 
-    void drawIconOnNormal()
+    void drawIconInGame() //make icon stay in the specific position
     {
         if (icon.Count > 0)
         {
@@ -133,7 +133,7 @@ public class Inventory : MonoBehaviour
     }
 
     //this function probably has a easier way to do it.......
-    void selectObjInShortcut() //allows player to use [1] ~ [0] to select items in shortcut
+    void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in shortcut
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -419,20 +419,20 @@ public class Inventory : MonoBehaviour
     {
         if (holdingObj != null)
         {
-            Destroy(icon[shortcut.IndexOf(holdingObj)]);
-            Destroy(shortcut[shortcut.IndexOf(holdingObj)]);
+            Destroy(icon[backpack.IndexOf(holdingObj)]);
+            Destroy(backpack[backpack.IndexOf(holdingObj)]);
         }
     }
 
     public void clearLastEmpty() //to clear empty space in last of the list
     {
-        if (shortcut.Count > 0)
+        if (backpack.Count > 0)
         {
-            for (int i = shortcut.Count - 1; i >= 0; i--)
+            for (int i = backpack.Count - 1; i >= 0; i--)
             {
-                if (shortcut[i] == null)
+                if (backpack[i] == null)
                 {
-                    shortcut.RemoveAt(i);
+                    backpack.RemoveAt(i);
                 }
                 else
                 {
@@ -457,7 +457,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void clearInsert(List<GameObject> list, int num) //to clear empty space in a list when insert an item in
+    public void clearInsert(List<GameObject> list, int num) //after inserting object in a list, clear the empty space right after the object
     {
         if (list.Count > num + 1)
         {
@@ -468,7 +468,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool checkEmptySpace(List<GameObject> li, int maxSize) //to check wether the list has empty space avaliable
+    public bool checkEmptySpace(List<GameObject> li, int maxSize) //to check whether the list has empty space avaliable
     {
         for (int i = 0; i < maxSize; i++)
         {
