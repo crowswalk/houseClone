@@ -94,12 +94,12 @@ public class Inventory : MonoBehaviour
                 //setting detectingObj to null 
                 detectingObj = null;
 
-                //when picking up, object goes into shortcut
-                int shortcutIndex = getNearestEmpty(backpack, backpackMax);
-                if (shortcutIndex > -1)
+                //when picking up, object goes into icon
+                int iconIndex = getNearestEmpty(backpack, backpackMax);
+                if (iconIndex > -1)
                 {
-                    backpack.Insert(shortcutIndex, holdingObj);
-                    clearInsert(backpack, shortcutIndex);
+                    backpack.Insert(iconIndex, holdingObj);
+                    clearInsert(backpack, iconIndex);
                     drawIcon(holdingObj);
                 }
             }
@@ -133,11 +133,11 @@ public class Inventory : MonoBehaviour
     }
 
     //this function probably has a easier way to do it.......
-    void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in shortcut
+    void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in icon
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            int index = 0; //the index of shortcut list, which player is selecting
+            int index = 0; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -146,11 +146,11 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -161,7 +161,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            int index = 1; //the index of shortcut list, which player is selecting
+            int index = 1; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -170,12 +170,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -186,7 +186,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            int index = 2; //the index of shortcut list, which player is selecting
+            int index = 2; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -195,12 +195,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -211,7 +211,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            int index = 3; //the index of shortcut list, which player is selecting
+            int index = 3; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -220,12 +220,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -236,7 +236,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            int index = 4; //the index of shortcut list, which player is selecting
+            int index = 4; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -245,12 +245,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -261,7 +261,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            int index = 5; //the index of shortcut list, which player is selecting
+            int index = 5; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -270,12 +270,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -286,7 +286,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            int index = 6; //the index of shortcut list, which player is selecting
+            int index = 6; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -295,12 +295,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -311,7 +311,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            int index = 7; //the index of shortcut list, which player is selecting
+            int index = 7; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -320,12 +320,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -336,7 +336,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            int index = 8; //the index of shortcut list, which player is selecting
+            int index = 8; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -345,12 +345,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -361,7 +361,7 @@ public class Inventory : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            int index = 9; //the index of shortcut list, which player is selecting
+            int index = 9; //the index of icon list, which player is selecting
 
             indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
 
@@ -370,12 +370,12 @@ public class Inventory : MonoBehaviour
                 holdingObj.SetActive(false);
             }
 
-            if (shortcut.Count >= index + 1)
+            if (icon.Count >= index + 1)
             {
-                if (shortcut[index] != null)
+                if (icon[index] != null)
                 {
 
-                    holdingObj = shortcut[index];
+                    holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
             }
