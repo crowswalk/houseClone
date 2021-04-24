@@ -66,7 +66,6 @@ public class Inventory : MonoBehaviour
         Debug.DrawRay(player.transform.position, player.dir * sight, Color.green);
         if (hit.collider != null)
         {
-            Debug.Log("detecting a thing");
             if (hit.collider.tag == "Item")
             {
                 Debug.Log("detecting an item");

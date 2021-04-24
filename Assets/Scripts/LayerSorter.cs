@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script is responsible for visually sorting the depth of a gameObject's sprite, by using its y position.
+*/
 public class LayerSorter : MonoBehaviour
 {
     private SpriteRenderer sprRenderer; //to access & change sprite renderer
