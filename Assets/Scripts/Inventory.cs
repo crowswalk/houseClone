@@ -156,7 +156,7 @@ public class Inventory : MonoBehaviour
             {
                 if (icon[index] != null)
                 {
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -181,7 +181,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -206,7 +206,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -231,7 +231,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -256,7 +256,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -281,7 +281,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -306,7 +306,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -331,7 +331,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -356,7 +356,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
@@ -381,7 +381,7 @@ public class Inventory : MonoBehaviour
                 if (icon[index] != null)
                 {
 
-                    holdingObj = icon[index];
+                    holdingObj = backpack[index];
                     holdingObj.SetActive(true);
                 }
             }
