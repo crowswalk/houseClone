@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamFollow : MonoBehaviour { //camera following behavior, doesn't cross world bounds
+public class CamFollow : MonoBehaviour
+{ //camera following behavior, doesn't cross world bounds
     public Transform playerTransform;
 
     public BoxCollider2D roomBounds; //box collider of room boundary
     public float smoothRate;
-    
+
     private float xMin, xMax, yMin, yMax, camX, camY, camRatio, camSize; //minmax world coordinates, camera position and dimensions
     Camera mainCam;
     Vector3 smoothPos;
@@ -15,6 +16,10 @@ public class CamFollow : MonoBehaviour { //camera following behavior, doesn't cr
 
     void Start() {
         mainCam = gameObject.GetComponent<Camera>();
+    }
+
+    void FixedUpdate()
+    {
         xMin = roomBounds.bounds.min.x; //left
         xMax = roomBounds.bounds.max.x; //right
         yMin = roomBounds.bounds.min.y; //top
@@ -22,12 +27,9 @@ public class CamFollow : MonoBehaviour { //camera following behavior, doesn't cr
         camSize = mainCam.orthographicSize; //half of camera height
         camRatio = camSize * mainCam.aspect; //half of camera width
         followTransform = playerTransform;
-    }
-
-    void FixedUpdate() {
-            camY = Mathf.Clamp(followTransform.position.y, yMin + camSize, yMax - camSize); //keep y position inside world bounds
-            camX = Mathf.Clamp(followTransform.position.x, xMin + camRatio, xMax - camRatio); //keep x position inside world bounds
-            smoothPos = Vector3.Lerp(gameObject.transform.position, new Vector3(camX, camY, gameObject.transform.position.z), smoothRate); //lerp position towards target
-            gameObject.transform.position = smoothPos; //camera transform is at smoothed position
+        camY = Mathf.Clamp(followTransform.position.y, yMin + camSize, yMax - camSize); //keep y position inside world bounds
+        camX = Mathf.Clamp(followTransform.position.x, xMin + camRatio, xMax - camRatio); //keep x position inside world bounds
+        smoothPos = Vector3.Lerp(gameObject.transform.position, new Vector3(camX, camY, gameObject.transform.position.z), smoothRate); //lerp position towards target
+        gameObject.transform.position = smoothPos; //camera transform is at smoothed position
     }
 }
