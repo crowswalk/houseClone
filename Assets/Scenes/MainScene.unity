@@ -2386,6 +2386,8 @@ GameObject:
   - component: {fileID: 1637436253}
   - component: {fileID: 1637436252}
   - component: {fileID: 1637436254}
+  - component: {fileID: 1637436255}
+  - component: {fileID: 1637436256}
   m_Layer: 0
   m_Name: RatMonster
   m_TagString: Untagged
@@ -2452,7 +2454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637436251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 114.53614, y: -482.98563, z: 0}
+  m_LocalPosition: {x: 116, y: -498.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2471,6 +2473,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorter: 0
+--- !u!114 &1637436255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637436251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ad8f84f16e7124a80d08349e60edd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ray_distance: 5
+  speed: 10
+  player: {fileID: 1469397788}
+  barrier:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!60 &1637436256
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637436251}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.50549453, y: 0.11111111}
+    oldSize: {x: 91, y: 27}
+    newSize: {x: 91, y: 27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 42, y: 18}
+      - {x: 28, y: 22}
+      - {x: 22, y: 24}
+      - {x: -11, y: 24}
+      - {x: -14, y: 23}
+      - {x: -21, y: 10}
+      - {x: -46, y: 4}
+      - {x: -46, y: -1}
+      - {x: -25, y: -1}
+      - {x: -12, y: -3}
+      - {x: 30, y: -3}
+      - {x: 43, y: 4}
+      - {x: 45, y: 9}
+      - {x: 45, y: 17}
 --- !u!1 &1669633274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2449915913549630770, guid: 5ebd2c8c23cb2fd49b99157fb659f308,
