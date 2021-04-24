@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        detectItem(); //raycasting to find the detectingObj
+        //detectItem(); //raycasting to find the detectingObj
         clearLastEmpty(); //remove all empty space at the end of the list
 
         pickUp(); //press [c] or [left click] to changing detectingObj to holdingObj
@@ -63,14 +63,17 @@ public class Inventory : MonoBehaviour
     void detectItem() //only detect objects that has tag "Item"
     {
         RaycastHit2D hit = Physics2D.Raycast(player.transform.position, player.dir, sight);
-        Debug.DrawRay(player.transform.position, player.dir, Color.green);
+        Debug.DrawRay(player.transform.position, player.dir * sight, Color.green);
         if (hit.collider != null)
         {
+            Debug.Log("detecting a thing");
             if (hit.collider.tag == "Item")
             {
+                Debug.Log("detecting an item");
                 detectingObj = hit.collider.gameObject;
             }
-        } else
+        }
+        else
         {
             detectingObj = null;
         }
@@ -92,7 +95,7 @@ public class Inventory : MonoBehaviour
                 holdingObj.transform.position = gameObject.transform.position;
 
                 //setting detectingObj to null 
-                detectingObj = null;
+                //detectingObj = null;
 
                 //when picking up, object goes into icon
                 int iconIndex = getNearestEmpty(backpack, backpackMax);
