@@ -2565,6 +2565,7 @@ GameObject:
   - component: {fileID: 1637436254}
   - component: {fileID: 1637436255}
   - component: {fileID: 1637436256}
+  - component: {fileID: 1637436257}
   m_Layer: 0
   m_Name: RatMonster
   m_TagString: Untagged
@@ -2631,7 +2632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637436251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 116, y: -498.54, z: 0}
+  m_LocalPosition: {x: 123, y: -505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2707,6 +2708,27 @@ PolygonCollider2D:
       - {x: 43, y: 4}
       - {x: 45, y: 9}
       - {x: 45, y: 17}
+--- !u!50 &1637436257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637436251}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1669633274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2449915913549630770, guid: 5ebd2c8c23cb2fd49b99157fb659f308,
