@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Interface
+    uniqueID: 2367610631
+    locked: 0

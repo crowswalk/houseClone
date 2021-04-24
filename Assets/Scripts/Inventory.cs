@@ -17,14 +17,18 @@ public class Inventory : MonoBehaviour
 
     //backpack size
     public int backpackMax; //max number of items that player can pack
-    public int rowSize; //the size of one row in backpack 
 
     //raycasting
     public float sight; //distance of raycasting
 
+    //holdingObj Position
+    [SerializeField]
+    [Range(0, 40.0f)]
+    float holdingObjX, holdingObjY;
+
     //backpack item drawing
     [SerializeField]
-    [Range(0, 10.0f)]
+    [Range(0, 100.0f)]
     float initX, initY; //use to determine where icon should draw
     Vector2 initPos; //vector 2 of the starting position of drawing icon
 
@@ -54,7 +58,8 @@ public class Inventory : MonoBehaviour
         //making holdingObj always stay with player
         if (holdingObj != null)
         {
-            holdingObj.transform.position = gameObject.transform.position;
+            Vector2 holdingPos = new Vector2(gameObject.transform.position.x + holdingObjX, gameObject.transform.position.y + holdingObjY);
+            holdingObj.transform.position = holdingPos;
             holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -63,13 +68,11 @@ public class Inventory : MonoBehaviour
     void detectItem() //only detect objects that has tag "Item"
     {
         RaycastHit2D hit = Physics2D.Raycast(player.transform.position, player.dir, sight);
-        Debug.DrawRay(player.transform.position, player.dir * sight, Color.green);
+        Debug.DrawRay(player.transform.position, player.dir * sight, Color.blue);
         if (hit.collider != null)
         {
-            Debug.Log("detecting a thing");
             if (hit.collider.tag == "Item")
             {
-                Debug.Log("detecting an item");
                 detectingObj = hit.collider.gameObject;
             }
         }
@@ -130,6 +133,7 @@ public class Inventory : MonoBehaviour
                 if (icon[i] != null)
                 {
                     icon[i].transform.position = pos;
+                    icon[i].GetComponent<SpriteRenderer>().sortingOrder = indicator.GetComponent<SpriteRenderer>().sortingOrder + 1;
                 }
             }
         }
@@ -227,7 +231,6 @@ public class Inventory : MonoBehaviour
             {
                 if (icon[index] != null)
                 {
-
                     holdingObj = icon[index];
                     holdingObj.SetActive(true);
                 }
