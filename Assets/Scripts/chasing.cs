@@ -16,7 +16,7 @@ public class chasing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class chasing : MonoBehaviour
             move_horizontal = 1;
         }
 
-        if (player.transform.position.x < transform.position.x)
+        if (player.transform.position.x > transform.position.x)
         {
             mySpriteRenderer.flipX = false;
         }
