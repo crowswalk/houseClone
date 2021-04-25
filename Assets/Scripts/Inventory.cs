@@ -61,6 +61,19 @@ public class Inventory : MonoBehaviour
             Vector2 holdingpos = new Vector2(gameObject.transform.position.x + holdingObjX, gameObject.transform.position.y + holdingObjY);
             holdingObj.transform.position = holdingpos;
             holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+            if (Input.GetKeyDown(KeyCode.X))//when holding object, press x to drop object
+            {
+                holdingObj.layer = 0;
+                holdingObj.GetComponent<BoxCollider2D>().enabled=true;//reset configuration
+                Instantiate(holdingObj, player.transform.position, Quaternion.identity);
+               
+               /* for (int i = 0; i < backpack.Count; i++)
+                {
+                    if (backpack[i]==holdingObj) { backpack.RemoveAt(i); }
+                    
+                }*/
+            }
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
