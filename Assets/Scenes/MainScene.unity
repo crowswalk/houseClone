@@ -2409,6 +2409,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   dir: {x: 0, y: -1}
+  normalSprites:
+  - {fileID: 4334783836991956000, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
+  - {fileID: 7388399842426930641, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
+  - {fileID: 6757282713640645180, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
+  - {fileID: -6781412095145881161, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
+  framerate: 8
 --- !u!50 &1469397792
 Rigidbody2D:
   serializedVersion: 4
@@ -2792,10 +2798,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
