@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 293812256}
   - component: {fileID: 293812255}
   m_Layer: 5
-  m_Name: BackpackBG
+  m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,10 +530,10 @@ RectTransform:
   m_Father: {fileID: 1518959085}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.35, y: 82.8}
-  m_SizeDelta: {x: 121.4267, y: 23.632294}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 65, y: 82}
+  m_SizeDelta: {x: 100, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293812255
 MonoBehaviour:
@@ -1092,7 +1092,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -1936,7 +1936,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104257728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1945,8 +1945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148.6, y: 82.8}
-  m_SizeDelta: {x: 14.75629, y: 21.595474}
+  m_AnchoredPosition: {x: -115, y: 82}
+  m_SizeDelta: {x: 25, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104257730
 MonoBehaviour:
@@ -2447,7 +2447,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.22, y: 0.32}
+    oldSize: {x: 22, y: 32}
     newSize: {x: 0.16, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2502,13 +2502,13 @@ MonoBehaviour:
   indicator: {fileID: 1104257728}
   backpack: []
   icon: []
-  backpackMax: 20
+  backpackMax: 4
   sight: 10
   holdingObjX: 0
   holdingObjY: 16
-  initX: 71
+  initX: 20
   initY: 0
-  gapX: 18
+  gapX: 25
   gapY: 0
 --- !u!4 &1476982168 stripped
 Transform:
@@ -3920,13 +3920,28 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5569166879175661624, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
         type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569166879175661624, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569166879175661624, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569166879175661624, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5569166879175661625, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
         type: 3}
       propertyPath: m_Name
-      value: TestItem
+      value: Axe
       objectReference: {fileID: 0}
     - target: {fileID: 5569166879175661630, guid: 3da7c6387ceaa684997bfb7a9d29f3c7,
         type: 3}

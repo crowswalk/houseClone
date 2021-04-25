@@ -17,6 +17,8 @@ public class Inventory : MonoBehaviour
 
     //backpack size
     public int backpackMax; //max number of items that player can pack
+    //keys for inventory slots
+    private KeyCode[] keys = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
     //raycasting
     public float sight; //distance of raycasting
@@ -72,12 +74,6 @@ public class Inventory : MonoBehaviour
                 }
 
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
-
-                /* for (int i = 0; i < backpack.Count; i++)
-                 {
-                     if (backpack[i]==holdingObj) { backpack.RemoveAt(i); }
-
-                 }*/
             }
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -114,9 +110,6 @@ public class Inventory : MonoBehaviour
                 holdingObj = detectingObj;
                 holdingObj.layer = 2; //making object on hand ignore raycasting
                 holdingObj.transform.position = gameObject.transform.position;
-
-                //setting detectingObj to null 
-                //detectingObj = null;
 
                 //when picking up, object goes into icon
                 int iconIndex = getNearestEmpty(backpack, backpackMax);
@@ -176,48 +169,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //this function probably has a easier way to do it.......
     void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in icon
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        for (int i = 1; i < backpackMax; i++)
         {
-            selectObj(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            selectObj(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            selectObj(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            selectObj(3);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            selectObj(4);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            selectObj(5);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            selectObj(6);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            selectObj(7);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            selectObj(8);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            selectObj(9);
+            if (Input.GetKeyDown(keys[i - 1])) { selectObj(i - 1); }
         }
     }
 
