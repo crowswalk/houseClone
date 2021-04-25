@@ -14,8 +14,10 @@ public class CamFollow : MonoBehaviour
     Vector3 smoothPos;
     Transform followTransform;
 
+
     void Start()
     {
+
         mainCam = gameObject.GetComponent<Camera>();
     }
 
@@ -32,5 +34,21 @@ public class CamFollow : MonoBehaviour
         camX = Mathf.Clamp(followTransform.position.x, xMin + camRatio, xMax - camRatio); //keep x position inside room bounds
         smoothPos = Vector3.Lerp(gameObject.transform.position, new Vector3(camX, camY, gameObject.transform.position.z), smoothRate); //lerp position towards target
         gameObject.transform.position = smoothPos; //camera transform is at smoothed position
+
+
+        if (bowlingball.drop==true)
+        {
+            gameObject.transform.position = gameObject.transform.position + Random.insideUnitSphere * 2;
+            StartCoroutine(ExampleCoroutine());
+        }
+
+        IEnumerator ExampleCoroutine()
+        {
+            //yield on a new YieldInstruction that waits for 2 seconds.
+            yield return new WaitForSeconds(1.0f);
+            bowlingball.drop = false;
+
+        }
     }
 }
+

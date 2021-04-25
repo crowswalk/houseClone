@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1496630930164970750}
   - component: {fileID: 1496630930164970749}
   - component: {fileID: 1496630930164970751}
+  - component: {fileID: -341960211372898683}
   m_Layer: 0
   m_Name: BowlingBall
   m_TagString: Item
@@ -109,3 +110,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
+--- !u!114 &-341960211372898683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496630930164970748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd58a4e5a0b418d40b780113b1f7e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maincamera: {fileID: 0}
+  frequency: 2

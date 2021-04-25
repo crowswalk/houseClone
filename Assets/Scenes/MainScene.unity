@@ -3116,10 +3116,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -341960211372898683, guid: c65cd002e3119a94eadbf55d98800f86,
+        type: 3}
+      propertyPath: maincamera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 1496630930164970748, guid: c65cd002e3119a94eadbf55d98800f86,
         type: 3}
       propertyPath: m_Name
-      value: BowlingBall (1)
+      value: BowlingBall
       objectReference: {fileID: 0}
     - target: {fileID: 1496630930164970750, guid: c65cd002e3119a94eadbf55d98800f86,
         type: 3}
