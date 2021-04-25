@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class chasing : MonoBehaviour
+public class Chasing : MonoBehaviour
 {
     public float ray_distance;
     public static Animator animator;

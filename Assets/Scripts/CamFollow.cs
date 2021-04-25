@@ -5,7 +5,6 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 { //camera following behavior, doesn't cross room bounds
     public Transform playerTransform;
-
     public BoxCollider2D roomBounds; //box collider of room boundary
     public float smoothRate;
 
@@ -17,7 +16,6 @@ public class CamFollow : MonoBehaviour
 
     void Start()
     {
-
         mainCam = gameObject.GetComponent<Camera>();
     }
 
@@ -36,7 +34,7 @@ public class CamFollow : MonoBehaviour
         gameObject.transform.position = smoothPos; //camera transform is at smoothed position
 
 
-        if (bowlingball.drop==true)
+        if (BowlingBall.drop == true)
         {
             gameObject.transform.position = gameObject.transform.position + Random.insideUnitSphere * 2;
             StartCoroutine(ExampleCoroutine());
@@ -46,7 +44,7 @@ public class CamFollow : MonoBehaviour
         {
             //yield on a new YieldInstruction that waits for 2 seconds.
             yield return new WaitForSeconds(1.0f);
-            bowlingball.drop = false;
+            BowlingBall.drop = false;
 
         }
     }

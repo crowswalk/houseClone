@@ -61,23 +61,23 @@ public class Inventory : MonoBehaviour
             Vector2 holdingpos = new Vector2(gameObject.transform.position.x + holdingObjX, gameObject.transform.position.y + holdingObjY);
             holdingObj.transform.position = holdingpos;
             holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
-           // Debug.Log(holdingObj);
+            // Debug.Log(holdingObj);
             if (Input.GetKeyDown(KeyCode.X))//when holding object, press x to drop object
             {
                 holdingObj.layer = 0;
-                holdingObj.GetComponent<BoxCollider2D>().enabled=true;//reset configuration
-                if (holdingObj.GetComponent<bowlingball>() != null)
+                holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
+                if (holdingObj.GetComponent<BowlingBall>() != null)
                 {
-                    bowlingball.drop = true;
+                    BowlingBall.drop = true;
                 }
-                
+
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
-              
-               /* for (int i = 0; i < backpack.Count; i++)
-                {
-                    if (backpack[i]==holdingObj) { backpack.RemoveAt(i); }
-                    
-                }*/
+
+                /* for (int i = 0; i < backpack.Count; i++)
+                 {
+                     if (backpack[i]==holdingObj) { backpack.RemoveAt(i); }
+
+                 }*/
             }
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -130,6 +130,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    //NOTE: This method needs to be changed, so that it is fixed to the ui instead of dragging in the world space. 
     void drawIcon(GameObject g) //draw icon to the backpackBG
     {
         Vector2 pos = new Vector2(backpackBG.transform.position.x - gapX, backpackBG.transform.position.y + gapY);
@@ -156,257 +157,67 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    void selectObj(int index)
+    {
+        indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y);
+        if (holdingObj != null)
+        {
+            holdingObj.SetActive(false);
+        }
+
+        if (icon.Count >= index + 1 && icon[index] != null)
+        {
+            holdingObj = backpack[index];
+            holdingObj.SetActive(true);
+        }
+        else
+        {
+            holdingObj = null;
+        }
+    }
+
     //this function probably has a easier way to do it.......
     void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in icon
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            int index = 0; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(0);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            int index = 1; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            int index = 2; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            int index = 3; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(3);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            int index = 4; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(4);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            int index = 5; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(5);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            int index = 6; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(6);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            int index = 7; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(7);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            int index = 8; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(8);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            int index = 9; //the index of icon list, which player is selecting
-
-            indicator.transform.position = new Vector2(initPos.x + (gapX * index), initPos.y); //draw indicator to corrosponding position
-
-            if (holdingObj != null)
-            {
-                holdingObj.SetActive(false);
-            }
-
-            if (icon.Count >= index + 1)
-            {
-                if (icon[index] != null)
-                {
-
-                    holdingObj = backpack[index];
-                    holdingObj.SetActive(true);
-                }
-            }
-            else
-            {
-                holdingObj = null;
-            }
+            selectObj(9);
         }
     }
 
@@ -421,21 +232,16 @@ public class Inventory : MonoBehaviour
                     return i;
                 }
             }
-
             return li.Count;
         }
-
         return -1;
     }
 
     void useHoldingObj() //press [x] to use item
     {
-        if (holdingObj != null)
+        if (holdingObj != null && Input.GetKeyDown(KeyCode.X))
         {
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                destroyHoldingObj();
-            }
+            destroyHoldingObj();
         }
     }
 
@@ -454,41 +260,22 @@ public class Inventory : MonoBehaviour
         {
             for (int i = backpack.Count - 1; i >= 0; i--)
             {
-                if (backpack[i] == null)
-                {
-                    backpack.RemoveAt(i);
-                }
-                else
+                if (backpack[i] != null)
                 {
                     break;
                 }
+                backpack.RemoveAt(i);
+                icon.RemoveAt(i);
             }
         }
 
-        if (icon.Count > 0)
-        {
-            for (int i = icon.Count - 1; i >= 0; i--)
-            {
-                if (icon[i] == null)
-                {
-                    icon.RemoveAt(i);
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
     }
 
     public void clearInsert(List<GameObject> list, int num) //after inserting object in a list, clear the empty space right after the object
     {
-        if (list.Count > num + 1)
+        if (list.Count > num + 1 && list[num + 1] == null)
         {
-            if (list[num + 1] == null)
-            {
-                list.RemoveAt(num + 1);
-            }
+            list.RemoveAt(num + 1);
         }
     }
 
