@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MovePlayer : MonoBehaviour
 {
-
+    public bool canMove;
     public float speed;
     public Vector2 dir;
 
