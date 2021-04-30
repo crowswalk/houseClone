@@ -26,16 +26,16 @@ public class Inventory : MonoBehaviour
     //holdingObj position
     [SerializeField]
     [Range(0, 50.0f)]
-    float holdingObjX, holdingObjY;
+    int holdingObjX, holdingObjY;
 
     //backpack item drawing
     [SerializeField]
-    [Range(0, 100.0f)]
-    float initX, initY; //use to determine where icon should draw
+    [Range(-50, 50)]
+    int initX, initY; //use to determine where icon should draw
     Vector2 initPos; //vector 2 of the starting position of drawing icon
 
     [SerializeField]
-    float gapX, gapY; //use to determine gap between icons
+    int gapX, gapY; //use to determine gap between icons
 
     // Start is called before the first frame update
     void Start()

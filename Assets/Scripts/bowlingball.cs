@@ -6,8 +6,4 @@ public class BowlingBall : MonoBehaviour
 {
     public static bool drop;
   
-   
-    
-    
-
 }

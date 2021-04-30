@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chasing : MonoBehaviour
 {
-    public float ray_distance;
+    public int ray_distance;
     public static Animator animator;
     public float speed;
     public GameObject player;
