@@ -13,7 +13,7 @@ public class TextBoxManager : MonoBehaviour
     public int currentLine;
     public int endAtLine;
 
-    public move_char player; //In HOUSE project: public MovePlayer player;
+    public MovePlayer player; //In HOUSE project: public MovePlayer player;
     
     public bool isActive;
     public bool stopPlayerMovement;
