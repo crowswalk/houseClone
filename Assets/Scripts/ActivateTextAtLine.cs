@@ -15,8 +15,6 @@ public class ActivateTextAtLine : MonoBehaviour
     public bool requireButtonPress;
     private bool waitForPress;
 
-    //CHANGE THIS SO IT'S WHEN YOU ENTER THE SHOUT ZONE, NOT WHEN YOU CLICK A BUTTON
-
     void Start()
     {
         theTextBox = FindObjectOfType<TextBoxManager>();   
@@ -39,15 +37,25 @@ public class ActivateTextAtLine : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.name == "Player"){
-            if(requireButtonPress){
-                waitForPress = true;
-                return;
+            theTextBox.ReloadScript(theText);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
+
+            if(destroyWhenActivated){
+                Destroy(gameObject);
             }
+            
+            // if(requireButtonPress){
+            //     waitForPress = true;
+            //     return;
+            // }
         }
     }
 
     void onTriggerExit2D(Collider2D other){
         if(other.gameObject.name == "Player"){
+
             waitForPress = false; //when the player leaves the zone, they can't activate the text box again 
         }
     }
