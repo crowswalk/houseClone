@@ -1,73 +1,49 @@
 fileFormatVersion: 2
-guid: 8a6b5ce96b21968469de914c8abf1854
+guid: 0e5dfa9767deece47800f8af3cf920ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 165373286628319211
-    second: ChildrensBedroom
+      213: -5237074582503671387
+    second: rat_sitting
   - first:
-      213: -7648012430335319412
-    second: ParentsBedroom
+      213: -1962871195434815468
+    second: rat_sniff
   - first:
-      213: 6859186386216287314
-    second: Player_placeholder
+      213: 6665371358829242843
+    second: rat_2
   - first:
-      213: 2907899027355159604
-    second: Bathroom
+      213: -513956825706076816
+    second: rat_3
   - first:
-      213: 6159535742252835776
-    second: Hallway
+      213: -8905257789077479170
+    second: rat_4
   - first:
-      213: -3404329787003826228
-    second: Bathtub
+      213: -6745645932972450358
+    second: rat_5
   - first:
-      213: -1001640069560872544
-    second: Table
+      213: 8711110521761442959
+    second: rat_6
   - first:
-      213: -7418582051225644535
-    second: Basement
+      213: -6765687925566922741
+    second: rat_walk1
   - first:
-      213: -7472794862456083373
-    second: Kitchen
+      213: -4964200257161314209
+    second: rat_walk2
   - first:
-      213: 7088775802892661715
-    second: Fridge
+      213: -999691463414030305
+    second: rat_walk3
   - first:
-      213: 5551202721799329819
-    second: Sister_placeholder
+      213: -999331501223176569
+    second: rat_walk4
   - first:
-      213: 3279677229860977651
-    second: picture_broken
+      213: -709529006737182585
+    second: rat_11
   - first:
-      213: -4712586633241780315
-    second: picture_normal
+      213: -4152971693090577913
+    second: rat_12
   - first:
-      213: -1528485433762725511
-    second: teddy_normal
-  - first:
-      213: -9125724705527432125
-    second: teddy_torn
-  - first:
-      213: -3322372718149536879
-    second: BearTrap_displayed
-  - first:
-      213: 7039094588665631670
-    second: Axe
-  - first:
-      213: 5073936973241692828
-    second: Shotgun
-  - first:
-      213: -3962632555123594662
-    second: Key
-  - first:
-      213: 7270706284840363348
-    second: Slingshot
-  - first:
-      213: 2827652582312845999
-    second: Door
-  - first:
-      213: -3083404001779134402
-    second: Door_Sideways
+      213: 432061624521475977
+    second: rat_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +89,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -165,55 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChildrensBedroom
+      name: rat_sitting
       rect:
         serializedVersion: 2
-        x: 38
-        y: 303
-        width: 192
-        height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: befd1d4c0268b4200800000000000000
-      internalID: 165373286628319211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ParentsBedroom
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 303
-        width: 178
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c82671c273dccd590800000000000000
-      internalID: -7648012430335319412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_placeholder
-      rect:
-        serializedVersion: 2
-        x: 425
-        y: 423
-        width: 16
-        height: 32
+        x: 1
+        y: 130
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,62 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25cfd9e3da9b03f50800000000000000
-      internalID: 6859186386216287314
+      spriteID: 5a934a71a6c2257b0800000000000000
+      internalID: -5237074582503671387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bathroom
+      name: rat_sniff
       rect:
         serializedVersion: 2
-        x: 4
-        y: 170
-        width: 102
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43c453832ceea5820800000000000000
-      internalID: 2907899027355159604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hallway
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 170
-        width: 334
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c36d4a7f111b7550800000000000000
-      internalID: 6159535742252835776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bathtub
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 238
-        width: 52
-        height: 30
+        x: 95
+        y: 130
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf0b5b781461c0d0800000000000000
-      internalID: -3404329787003826228
+      spriteID: 410f2482c0b72c4e0800000000000000
+      internalID: -1962871195434815468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Table
+      name: rat_2
       rect:
         serializedVersion: 2
-        x: 456
-        y: 175
-        width: 108
-        height: 56
+        x: 189
+        y: 130
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,62 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a1d605e9a57912f0800000000000000
-      internalID: -1001640069560872544
+      spriteID: bd9641bafe7208c50800000000000000
+      internalID: 6665371358829242843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basement
+      name: rat_3
       rect:
         serializedVersion: 2
-        x: 4
-        y: 37
-        width: 244
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9025b930ee6eb0990800000000000000
-      internalID: -7418582051225644535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kitchen
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 5
-        width: 244
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35ce0f74aac4b4890800000000000000
-      internalID: -7472794862456083373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fridge
-      rect:
-        serializedVersion: 2
-        x: 505
-        y: 104
-        width: 34
-        height: 62
+        x: 283
+        y: 130
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d33dc7e804606260800000000000000
-      internalID: 7088775802892661715
+      spriteID: 075e6e57dfe0ed8f0800000000000000
+      internalID: -513956825706076816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sister_placeholder
+      name: rat_4
       rect:
         serializedVersion: 2
-        x: 452
-        y: 423
-        width: 16
-        height: 33
+        x: 1
+        y: 87
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b18d705c675d90d40800000000000000
-      internalID: 5551202721799329819
+      spriteID: ef0a1c0193b2a6480800000000000000
+      internalID: -8905257789077479170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door
+      name: rat_5
       rect:
         serializedVersion: 2
-        x: 506
-        y: 42
-        width: 24
-        height: 42
+        x: 95
+        y: 87
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa229f4ca07dd3720800000000000000
-      internalID: 2827652582312845999
+      spriteID: acd5e9093c6a262a0800000000000000
+      internalID: -6745645932972450358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door_Sideways
+      name: rat_6
       rect:
         serializedVersion: 2
-        x: 548
-        y: 35
-        width: 6
-        height: 54
+        x: 189
+        y: 87
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,62 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30dfee956c8535d0800000000000000
-      internalID: -3083404001779134402
+      spriteID: f8c22c8bdd414e870800000000000000
+      internalID: 8711110521761442959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: picture_broken
+      name: rat_walk1
       rect:
         serializedVersion: 2
-        x: 445
-        y: 307
-        width: 15
-        height: 21
-      alignment: 9
-      pivot: {x: 0.53333336, y: -0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fbfcc76011c38d20800000000000000
-      internalID: 3279677229860977651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: picture_normal
-      rect:
-        serializedVersion: 2
-        x: 425
-        y: 307
-        width: 15
-        height: 21
-      alignment: 9
-      pivot: {x: 0.53333336, y: -0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5af9e58ec67899eb0800000000000000
-      internalID: -4712586633241780315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: teddy_normal
-      rect:
-        serializedVersion: 2
-        x: 476
-        y: 314
-        width: 12
-        height: 14
+        x: 283
+        y: 87
+        width: 92
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,29 +302,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 971c634a89ab9cae0800000000000000
-      internalID: -1528485433762725511
+      spriteID: b002f678da27b12a0800000000000000
+      internalID: -6765687925566922741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teddy_torn
+      name: rat_walk2
       rect:
         serializedVersion: 2
-        x: 492
-        y: 311
-        width: 24
-        height: 10
-      alignment: 9
-      pivot: {x: 0.5, y: 0.3}
+        x: 1
+        y: 44
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34cf7010bb9ea5180800000000000000
-      internalID: -9125724705527432125
+      spriteID: f504ff5ea2e9b1bb0800000000000000
+      internalID: -4964200257161314209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_walk3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 44
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10673e19e16022f0800000000000000
+      internalID: -999691463414030305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_walk4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 44
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7861cb85b49a122f0800000000000000
+      internalID: -999331501223176569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_11
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 44
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780389ba02f3726f0800000000000000
+      internalID: -709529006737182585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702651f9f3ead56c0800000000000000
+      internalID: -4152971693090577913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_13
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1
+        width: 92
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9874ea222cdfef500800000000000000
+      internalID: 432061624521475977
       vertices: []
       indices: 
       edges: []
