@@ -2522,11 +2522,41 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5506712673985032944}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &1469397790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5506712673138625006, guid: a0db73f4f67cb9a4aa2a23c2dbec905b,
     type: 3}
   m_PrefabInstance: {fileID: 5506712673985032944}
+=======
+  m_GameObject: {fileID: 1469397788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99325643bfa69a745913818656caf483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 519420033}
+  mainCam: {fileID: 519420031}
+  sister: {fileID: 2028308694}
+--- !u!114 &1469397795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469397788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d97e55803dd57b45897efca87920cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sorter: 0
+--- !u!114 &1469397796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> 3a70303c5cadb7bfb1d132d28a97d1657d08ddd6
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1476982168 stripped
 Transform:
@@ -3299,6 +3329,8 @@ GameObject:
   - component: {fileID: 2028308696}
   - component: {fileID: 2028308695}
   - component: {fileID: 2028308698}
+  - component: {fileID: 2028308699}
+  - component: {fileID: 2028308700}
   m_Layer: 0
   m_Name: Sister
   m_TagString: Untagged
@@ -3410,6 +3442,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorter: 0
+--- !u!114 &2028308699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028308694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524fb8fa5d962774f84df43b77b49fc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ray_distance: 5
+  speed: 20
+  player: {fileID: 1469397788}
+  barrier:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!50 &2028308700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028308694}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2036711658
 GameObject:
   m_ObjectHideFlags: 0

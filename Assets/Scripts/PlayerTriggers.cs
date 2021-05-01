@@ -9,6 +9,8 @@ public class PlayerTriggers : MonoBehaviour
 {
     public CamFollow camera;
     public Camera mainCam;
+    public static bool sister_follow;
+    public GameObject sister;
     void OnTriggerEnter2D(Collider2D other)
     {
         //if the player collides w/ a door, teleport them to the spawn location of specified destination door
@@ -18,6 +20,10 @@ public class PlayerTriggers : MonoBehaviour
             if (thisDoor.open==true)
             {
                 gameObject.transform.position = thisDoor.dest; //teleport player to new destination
+                if (sister_follow==true)
+                {
+                    sister.transform.position= thisDoor.dest; ;
+                }
                 camera.roomBounds = thisDoor.roomBounds;
                 camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
             }
@@ -38,4 +44,5 @@ public class PlayerTriggers : MonoBehaviour
 
         return new Vector3(camX, camY, -10); //return location
     }
+  
 }
