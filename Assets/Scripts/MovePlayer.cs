@@ -30,6 +30,13 @@ public class MovePlayer : MonoBehaviour
         playerCollider = GetComponent<BoxCollider2D>();
     }
 
+    void Update()
+    {
+        if(!canMove){
+            return;
+        }
+    }
+
     void FixedUpdate()
     {
         sprRenderer.sprite = currentSprite; //show sprite that was calculated in walkCycle
