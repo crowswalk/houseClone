@@ -88,7 +88,11 @@ public class Inventory : MonoBehaviour
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
 
+<<<<<<< HEAD
             if (checkShotgun()) //allow player to pree [space] to shoot when holdingObj is shotgun
+=======
+            if (checkShotgun())
+>>>>>>> testShooting
             {
                 holdingObj.GetComponent<Shotgun>().shoot();
             }

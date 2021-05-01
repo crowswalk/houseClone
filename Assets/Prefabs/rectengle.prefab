@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!1 &8359505669541745118
-=======
---- !u!1 &2532385362981487012
->>>>>>> testShooting
+--- !u!1 &1105430158610012239
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,60 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 8359505669541745104}
-  - component: {fileID: 8359505669541745105}
-  - component: {fileID: 8359505669541745107}
-=======
-  - component: {fileID: 2532385362981487018}
-  - component: {fileID: 2532385362981487019}
-  - component: {fileID: 2532385362981487017}
-  - component: {fileID: 3727819389376150486}
->>>>>>> testShooting
+  - component: {fileID: 2477256863550499371}
+  - component: {fileID: 4325624294941320655}
+  - component: {fileID: 7988339291586327936}
+  - component: {fileID: 8607040202112208906}
   m_Layer: 0
-  m_Name: Shotgun
-  m_TagString: Item
+  m_Name: rectengle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!4 &8359505669541745104
-=======
---- !u!4 &2532385362981487018
->>>>>>> testShooting
+--- !u!4 &2477256863550499371
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 8359505669541745118}
-=======
-  m_GameObject: {fileID: 2532385362981487012}
->>>>>>> testShooting
+  m_GameObject: {fileID: 1105430158610012239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 364, y: -44, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -254.8, y: 2.6, z: 0}
+  m_LocalScale: {x: 22.153202, y: 8.510718, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!212 &8359505669541745105
-=======
---- !u!212 &2532385362981487019
->>>>>>> testShooting
+--- !u!212 &4325624294941320655
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 8359505669541745118}
-=======
-  m_GameObject: {fileID: 2532385362981487012}
->>>>>>> testShooting
+  m_GameObject: {fileID: 1105430158610012239}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -97,34 +71,38 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 50
-  m_Sprite: {fileID: 6181949157113167808, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 168357c66288fc048a313daf9d0fc338, type: 3}
+  m_Color: {r: 0.7169812, g: 0.36187258, b: 0.5167092, a: 0.5686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 26, y: 7}
+  m_Size: {x: 1, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
---- !u!61 &8359505669541745107
-=======
---- !u!61 &2532385362981487017
->>>>>>> testShooting
+--- !u!114 &7988339291586327936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105430158610012239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add4aede42eba7249ab754c648ced5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeEnd: 2
+--- !u!61 &8607040202112208906
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 8359505669541745118}
-=======
-  m_GameObject: {fileID: 2532385362981487012}
->>>>>>> testShooting
+  m_GameObject: {fileID: 1105430158610012239}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -135,33 +113,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26, y: 7}
-    newSize: {x: 26, y: 7}
+    oldSize: {x: 1, y: 3}
+    newSize: {x: 1, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 26, y: 7}
+  m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
-<<<<<<< HEAD
-=======
---- !u!114 &3727819389376150486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2532385362981487012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec69732821044274488c96b4d555ed14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotgunEffectArea: {fileID: 1105430158610012239, guid: 4aa618d76cbce3148b43ff3a96c0a9e9,
-    type: 3}
-  player: {fileID: 0}
-  rangeX: 15
-  rangeY: 5
-  offsetX: 10
->>>>>>> testShooting

@@ -26,7 +26,11 @@ public class Shotgun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> testShooting
     }
 
     public void shoot()
@@ -36,7 +40,13 @@ public class Shotgun : MonoBehaviour
             if (player.dir.x > 0)
             {
                 effectAreaPos = new Vector2(transform.position.x + rangeX, transform.position.y + rangeY);
+<<<<<<< HEAD
             } else {
+=======
+            }
+            else
+            {
+>>>>>>> testShooting
                 effectAreaPos = new Vector2(transform.position.x - rangeX - offsetX, transform.position.y + rangeY);
             }
             Instantiate(shotgunEffectArea, effectAreaPos, transform.rotation);

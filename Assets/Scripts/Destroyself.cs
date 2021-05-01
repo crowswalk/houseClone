@@ -5,7 +5,11 @@ using UnityEngine;
 public class Destroyself : MonoBehaviour
 {
     [SerializeField]
+<<<<<<< HEAD
     [Range(0.0f,10.0f)]
+=======
+    [Range(0.0f, 10.0f)]
+>>>>>>> testShooting
     float timeEnd;
 
     float timeStart;
@@ -23,10 +27,19 @@ public class Destroyself : MonoBehaviour
         if (timeCurrent < timeEnd)
         {
             timeCurrent += Time.deltaTime;
+<<<<<<< HEAD
         } else
+=======
+        }
+        else
+>>>>>>> testShooting
         {
             timeCurrent = timeStart;
             Destroy(gameObject);
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> testShooting
