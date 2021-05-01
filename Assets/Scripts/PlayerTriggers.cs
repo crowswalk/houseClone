@@ -15,10 +15,12 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.tag == "Door")
         {
             ChangeRoom thisDoor = other.gameObject.GetComponent<ChangeRoom>(); //get the "ChangeRoom" script of this door
-            gameObject.transform.position = thisDoor.dest; //teleport player to new destination
-            camera.roomBounds = thisDoor.roomBounds;
-            camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
-
+            if (thisDoor.open==true)
+            {
+                gameObject.transform.position = thisDoor.dest; //teleport player to new destination
+                camera.roomBounds = thisDoor.roomBounds;
+                camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
+            }
         }
     }
 

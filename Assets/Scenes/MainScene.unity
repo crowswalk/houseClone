@@ -838,6 +838,8 @@ MonoBehaviour:
   roomBounds: {fileID: 1381790369}
   destination: {fileID: 145243863}
   dest: {x: 0, y: 0}
+  needkey: 0
+  open: 0
 --- !u!1001 &480912367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,6 +1185,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1469397788}
+    - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
+        type: 3}
+      propertyPath: needkey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
+        type: 3}
       propertyPath: roomBounds
       value: 
       objectReference: {fileID: 510371830}
@@ -1286,6 +1298,8 @@ MonoBehaviour:
   roomBounds: {fileID: 343963393}
   destination: {fileID: 949114647}
   dest: {x: 0, y: 0}
+  needkey: 0
+  open: 0
 --- !u!4 &757845446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5738221581530022750, guid: 5866b8dd5944123438e229026a88c2b9,
@@ -2185,6 +2199,8 @@ MonoBehaviour:
   roomBounds: {fileID: 1381790369}
   destination: {fileID: 1612595477}
   dest: {x: 0, y: 0}
+  needkey: 0
+  open: 0
 --- !u!1 &1104257728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,12 +3060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ad8f84f16e7124a80d08349e60edd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ray_distance: 5
-  speed: 5
-  player: {fileID: 1469397788}
-  barrier:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &1637436256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3097,6 +3107,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1662958867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1496630930164970748, guid: c65cd002e3119a94eadbf55d98800f86,
+    type: 3}
+  m_PrefabInstance: {fileID: 1950892347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1662958868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662958867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb93ca48b50afc540ab1a9304fc4747b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669633274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2449915913549630770, guid: 5ebd2c8c23cb2fd49b99157fb659f308,
@@ -3124,6 +3152,8 @@ MonoBehaviour:
   roomBounds: {fileID: 1865587564}
   destination: {fileID: 71435016}
   dest: {x: 0, y: 0}
+  needkey: 0
+  open: 0
 --- !u!4 &1670371041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1668633232126146000, guid: c353d8366d856894bb1caee3fefbf95f,
@@ -3560,7 +3590,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -341960211372898683, guid: c65cd002e3119a94eadbf55d98800f86, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c65cd002e3119a94eadbf55d98800f86, type: 3}
 --- !u!1 &2028308694
 GameObject:
@@ -3696,6 +3727,7 @@ GameObject:
   - component: {fileID: 2036711660}
   - component: {fileID: 2036711659}
   - component: {fileID: 2036711661}
+  - component: {fileID: 2036711662}
   m_Layer: 0
   m_Name: Key
   m_TagString: Item
@@ -3794,6 +3826,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &2036711662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036711658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b278ba8fd04f79f47b99150eca5d72cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2076231463
 PrefabInstance:
   m_ObjectHideFlags: 0

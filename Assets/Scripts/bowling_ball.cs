@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlingBall : MonoBehaviour
+public class bowling_ball : MonoBehaviour
 {
     public static bool drop;
-  
 }

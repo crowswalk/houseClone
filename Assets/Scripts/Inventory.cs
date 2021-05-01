@@ -64,14 +64,26 @@ public class Inventory : MonoBehaviour
             holdingObj.transform.position = holdingpos;
             holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
             // Debug.Log(holdingObj);
+            if (holdingObj.GetComponent<Key>() != null)
+            {
+                Key.haskey = true;
+                Debug.Log("haskey");
+            }
+            else
+            {
+
+                Key.haskey = false;
+
+            }
             if (Input.GetKeyDown(KeyCode.X))//when holding object, press x to drop object
             {
                 holdingObj.layer = 0;
                 holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
-                if (holdingObj.GetComponent<BowlingBall>() != null)
+                if (holdingObj.GetComponent<bowling_ball>() != null)
                 {
-                    BowlingBall.drop = true;
+                    bowling_ball.drop = true;
                 }
+             
 
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }

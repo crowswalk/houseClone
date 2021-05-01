@@ -34,7 +34,7 @@ public class CamFollow : MonoBehaviour
         gameObject.transform.position = smoothPos; //camera transform is at smoothed position
 
 
-        if (BowlingBall.drop == true)
+        if (bowling_ball.drop == true)
         {
             gameObject.transform.position = gameObject.transform.position + Random.insideUnitSphere * 2;
             StartCoroutine(ExampleCoroutine());
@@ -43,8 +43,8 @@ public class CamFollow : MonoBehaviour
         IEnumerator ExampleCoroutine()
         {
             //yield on a new YieldInstruction that waits for 2 seconds.
-            yield return new WaitForSeconds(1.0f);
-            BowlingBall.drop = false;
+            yield return new WaitForSeconds(0.5f);
+            bowling_ball.drop = false;
 
         }
     }
