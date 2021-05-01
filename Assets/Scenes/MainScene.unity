@@ -2854,6 +2854,7 @@ GameObject:
   - component: {fileID: 1637436256}
   - component: {fileID: 1637436257}
   - component: {fileID: 1637436258}
+  - component: {fileID: 1637436259}
   m_Layer: 0
   m_Name: RatMonster
   m_TagString: Untagged
@@ -3017,6 +3018,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1637436259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637436251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86035b8c207a1fb4fb9133478d1728a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1662958867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1496630930164970748, guid: c65cd002e3119a94eadbf55d98800f86,
