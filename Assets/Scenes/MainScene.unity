@@ -1335,6 +1335,7 @@ EdgeCollider2D:
   - {x: 23, y: -6}
   - {x: 56, y: -6}
   - {x: 56, y: 3.5}
+  - {x: 75.49337, y: 3.5}
   - {x: 94, y: 3.5}
   - {x: 94, y: -85}
   - {x: -94, y: -85}
@@ -1420,13 +1421,16 @@ GameObject:
   m_Component:
   - component: {fileID: 886568821}
   - component: {fileID: 886568820}
+  - component: {fileID: 886568822}
+  - component: {fileID: 886568824}
+  - component: {fileID: 886568823}
   m_Layer: 0
   m_Name: ToiletGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &886568820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1492,6 +1496,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &886568822
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886568819}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 641ae8bb4bd43074a9e4f35f17119d8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &886568823
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886568819}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -22.24376, y: 7.6844864}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 48, y: 48}
+    newSize: {x: 48, y: 48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 31.055237, y: 32.631027}
+  m_EdgeRadius: 0
+--- !u!114 &886568824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886568819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e93743711022b548b9ca05cfcd3a3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1469397788}
+  player_move: {fileID: 1469397791}
 --- !u!1 &941535792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1709,7 @@ GameObject:
   - component: {fileID: 970645853}
   - component: {fileID: 970645852}
   - component: {fileID: 970645855}
+  - component: {fileID: 970645856}
   m_Layer: 0
   m_Name: Plunger
   m_TagString: Item
@@ -1757,6 +1821,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorter: 0
+--- !u!114 &970645856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970645851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51d32e08a43d9548ba6297632cc7b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975026322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2586,51 @@ EdgeCollider2D:
   - {x: 165, y: -63}
   - {x: -165, y: -63}
   - {x: -165, y: 0}
+--- !u!1 &1388400085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388400087}
+  - component: {fileID: 1388400086}
+  m_Layer: 0
+  m_Name: girl_trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1388400086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388400085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e18e68a82415e4b8625bd18ab48a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gril: {fileID: 886568819}
+  player: {fileID: 1469397788}
+--- !u!4 &1388400087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388400085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -201.9, y: -248.34, z: -470.59885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1424851304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1489759386312134280, guid: c353d8366d856894bb1caee3fefbf95f,
