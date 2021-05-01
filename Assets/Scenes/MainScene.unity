@@ -2794,6 +2794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 519420033}
   mainCam: {fileID: 519420031}
+  sister: {fileID: 2028308694}
 --- !u!114 &1469397795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,7 +3360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719890752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 134, y: -74, z: -90}
+  m_LocalPosition: {x: 134, y: -74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1518959085}
@@ -3605,6 +3606,8 @@ GameObject:
   - component: {fileID: 2028308696}
   - component: {fileID: 2028308695}
   - component: {fileID: 2028308698}
+  - component: {fileID: 2028308699}
+  - component: {fileID: 2028308700}
   m_Layer: 0
   m_Name: Sister
   m_TagString: Untagged
@@ -3716,6 +3719,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorter: 0
+--- !u!114 &2028308699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028308694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524fb8fa5d962774f84df43b77b49fc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ray_distance: 5
+  speed: 20
+  player: {fileID: 1469397788}
+  barrier:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!50 &2028308700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028308694}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2036711658
 GameObject:
   m_ObjectHideFlags: 0
