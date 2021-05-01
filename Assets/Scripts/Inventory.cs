@@ -87,8 +87,14 @@ public class Inventory : MonoBehaviour
 
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
-
-            if (checkShotgun())
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (holdingObj.GetComponent<plunger>() != null)
+                {
+                    plunger.use = true;
+                }
+            }
+                if (checkShotgun())
             {
                 holdingObj.GetComponent<Shotgun>().shoot();
             }
