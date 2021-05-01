@@ -87,6 +87,11 @@ public class Inventory : MonoBehaviour
 
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
+
+            if (checkShotgun())
+            {
+                holdingObj.GetComponent<Shotgun>().shoot();
+            }
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -257,5 +262,16 @@ public class Inventory : MonoBehaviour
             }
         }
         return false;
+    }
+
+    bool checkShotgun()
+    {
+        if (holdingObj.GetComponent<Shotgun>() != null)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
     }
 }
