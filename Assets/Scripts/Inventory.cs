@@ -264,7 +264,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    bool checkShotgun()
+    bool checkShotgun() //if holdingObj is shotgun, return true
     {
         if (holdingObj.GetComponent<Shotgun>() != null)
         {
