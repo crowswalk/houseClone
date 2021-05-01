@@ -37,28 +37,30 @@ public class BeartrapBehavior : MonoBehaviour
             if (playerInv.holdingObj == gameObject)
             {
                 isTrapPlaced = false;
-                myRender.sprite = trapClosed;
+                myRender.sprite = trapClosed; //sprite become beartrap_closed when holding on hand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
                     playerInv.holdingObj.transform.position = trapPos;
-                    Destroy(playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)]);
-                    playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)] = null;
-                    playerInv.backpack.RemoveAt(playerInv.backpack.IndexOf(playerInv.holdingObj));
+                    Destroy(playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)]); //destroy icon  
+                    playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)] = null; //remove icon from icon list
+                    playerInv.backpack.RemoveAt(playerInv.backpack.IndexOf(playerInv.holdingObj)); //remove object from backpack list
                     playerInv.holdingObj = null;
-                    myRender.sprite = trapOpen;
+                    myRender.sprite = trapOpen; //sprite become beartrap_open when putting on ground
                 }
             }
         }
     }
 
+    //when ratMonster collide with bear trap, the death anime will show, and ratMonster will be destroyed
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "RatMonster" && isTrapPlaced)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<RatMonster>().dead();
+            Destroy(gameObject);
         }
     }
 
@@ -66,7 +68,8 @@ public class BeartrapBehavior : MonoBehaviour
     {
         if(collision.gameObject.name == "RatMonster" && isTrapPlaced)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<RatMonster>().dead();
+            Destroy(gameObject);
         }
     }
 }
