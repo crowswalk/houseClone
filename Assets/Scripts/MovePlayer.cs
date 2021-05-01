@@ -57,12 +57,12 @@ public class MovePlayer : MonoBehaviour
             walkCycle();
             if (Input.GetKey(KeyCode.A))
             { //UP & LEFT
-                transform.Translate(new Vector3(-.5f, .5f, 0f) * Time.deltaTime * speed);
+                transform.Translate(new Vector3(-.75f, .75f, 0f) * Time.deltaTime * speed);
                 dir = new Vector2(-1, 1);
             }
             else if (Input.GetKey(KeyCode.D))
             { //UP & RIGHT
-                transform.Translate(new Vector3(.5f, .5f, 0f) * Time.deltaTime * speed);
+                transform.Translate(new Vector3(.75f, .75f, 0f) * Time.deltaTime * speed);
                 dir = new Vector2(1, 1);
             }
             else
@@ -76,12 +76,12 @@ public class MovePlayer : MonoBehaviour
             walkCycle();
             if (Input.GetKey(KeyCode.A))
             { //DOWN & LEFT
-                transform.Translate(new Vector3(-.5f, -.5f, 0f) * Time.deltaTime * speed);
+                transform.Translate(new Vector3(-.75f, -.75f, 0f) * Time.deltaTime * speed);
                 dir = new Vector2(-1, -1);
             }
             else if (Input.GetKey(KeyCode.D))
             { //DOWN & RIGHT
-                transform.Translate(new Vector3(.5f, -.5f, 0f) * Time.deltaTime * speed);
+                transform.Translate(new Vector3(.75f, -.75f, 0f) * Time.deltaTime * speed);
                 dir = new Vector2(1, -1);
             }
             else
