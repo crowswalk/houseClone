@@ -2506,7 +2506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1424851304 stripped
 Transform:
@@ -3492,9 +3492,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
+      propertyPath: trapOpen
+      value: 
+      objectReference: {fileID: 5581773966291736342, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+        type: 3}
+    - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
       propertyPath: playerInv
       value: 
       objectReference: {fileID: 1469397796}
+    - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
+      propertyPath: trapClosed
+      value: 
+      objectReference: {fileID: 7813506556951106354, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+        type: 3}
     - target: {fileID: 6842587230920987996, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
       propertyPath: m_RootOrder

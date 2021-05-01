@@ -8,6 +8,10 @@ public class BeartrapBehavior : MonoBehaviour
     
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
+    public Sprite trapOpen;
+    public Sprite trapClosed;
+    SpriteRenderer myRender;
+
     [SerializeField]
     [Range(0.0f, 20.0f)]
     float trapX, trapY, trapXOffset; //indicates how far beartrap placed from player
@@ -16,7 +20,7 @@ public class BeartrapBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myRender = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class BeartrapBehavior : MonoBehaviour
             if (playerInv.holdingObj == gameObject)
             {
                 isTrapPlaced = false;
+                myRender.sprite = trapClosed;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     isTrapPlaced = true;
@@ -43,8 +48,25 @@ public class BeartrapBehavior : MonoBehaviour
                     playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)] = null;
                     playerInv.backpack.RemoveAt(playerInv.backpack.IndexOf(playerInv.holdingObj));
                     playerInv.holdingObj = null;
+                    myRender.sprite = trapOpen;
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "RatMonster" && isTrapPlaced)
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "RatMonster" && isTrapPlaced)
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
