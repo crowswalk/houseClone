@@ -11,11 +11,12 @@ public class ChangeRoom : MonoBehaviour
     public Transform destination; //where the player is transported to if they enter the door
     public Vector2 dest; //the position of where the player is transported to if they enter the door
     public bool needkey;
+    public bool needaxe;
     public bool open;
     void Start()
     {
         dest = destination.position;
-        if (needkey == false)
+        if (needkey == false&&needaxe==false)
         {
            
             open = true;
@@ -33,7 +34,18 @@ public class ChangeRoom : MonoBehaviour
                 open = false;  
             }
         }
-       
+        if (needaxe == true)
+        {
+            if (blockeddoor.blockdoor==true)
+            {
+                open = true;
+            }
+            else
+            {
+                open = false;
+            }
+        }
+    
     }
 
     //in final version, add some door animations here when the player interacts
