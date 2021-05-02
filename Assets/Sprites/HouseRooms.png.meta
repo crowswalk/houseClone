@@ -49,7 +49,7 @@ TextureImporter:
     second: teddy_torn
   - first:
       213: -3322372718149536879
-    second: BearTrap_displayed
+    second: door_boardedup
   - first:
       213: 7039094588665631670
     second: Axe
@@ -517,6 +517,27 @@ TextureImporter:
       bones: []
       spriteID: 34cf7010bb9ea5180800000000000000
       internalID: -9125724705527432125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_boardedup
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 249
+        width: 30
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937f339d9f84e1d0800000000000000
+      internalID: -3322372718149536879
       vertices: []
       indices: 
       edges: []
