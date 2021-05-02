@@ -138,8 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInv: {fileID: 0}
   isTrapPlaced: 0
-  trapOpen: {fileID: 0}
-  trapClosed: {fileID: 0}
+  trapOpen: {fileID: 5581773966291736342, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+    type: 3}
+  trapClosed: {fileID: 7813506556951106354, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+    type: 3}
   trapX: 0
   trapY: 0
   trapXOffset: 0

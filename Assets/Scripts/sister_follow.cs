@@ -7,6 +7,7 @@ public class sister_follow : MonoBehaviour
     public int ray_distance;
     public static Animator animator;
     public float speed;
+    public float playerDist; //distance sister is from player
     public GameObject player;
     private SpriteRenderer mySpriteRenderer;
     public static int move_vertical;
@@ -28,8 +29,8 @@ public class sister_follow : MonoBehaviour
 
         localPosition = localPosition.normalized; // The normalized direction in LOCAL space
         transform.Translate(localPosition.x * Time.deltaTime * speed * move_vertical, move_horizontal * localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
-      
-        if (Vector2.Distance(player.transform.position, transform.position) < 20)
+
+        if (Vector2.Distance(player.transform.position, transform.position) < playerDist)
         {
             move_vertical = 0;
             move_horizontal = 0;
@@ -64,5 +65,5 @@ public class sister_follow : MonoBehaviour
 
 
     }
-   
+
 }

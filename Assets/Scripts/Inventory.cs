@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class Inventory : MonoBehaviour
     public GameObject indicator; //indicates which item player is selecting
 
     public List<GameObject> backpack; //all objects that player picked up will be in backpack
-    public List<GameObject> icon; //this is the objects's icon that shows in backpackBG, has the same index with them in List backpack
+    public Image[] icons = new Image[3]; //this is the objects's icon that shows in backpackBG, has the same index with them in List backpack
+    public Sprite emptyIcon; //empty image that shows when there is no item in this backpack slot
+
 
     //backpack size
     public int backpackMax; //max number of items that player can pack
@@ -41,19 +44,14 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         List<GameObject> backpack = new List<GameObject>();
-        List<GameObject> icon = new List<GameObject>();
-
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //detectItem(); //raycasting to find the detectingObj
         clearLastEmpty(); //remove all empty space at the end of the list
-
         pickUp(); //press [c] or [left click] to changing detectingObj to holdingObj
-        drawIconInGame(); //make icon stay where they should stay
         selectObjInBackpack(); //use [1] to [0] to select items in backpack
         useHoldingObj(); //currently only for testing: press [x] to use item
 
@@ -83,7 +81,7 @@ public class Inventory : MonoBehaviour
                 {
                     bowling_ball.drop = true;
                 }
-             
+
 
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
@@ -98,7 +96,7 @@ public class Inventory : MonoBehaviour
                     axe.useaxe = true;
                 }
             }
-            
+
             if (checkShotgun())
             {
                 holdingObj.GetComponent<Shotgun>().shoot();
@@ -150,37 +148,16 @@ public class Inventory : MonoBehaviour
                 {
                     backpack.Insert(iconIndex, holdingObj);
                     clearInsert(backpack, iconIndex);
-                    drawIcon(holdingObj);
+                    drawIcon(holdingObj, iconIndex);
                 }
             }
         }
     }
 
-    //NOTE: This method needs to be changed, so that it is fixed to the ui instead of dragging in the world space. 
-    void drawIcon(GameObject g) //draw icon to the backpackBG
+    void drawIcon(GameObject g, int iconIndex) //draw icon to the backpackBG
     {
-        Vector2 pos = new Vector2(backpackBG.transform.position.x - gapX, backpackBG.transform.position.y + gapY);
-        GameObject o = Instantiate(g, pos, transform.rotation);
-        o.GetComponent<SpriteRenderer>().sortingOrder = g.GetComponent<SpriteRenderer>().sortingOrder + 1;
-        icon.Insert(backpack.IndexOf(holdingObj), o);
-        clearInsert(icon, backpack.IndexOf(holdingObj));
-        o.transform.position = new Vector2(initPos.x + (gapX * icon.IndexOf(o)), initPos.y);
-        indicator.transform.position = o.transform.position;
-    }
-
-    void drawIconInGame() //make icon stay in the specific position
-    {
-        if (icon.Count > 0)
-        {
-            for (int i = 0; i < icon.Count; i++)
-            {
-                Vector2 pos = new Vector2(initPos.x + (gapX * i), initPos.y);
-                if (icon[i] != null)
-                {
-                    icon[i].transform.position = pos;
-                }
-            }
-        }
+        Sprite itemicon = g.GetComponent<ItemIcon>().inventoryIcon;
+        icons[iconIndex].sprite = itemicon;
     }
 
     void selectObj(int index)
@@ -191,7 +168,7 @@ public class Inventory : MonoBehaviour
             holdingObj.SetActive(false);
         }
 
-        if (icon.Count >= index + 1 && icon[index] != null)
+        if (backpack.Count >= index + 1 && backpack[index] != null)
         {
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
@@ -238,8 +215,9 @@ public class Inventory : MonoBehaviour
     {
         if (holdingObj != null)
         {
-            Destroy(icon[backpack.IndexOf(holdingObj)]);
-            Destroy(backpack[backpack.IndexOf(holdingObj)]);
+            int destroyIndex = backpack.IndexOf(holdingObj);
+            icons[destroyIndex].sprite = emptyIcon;
+            Destroy(backpack[destroyIndex]);
         }
     }
 
@@ -254,7 +232,6 @@ public class Inventory : MonoBehaviour
                     break;
                 }
                 backpack.RemoveAt(i);
-                icon.RemoveAt(i);
             }
         }
 
@@ -285,7 +262,8 @@ public class Inventory : MonoBehaviour
         if (holdingObj.GetComponent<Shotgun>() != null)
         {
             return true;
-        } else
+        }
+        else
         {
             return false;
         }
@@ -297,8 +275,9 @@ public class Inventory : MonoBehaviour
         {
             return true;
         }
-        else {
-            return false; 
+        else
+        {
+            return false;
         }
     }
 }
