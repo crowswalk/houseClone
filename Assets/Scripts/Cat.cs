@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RatMonster : MonoBehaviour
+public class Cat : MonoBehaviour
 {
     Animator animator;
     // Start is called before the first frame update
@@ -23,20 +23,17 @@ public class RatMonster : MonoBehaviour
         StartCoroutine(ExampleCoroutine());
     }
 
+    public void kill(GameObject g)
+    {
+        animator.SetBool("kill", true);
+        Destroy(g.gameObject);
+    }
+
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 2 seconds.
         yield return new WaitForSeconds(2.0f);
 
         Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            animator.SetBool("eat", true);
-            Destroy(other.gameObject);
-        }
     }
 }
