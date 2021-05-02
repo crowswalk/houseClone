@@ -93,6 +93,10 @@ public class Inventory : MonoBehaviour
                 {
                     plunger.use = true;
                 }
+                if (holdingObj.GetComponent<axe>() != null)
+                {
+                    axe.useaxe = true;
+                }
             }
             
             if (checkShotgun())
