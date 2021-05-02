@@ -5,12 +5,14 @@ using UnityEngine;
 public class bowling_ball : MonoBehaviour
 {
     public static bool drop;
+    public GameObject bowlingEffectArea;
+    public Inventory playerInv;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void dropBowling()
     {
-        if(collision.gameObject.GetComponent<CatBehavior>() != null)
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            CatBehavior cat = collision.gameObject.GetComponent<CatBehavior>();
+            Instantiate(bowlingEffectArea, transform.position, transform.rotation);
         }
     }
 }

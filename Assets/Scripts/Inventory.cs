@@ -94,9 +94,15 @@ public class Inventory : MonoBehaviour
                     plunger.use = true;
                 }
             }
-                if (checkShotgun())
+            
+            if (checkShotgun())
             {
                 holdingObj.GetComponent<Shotgun>().shoot();
+            }
+
+            if (checkBowling())
+            {
+                holdingObj.GetComponent<bowling_ball>().dropBowling();
             }
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -278,6 +284,17 @@ public class Inventory : MonoBehaviour
         } else
         {
             return false;
+        }
+    }
+
+    bool checkBowling() //if holdingObj is bowling, return true
+    {
+        if (holdingObj.GetComponent<bowling_ball>() != null)
+        {
+            return true;
+        }
+        else {
+            return false; 
         }
     }
 }
