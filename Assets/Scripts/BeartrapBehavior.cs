@@ -44,9 +44,9 @@ public class BeartrapBehavior : MonoBehaviour
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
                     playerInv.holdingObj.transform.position = trapPos;
-                    Destroy(playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)]); //destroy icon  
-                    playerInv.icon[playerInv.backpack.IndexOf(playerInv.holdingObj)] = null; //remove icon from icon list
-                    playerInv.backpack.RemoveAt(playerInv.backpack.IndexOf(playerInv.holdingObj)); //remove object from backpack list
+                    int removeIndex = playerInv.backpack.IndexOf(playerInv.holdingObj);
+                    playerInv.icons[removeIndex].sprite = playerInv.emptyIcon; //remove icon from icon list
+                    playerInv.backpack.RemoveAt(removeIndex); //remove object from backpack list
                     playerInv.holdingObj = null;
                     myRender.sprite = trapOpen; //sprite become beartrap_open when putting on ground
                 }

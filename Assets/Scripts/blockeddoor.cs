@@ -19,7 +19,7 @@ public class blockeddoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cond);
+        //Debug.Log(cond);
         if (cond && axe.useaxe == true)
         {
             spriteRenderer.sprite = newSprite;
