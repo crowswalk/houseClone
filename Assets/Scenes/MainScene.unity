@@ -3093,7 +3093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e18e68a82415e4b8625bd18ab48a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gril: {fileID: 0}
+  gril: {fileID: 1556699870}
   player: {fileID: 1469397788}
   girlDist: 50
 --- !u!4 &1388400087
@@ -3677,6 +3677,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1556699870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 626383724974678351, guid: 7afda5cea4e5b87489eab4c8d648edc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 626383725187585596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1612595477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4680763715290720682, guid: 6e4f76863946d0e48b08ed800dc8e208,
