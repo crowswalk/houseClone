@@ -1128,7 +1128,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isActive: 0
   stopPlayerMovement: 0
-  typeSpeed: 0
+  typeSpeed: 0.03
 --- !u!224 &473074813
 RectTransform:
   m_ObjectHideFlags: 0
