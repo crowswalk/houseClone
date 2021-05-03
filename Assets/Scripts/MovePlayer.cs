@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MovePlayer : MonoBehaviour
 {
-
+    public bool canMove;
     public float speed;
     public Vector2 dir;
 
@@ -28,6 +28,13 @@ public class MovePlayer : MonoBehaviour
         currentFrame = 0;
         sprRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<BoxCollider2D>();
+    }
+
+    void Update()
+    {
+        if(!canMove){
+            return;
+        }
     }
 
     void FixedUpdate()
