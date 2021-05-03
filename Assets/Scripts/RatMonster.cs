@@ -28,7 +28,8 @@ public class RatMonster : MonoBehaviour
         //yield on a new YieldInstruction that waits for 2 seconds.
         yield return new WaitForSeconds(2.0f);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -36,7 +37,8 @@ public class RatMonster : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool("eat", true);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
         }
     }
 }

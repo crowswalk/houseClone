@@ -29,15 +29,15 @@ public class tolietgirl : MonoBehaviour
     {
         //yield on a new YieldInstruction that waits for 2 seconds.
         yield return new WaitForSeconds(2.0f);
-        
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool("eat", true);
-            Destroy(player);
+
+            player.SetActive(false);
         }
     }
 }

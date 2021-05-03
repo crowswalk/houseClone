@@ -26,14 +26,13 @@ public class Cat : MonoBehaviour
     public void kill(GameObject g)
     {
         animator.SetBool("kill", true);
-        Destroy(g.gameObject);
+        g.gameObject.SetActive(false);
     }
 
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 2 seconds.
         yield return new WaitForSeconds(2.0f);
-
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

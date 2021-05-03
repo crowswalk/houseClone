@@ -22,7 +22,7 @@ public class PlayerTriggers : MonoBehaviour
                 gameObject.transform.position = thisDoor.dest; //teleport player to new destination
                 if (sister_follow==true)
                 {
-                    sister.transform.position= thisDoor.dest; ;
+                    sister.transform.position= thisDoor.dest;
                 }
                 camera.roomBounds = thisDoor.roomBounds;
                 camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
