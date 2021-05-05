@@ -87,9 +87,9 @@ public class TextBoxManager : MonoBehaviour
         textBox.SetActive(true);
         isActive = true;
         
-        if(stopPlayerMovement){
+        //if(stopPlayerMovement){
             player.canMove = false; //stops the player from moving when the text is on screen
-        }
+        //}
 
         StartCoroutine(TextScroll(textLines[currentLine])); 
     }

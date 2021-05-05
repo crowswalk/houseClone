@@ -32,13 +32,15 @@ public class MovePlayer : MonoBehaviour
 
     void Update()
     {
-        if(!canMove){
-            return;
-        }
+       
     }
 
     void FixedUpdate()
     {
+         if(!canMove){
+             sprRenderer.sprite = stillSprite;
+            return;
+        }
         sprRenderer.sprite = currentSprite; //show sprite that was calculated in walkCycle
         checkKey(); //check key input
     }
