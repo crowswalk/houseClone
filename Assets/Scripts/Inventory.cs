@@ -60,7 +60,8 @@ public class Inventory : MonoBehaviour
         {
             Vector2 holdingpos = new Vector2(gameObject.transform.position.x + holdingObjX, gameObject.transform.position.y + holdingObjY);
             holdingObj.transform.position = holdingpos;
-            holdingObj.GetComponent<SpriteRenderer>().sortingOrder = player.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
+            holdingObj.GetComponent<SpriteRenderer>().enabled = false;
+
             // Debug.Log(holdingObj);
             if (holdingObj.GetComponent<Key>() != null)
             {
@@ -106,6 +107,8 @@ public class Inventory : MonoBehaviour
             {
                 holdingObj.GetComponent<bowling_ball>().dropBowling();
             }
+        } else {
+            player.changeSprites("default");
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -149,6 +152,7 @@ public class Inventory : MonoBehaviour
                     backpack.Insert(iconIndex, holdingObj);
                     clearInsert(backpack, iconIndex);
                     drawIcon(holdingObj, iconIndex);
+                    selectObj(iconIndex);
                 }
             }
         }
@@ -156,6 +160,7 @@ public class Inventory : MonoBehaviour
 
     void drawIcon(GameObject g, int iconIndex) //draw icon to the backpackBG
     {
+        indicator.transform.position = new Vector2(initPos.x + (gapX * iconIndex), initPos.y);
         Sprite itemicon = g.GetComponent<ItemIcon>().inventoryIcon;
         icons[iconIndex].sprite = itemicon;
     }
@@ -172,10 +177,12 @@ public class Inventory : MonoBehaviour
         {
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
+            player.changeSprites(holdingObj.name);
         }
         else
         {
             holdingObj = null;
+            player.changeSprites("default");
         }
     }
 
@@ -218,6 +225,7 @@ public class Inventory : MonoBehaviour
             int destroyIndex = backpack.IndexOf(holdingObj);
             icons[destroyIndex].sprite = emptyIcon;
             Destroy(backpack[destroyIndex]);
+            player.changeSprites("default");
         }
     }
 

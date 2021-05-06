@@ -12,7 +12,6 @@ public class MovePlayer : MonoBehaviour
     public Vector2 dir;
 
     private SpriteRenderer sprRenderer; //to access & change sprite renderer
-    public Sprite[] normalSprites = new Sprite[1]; //normal walking sprite without items
     private Sprite[] walkingSprites; //which sprite is currently being displayed
     private Sprite currentSprite; //currently displayed sprite
     private Sprite stillSprite; //sprite to show when there is no movement
@@ -20,6 +19,16 @@ public class MovePlayer : MonoBehaviour
     private float currentFrame; //currently displayed frame
 
     private BoxCollider2D playerCollider;
+    private Inventory inventory;
+
+    [SerializeField]
+    public Sprite[] normalSprites = new Sprite[1]; //normal walking sprite without items
+    public Sprite[] axeSprites = new Sprite[1];
+    public Sprite[] keySprites = new Sprite[1];
+    public Sprite[] plungeSprites = new Sprite[1];
+    public Sprite[] ballSprites = new Sprite[1];
+    public Sprite[] gunSprites = new Sprite[1];
+    public Sprite[] trapSprites = new Sprite[1];
 
     void Start()
     {
@@ -28,21 +37,36 @@ public class MovePlayer : MonoBehaviour
         currentFrame = 0;
         sprRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<BoxCollider2D>();
-    }
-
-    void Update()
-    {
-       
+        inventory = GetComponent<Inventory>();
     }
 
     void FixedUpdate()
     {
+
          if(!canMove){
              sprRenderer.sprite = stillSprite;
             return;
         }
         sprRenderer.sprite = currentSprite; //show sprite that was calculated in walkCycle
         checkKey(); //check key input
+    }
+
+   public void changeSprites(string currentItem) {
+        if (currentItem == "BowlingBall") {
+            walkingSprites = ballSprites;
+        } else if (currentItem == "Axe") {
+            walkingSprites = axeSprites;
+        } else if (currentItem == "BearTrap") {
+            walkingSprites = trapSprites;
+        } else if (currentItem == "Key") {
+            walkingSprites = keySprites;
+        } else if (currentItem == "Shotgun") {
+            walkingSprites = gunSprites;
+        } else if (currentItem == "Plunger") {
+            walkingSprites = plungeSprites;
+        } else {
+            walkingSprites = normalSprites;
+        }
     }
 
     void walkCycle()
