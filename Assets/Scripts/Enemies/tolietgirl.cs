@@ -7,6 +7,8 @@ public class tolietgirl : MonoBehaviour
     public GameObject player;
     Animator animator;
     public MovePlayer player_move;
+    public int girlDist;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,10 @@ public class tolietgirl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector2.Distance(player.transform.position, transform.position) < girlDist)
+        {
+            animator.enabled = true;
+        }
         if (Vector2.Distance(player.transform.position, transform.position) < 30 && player_move.dir.x <0 &&plunger.use==true)
         {
             plunger.use = true;
@@ -36,7 +42,6 @@ public class tolietgirl : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool("eat", true);
-
             player.SetActive(false);
         }
     }

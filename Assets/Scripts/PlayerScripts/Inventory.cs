@@ -150,7 +150,6 @@ public class Inventory : MonoBehaviour
                     clearInsert(backpack, iconIndex);
                     drawIcon(holdingObj, iconIndex);
                     selectObj(iconIndex);
-                    
                 }
             }
         }
@@ -169,7 +168,9 @@ public class Inventory : MonoBehaviour
         if (holdingObj != null)
         {
             holdingObj.SetActive(false);
-        } else {
+        }
+        else
+        {
             player.changeSprites("default");
         }
 
@@ -264,10 +265,7 @@ public class Inventory : MonoBehaviour
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     bool checkBowling() //if holdingObj is bowling, return true
@@ -276,9 +274,6 @@ public class Inventory : MonoBehaviour
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
