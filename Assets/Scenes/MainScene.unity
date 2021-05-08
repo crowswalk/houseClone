@@ -3341,8 +3341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4699986, y: 0.81002045}
-  m_SizeDelta: {x: 190, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 224, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1469397788
 GameObject:
@@ -3447,12 +3447,42 @@ MonoBehaviour:
   canMove: 1
   speed: 50
   dir: {x: 0, y: -1}
+  framerate: 8
   normalSprites:
   - {fileID: 4334783836991956000, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
   - {fileID: 7388399842426930641, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
   - {fileID: 6757282713640645180, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
   - {fileID: -6781412095145881161, guid: ab342f867d84fea4eb51478540957c9e, type: 3}
-  framerate: 8
+  axeSprites:
+  - {fileID: -1383436673686733631, guid: eeae5603a476ac04fa3a27de679474cb, type: 3}
+  - {fileID: 3030588202155000674, guid: eeae5603a476ac04fa3a27de679474cb, type: 3}
+  - {fileID: -2232235105955116248, guid: eeae5603a476ac04fa3a27de679474cb, type: 3}
+  - {fileID: -6161983478811705508, guid: eeae5603a476ac04fa3a27de679474cb, type: 3}
+  keySprites:
+  - {fileID: -1405514032948650233, guid: 9abea82f16ccb1445b9e04f8ed4bfa95, type: 3}
+  - {fileID: 765168581435755793, guid: 9abea82f16ccb1445b9e04f8ed4bfa95, type: 3}
+  - {fileID: 6802216923526961746, guid: 9abea82f16ccb1445b9e04f8ed4bfa95, type: 3}
+  - {fileID: -8032745339083435169, guid: 9abea82f16ccb1445b9e04f8ed4bfa95, type: 3}
+  plungeSprites:
+  - {fileID: -290048541200026646, guid: 1c97ba3406295ce46a3df34e3220f82c, type: 3}
+  - {fileID: -540629914893630467, guid: 1c97ba3406295ce46a3df34e3220f82c, type: 3}
+  - {fileID: -4447660139448017680, guid: 1c97ba3406295ce46a3df34e3220f82c, type: 3}
+  - {fileID: 5517402451793725050, guid: 1c97ba3406295ce46a3df34e3220f82c, type: 3}
+  ballSprites:
+  - {fileID: -6550505481238852305, guid: e56bac7fbe8d5894d9be8510e27991b4, type: 3}
+  - {fileID: 924409864236051911, guid: e56bac7fbe8d5894d9be8510e27991b4, type: 3}
+  - {fileID: 1515291710899648017, guid: e56bac7fbe8d5894d9be8510e27991b4, type: 3}
+  - {fileID: -2842287669089731800, guid: e56bac7fbe8d5894d9be8510e27991b4, type: 3}
+  gunSprites:
+  - {fileID: 7429642895323861242, guid: dda7b9ccae2d02241902ded7dcf3f7a7, type: 3}
+  - {fileID: 2938485498531891278, guid: dda7b9ccae2d02241902ded7dcf3f7a7, type: 3}
+  - {fileID: 3806997866485198146, guid: dda7b9ccae2d02241902ded7dcf3f7a7, type: 3}
+  - {fileID: 5413378775688150841, guid: dda7b9ccae2d02241902ded7dcf3f7a7, type: 3}
+  trapSprites:
+  - {fileID: -8934483856658646596, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
+  - {fileID: -1032329839686586644, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
+  - {fileID: 3155494390451400931, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
+  - {fileID: 978662460964921689, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
 --- !u!50 &1469397792
 Rigidbody2D:
   serializedVersion: 4

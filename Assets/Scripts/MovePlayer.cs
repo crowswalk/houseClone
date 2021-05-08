@@ -52,17 +52,17 @@ public class MovePlayer : MonoBehaviour
     }
 
    public void changeSprites(string currentItem) {
-        if (currentItem == "BowlingBall") {
+        if (currentItem.Contains("BowlingBall")) {
             walkingSprites = ballSprites;
-        } else if (currentItem == "Axe") {
+        } else if (currentItem.Contains("Axe")) {
             walkingSprites = axeSprites;
-        } else if (currentItem == "BearTrap") {
+        } else if (currentItem.Contains("BearTrap")) {
             walkingSprites = trapSprites;
-        } else if (currentItem == "Key") {
+        } else if (currentItem.Contains("Key")) {
             walkingSprites = keySprites;
-        } else if (currentItem == "Shotgun") {
+        } else if (currentItem.Contains("Shotgun")) {
             walkingSprites = gunSprites;
-        } else if (currentItem == "Plunger") {
+        } else if (currentItem.Contains("Plunger")) {
             walkingSprites = plungeSprites;
         } else {
             walkingSprites = normalSprites;

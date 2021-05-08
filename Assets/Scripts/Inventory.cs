@@ -62,28 +62,25 @@ public class Inventory : MonoBehaviour
             holdingObj.transform.position = holdingpos;
             holdingObj.GetComponent<SpriteRenderer>().enabled = false;
 
-            // Debug.Log(holdingObj);
             if (holdingObj.GetComponent<Key>() != null)
             {
                 Key.haskey = true;
-                Debug.Log("haskey");
             }
             else
             {
-
                 Key.haskey = false;
-
             }
             if (Input.GetKeyDown(KeyCode.X))//when holding object, press x to drop object
             {
                 holdingObj.layer = 0;
                 holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
+
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {
                     bowling_ball.drop = true;
                 }
 
-
+                holdingObj.GetComponent<SpriteRenderer>().enabled = true;
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
             if (Input.GetKeyDown(KeyCode.Space))
@@ -107,8 +104,6 @@ public class Inventory : MonoBehaviour
             {
                 holdingObj.GetComponent<bowling_ball>().dropBowling();
             }
-        } else {
-            player.changeSprites("default");
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -117,6 +112,7 @@ public class Inventory : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(player.transform.position, player.dir, sight);
         Debug.DrawRay(player.transform.position, player.dir * sight, Color.green);
+
         if (hit.collider != null)
         {
             if (hit.collider.tag == "Item")
@@ -144,6 +140,7 @@ public class Inventory : MonoBehaviour
                 holdingObj = detectingObj;
                 holdingObj.layer = 2; //making object on hand ignore raycasting
                 holdingObj.transform.position = gameObject.transform.position;
+                player.changeSprites(holdingObj.name);
 
                 //when picking up, object goes into icon
                 int iconIndex = getNearestEmpty(backpack, backpackMax);
@@ -153,6 +150,7 @@ public class Inventory : MonoBehaviour
                     clearInsert(backpack, iconIndex);
                     drawIcon(holdingObj, iconIndex);
                     selectObj(iconIndex);
+                    
                 }
             }
         }
@@ -171,18 +169,20 @@ public class Inventory : MonoBehaviour
         if (holdingObj != null)
         {
             holdingObj.SetActive(false);
+        } else {
+            player.changeSprites("default");
         }
 
         if (backpack.Count >= index + 1 && backpack[index] != null)
         {
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
+            Debug.Log(holdingObj.name);
             player.changeSprites(holdingObj.name);
         }
         else
         {
             holdingObj = null;
-            player.changeSprites("default");
         }
     }
 
@@ -214,17 +214,10 @@ public class Inventory : MonoBehaviour
     {
         if (holdingObj != null && Input.GetKeyDown(KeyCode.X))
         {
-            destroyHoldingObj();
-        }
-    }
-
-    public void destroyHoldingObj() //use/destroy item that player is holding 
-    {
-        if (holdingObj != null)
-        {
-            int destroyIndex = backpack.IndexOf(holdingObj);
-            icons[destroyIndex].sprite = emptyIcon;
-            Destroy(backpack[destroyIndex]);
+            holdingObj.GetComponent<SpriteRenderer>().enabled = true;
+            int removeIndex = backpack.IndexOf(holdingObj);
+            icons[removeIndex].sprite = emptyIcon;
+            Destroy(backpack[removeIndex]);
             player.changeSprites("default");
         }
     }
