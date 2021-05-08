@@ -226,7 +226,8 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 30
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7104753330680653441, guid: c353d8366d856894bb1caee3fefbf95f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c353d8366d856894bb1caee3fefbf95f, type: 3}
 --- !u!1 &111449670
 GameObject:
@@ -3845,7 +3846,7 @@ MonoBehaviour:
   emptyIcon: {fileID: -8437384966788738912, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
   backpackMax: 4
-  sight: 10
+  sight: 25
   holdingObjX: 6
   holdingObjY: 6
   initX: 30
