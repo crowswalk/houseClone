@@ -13,10 +13,13 @@ public class chasing_player : MonoBehaviour
     public static int move_horizontal;
 
     public LayerMask barrier;
+
+    private float initSpeed; //to record the inistial speed of tha rat, so after text displayed, the speed will go back to normal
     // Start is called before the first frame update
     void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        initSpeed = speed;
     }
 
     // Update is called once per frame
@@ -52,5 +55,10 @@ public class chasing_player : MonoBehaviour
 
 
 
+    }
+
+    public void resetSpeed()
+    {
+        speed = initSpeed;
     }
 }

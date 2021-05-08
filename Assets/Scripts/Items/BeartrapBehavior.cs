@@ -40,6 +40,7 @@ public class BeartrapBehavior : MonoBehaviour
                 myRender.sprite = trapClosed; //sprite become beartrap_closed when holding on hand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    Debug.Log("s");
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
