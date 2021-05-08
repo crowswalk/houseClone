@@ -4030,6 +4030,8 @@ GameObject:
   - component: {fileID: 1685533400}
   - component: {fileID: 1685533399}
   - component: {fileID: 1685533402}
+  - component: {fileID: 1685533403}
+  - component: {fileID: 1685533404}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Untagged
@@ -4050,18 +4052,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 12.032791}
+  m_Offset: {x: 1.5682373, y: 24.68666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 34, y: 62}
+    oldSize: {x: 34, y: 80}
     newSize: {x: 0.33, y: 0.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34, y: 24.065582}
+  m_Size: {x: 40.273193, y: 40.594208}
   m_EdgeRadius: 0
 --- !u!212 &1685533400
 SpriteRenderer:
@@ -4102,7 +4104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 7088775802892661715, guid: 8a6b5ce96b21968469de914c8abf1854,
+  m_Sprite: {fileID: 5739897283171119737, guid: 86b7e900b933d654f9e9f68509c06e46,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4122,7 +4124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685533398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47, y: -8, z: 0}
+  m_LocalPosition: {x: -45.7, y: -18.28, z: -3.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1865587566}
@@ -4141,6 +4143,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sorter: 0
+--- !u!95 &1685533403
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685533398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57da4826b7e22074e9a94f4f461fd4c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1685533404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685533398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d501cc4e2c8e343a0d1385f47b4c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719890752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,6 +4734,7 @@ GameObject:
   - component: {fileID: 2028308698}
   - component: {fileID: 2028308699}
   - component: {fileID: 2028308700}
+  - component: {fileID: 2028308701}
   m_Layer: 0
   m_Name: Sister
   m_TagString: Untagged
@@ -4724,8 +4758,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 16, y: 34}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 33}
     newSize: {x: 16, y: 33}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4773,7 +4807,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 75
-  m_Sprite: {fileID: 5551202721799329819, guid: 8a6b5ce96b21968469de914c8abf1854,
+  m_Sprite: {fileID: 5166376579139525803, guid: 0c5078c3a16c6124ca80f55cc0efc512,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4852,6 +4886,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &2028308701
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028308694}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da450a7e383002846b1151d3e4a38f0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2076231463
 PrefabInstance:
   m_ObjectHideFlags: 0

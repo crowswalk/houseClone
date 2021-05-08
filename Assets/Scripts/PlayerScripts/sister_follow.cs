@@ -12,6 +12,7 @@ public class sister_follow : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     public static int move_vertical;
     public static int move_horizontal;
+  
 
     public LayerMask barrier;
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class sister_follow : MonoBehaviour
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         PlayerTriggers.sister_follow = true;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,10 +37,11 @@ public class sister_follow : MonoBehaviour
             move_vertical = 0;
             move_horizontal = 0;
 
+            animator.SetBool("still", true);
         }
         else
         {
-
+            animator.SetBool("still", false);
             if (hit.collider != null)
             {
 
