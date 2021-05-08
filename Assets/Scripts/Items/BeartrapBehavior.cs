@@ -47,6 +47,7 @@ public class BeartrapBehavior : MonoBehaviour
                 {
                     playerInv.holdingObj.GetComponent<SpriteRenderer>().enabled = true;//reset configuration
                     player.changeSprites("default");
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
