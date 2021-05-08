@@ -13,6 +13,8 @@ public class BeartrapBehavior : MonoBehaviour
     public Sprite trapClosed;
     SpriteRenderer myRender;
 
+    public TextBoxManager text; //check if text is active before letting player drop bear trap.
+
     [SerializeField]
     [Range(0.0f, 20.0f)]
     float trapX, trapY, trapXOffset; //indicates how far beartrap placed from player
@@ -28,7 +30,9 @@ public class BeartrapBehavior : MonoBehaviour
     void Update()
     {
         trapPos = new Vector2(transform.position.x + trapX, transform.position.y + trapY);
-        placing();
+        if (!text.isActive) { //only place trap if textbox is not active
+            placing();
+        }
     }
 
     void placing() //press [space] to place trap, making isPlaced = true

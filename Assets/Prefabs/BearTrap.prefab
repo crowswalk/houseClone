@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6842587230920987995}
   - component: {fileID: 6842587230920987994}
   - component: {fileID: 6842587230920987993}
+  - component: {fileID: 6842587231864324937}
   m_Layer: 0
   m_Name: BearTrap
   m_TagString: Item
@@ -111,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -122,7 +123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 24, y: 24}
+  m_Size: {x: 24, y: 50}
   m_EdgeRadius: 0
 --- !u!114 &6842587230920987993
 MonoBehaviour:
@@ -137,11 +138,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInv: {fileID: 0}
+  player: {fileID: 0}
   isTrapPlaced: 0
   trapOpen: {fileID: 5581773966291736342, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
   trapClosed: {fileID: 7813506556951106354, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+  text: {fileID: 0}
   trapX: 0
   trapY: 0
   trapXOffset: 0
+--- !u!114 &6842587231864324937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842587230920987998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2495727e94e239a4ea9c7e90dafd4883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryIcon: {fileID: 4597237917407285784, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+    type: 3}

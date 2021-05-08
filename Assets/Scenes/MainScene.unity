@@ -5024,7 +5024,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 16, y: 33}
     newSize: {x: 16, y: 33}
     adaptiveTilingThreshold: 0.5
@@ -6200,6 +6200,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 473074812}
+    - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1469397791}
@@ -6208,21 +6213,6 @@ PrefabInstance:
       propertyPath: playerInv
       value: 
       objectReference: {fileID: 1469397796}
-    - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -11
-      objectReference: {fileID: 0}
     - target: {fileID: 6842587230920987996, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
       propertyPath: m_RootOrder
@@ -6285,23 +6275,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd280839ac2cd4449a5168eac8a0b4f, type: 3}
---- !u!1 &6842587231864324936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6842587230920987998, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
-    type: 3}
-  m_PrefabInstance: {fileID: 6842587231864324935}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6842587231864324937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6842587231864324936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2495727e94e239a4ea9c7e90dafd4883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryIcon: {fileID: 4597237917407285784, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
-    type: 3}
