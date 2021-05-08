@@ -5,6 +5,7 @@ using UnityEngine;
 public class BeartrapBehavior : MonoBehaviour
 {
     public Inventory playerInv;
+    public MovePlayer player;
     
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
@@ -40,6 +41,7 @@ public class BeartrapBehavior : MonoBehaviour
                 myRender.sprite = trapClosed; //sprite become beartrap_closed when holding on hand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    player.changeSprites("default");
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration

@@ -14,12 +14,19 @@ public class RatMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.GetComponent<chasing_player>().speed >0)
+        {
+            animator.SetBool("walk", true);
+        } else
+        {
+            animator.SetBool("walk", false);
+        }
     }
 
     public void dead()
     {
         animator.SetBool("dead", true);
+        this.gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
         StartCoroutine(ExampleCoroutine());
     }
 
@@ -37,6 +44,7 @@ public class RatMonster : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             animator.SetBool("eat", true);
+            this.gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
             other.gameObject.SetActive(false);
             //Destroy(other.gameObject);
         }

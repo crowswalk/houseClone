@@ -591,6 +591,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!61 &242073502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1050,6 +1051,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!61 &387079491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1806,6 +1808,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!61 &671247800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2203,6 +2206,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!1 &934960565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,6 +2461,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!61 &942243331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3039,6 +3044,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  rat: {fileID: 1637436251}
 --- !u!4 &1372760242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5487318876602103814, guid: 5866b8dd5944123438e229026a88c2b9,
@@ -5932,6 +5938,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1469397791}
     - target: {fileID: 6842587230920987993, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
       propertyPath: playerInv
