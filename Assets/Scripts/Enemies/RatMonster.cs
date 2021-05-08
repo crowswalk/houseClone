@@ -17,6 +17,9 @@ public class RatMonster : MonoBehaviour
         if (gameObject.GetComponent<chasing_player>().speed >0)
         {
             animator.SetBool("walk", true);
+        } else
+        {
+            animator.SetBool("walk", false);
         }
     }
 
