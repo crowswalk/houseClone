@@ -140,6 +140,7 @@ public class Inventory : MonoBehaviour
                 holdingObj = detectingObj;
                 holdingObj.layer = 2; //making object on hand ignore raycasting
                 holdingObj.transform.position = gameObject.transform.position;
+                string objName = holdingObj.name;
                 player.changeSprites(holdingObj.name);
 
                 //when picking up, object goes into icon
@@ -178,8 +179,9 @@ public class Inventory : MonoBehaviour
         {
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
-            Debug.Log(holdingObj.name);
-            player.changeSprites(holdingObj.name);
+            string objName = holdingObj.name;
+            player.changeSprites(objName); //change player sprite to match currently held object
+            checkIfHeld(objName); //check if played has picked up this object before - if not, sister will say something
         }
         else
         {
@@ -276,4 +278,33 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    void checkIfHeld(string name)
+    {
+        if (name == "BowlingBall")
+        {
+            //trigger sister dialogue here
+        }
+        else if (name == "Axe")
+        {
+            //trigger sister dialogue here
+        }
+        else if (name == "BearTrap")
+        {
+            //trigger sister dialogue here
+        }
+        else if (name == "Key")
+        {
+            //trigger sister dialogue here
+        }
+        else if (name == "Shotgun")
+        {
+            //trigger sister dialogue here
+        }
+        else if (name == "Plunger")
+        {
+            //trigger sister dialogue here
+        }
+    }
+
 }

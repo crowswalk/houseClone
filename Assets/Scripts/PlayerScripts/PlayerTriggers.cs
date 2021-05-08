@@ -8,9 +8,13 @@ This script is responsible for detecting triggers that the player collides with.
 public class PlayerTriggers : MonoBehaviour
 {
     public CamFollow camera;
-    public Camera mainCam;
+    Camera mainCam;
     public static bool sister_follow;
     public GameObject sister;
+
+    void Start() {
+        mainCam = Camera.main;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         //if the player collides w/ a door, teleport them to the spawn location of specified destination door
