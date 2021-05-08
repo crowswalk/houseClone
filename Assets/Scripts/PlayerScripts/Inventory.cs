@@ -279,7 +279,8 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    void checkIfHeld(string name)
+    void checkIfHeld(string name) //checks the name of the item that has been picked up. 
+    //This should work, because if the item has been picked up before, the name would have "clone" in it (like Axe(CLone))
     {
         if (name == "BowlingBall")
         {
