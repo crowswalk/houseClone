@@ -42,6 +42,7 @@ public class BeartrapBehavior : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     player.changeSprites("default");
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
