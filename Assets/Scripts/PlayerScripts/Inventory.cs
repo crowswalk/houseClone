@@ -9,9 +9,10 @@ public class Inventory : MonoBehaviour
     
     //sister dialogue activation vars
     public GameObject textBox; //accesses text box obj
-    public Text theText; //accesses text obj
-    public TextAsset textFile; //TextAsset = block of text
+    public TextAsset theText; //accesses text obj
+    //public TextAsset textFile; //TextAsset = block of text
     public TextBoxManager theTextBox;
+    public ActivateTextAtLine callingTheText;
     public int startLine;
     public int endLine;
     public bool destroyWhenActivated;
@@ -52,6 +53,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        callingTheText = FindObjectOfType<ActivateTextAtLine>();   
         theTextBox = FindObjectOfType<TextBoxManager>();
         List<GameObject> backpack = new List<GameObject>();
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -295,7 +297,7 @@ public class Inventory : MonoBehaviour
         if (name == "BowlingBall")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+            theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -304,7 +306,7 @@ public class Inventory : MonoBehaviour
         else if (name == "Axe")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+            theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -312,7 +314,7 @@ public class Inventory : MonoBehaviour
         else if (name == "BearTrap")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+            theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -321,7 +323,7 @@ public class Inventory : MonoBehaviour
         else if (name == "Key")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+            theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -329,7 +331,7 @@ public class Inventory : MonoBehaviour
         else if (name == "Shotgun")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+            theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -337,10 +339,16 @@ public class Inventory : MonoBehaviour
         else if (name == "Plunger")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(textFile);
+
+            theTextBox.ReloadScript(theText);
+            Debug.Log("this is running");
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
+
+        if(destroyWhenActivated){
+                Destroy(theText);
+            }
         }
     }
 
