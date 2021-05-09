@@ -5618,6 +5618,11 @@ PrefabInstance:
       objectReference: {fileID: 1076510616}
     - target: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
         type: 3}
+      propertyPath: loopTimeReset
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
+        type: 3}
       propertyPath: clockTextComponent
       value: 
       objectReference: {fileID: 1120939162}
