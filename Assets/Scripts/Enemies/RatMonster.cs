@@ -18,7 +18,7 @@ public class RatMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<chasing_player>().speed >0)
+        if (gameObject.GetComponent<chasing_player>().speed > 0)
         {
             animator.SetBool("walk", true);
         } else

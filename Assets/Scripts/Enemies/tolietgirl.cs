@@ -10,7 +10,7 @@ public class tolietgirl : MonoBehaviour
     public int girlDist;
 
     public SoundManager sound;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +24,16 @@ public class tolietgirl : MonoBehaviour
         {
             animator.enabled = true;
         }
-        if (Vector2.Distance(player.transform.position, transform.position) < 30 && player_move.dir.x <0 &&plunger.use==true)
+        if (Vector2.Distance(player.transform.position, transform.position) < 30 && player_move.dir.x < 0 && plunger.use)
         {
-            plunger.use = true;
             sound.playSound(SoundEffects.TolietgirlDead);
             animator.SetBool("dead", true);
-            StartCoroutine(ExampleCoroutine());
+            //StartCoroutine(ExampleCoroutine());
             Destroy(GetComponent<BoxCollider2D>());
         }
-       
-;    }
+
+;
+    }
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 2 seconds.
