@@ -7,6 +7,16 @@ public class Inventory : MonoBehaviour
 {
     public MovePlayer player;
 
+    //sister dialogue activation vars
+    public GameObject textBox; //accesses text box obj
+    public TextAsset theText; //accesses text obj
+    //public TextAsset textFile; //TextAsset = block of text
+    public TextBoxManager theTextBox;
+    public ActivateTextAtLine callingTheText;
+    public int startLine;
+    public int endLine;
+    public bool destroyWhenActivated;
+
     public GameObject detectingObj; //the object that raycasting is detecting
     public GameObject holdingObj; //the object that player is holding
 
@@ -43,6 +53,8 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        callingTheText = FindObjectOfType<ActivateTextAtLine>();
+        theTextBox = FindObjectOfType<TextBoxManager>();
         List<GameObject> backpack = new List<GameObject>();
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -131,7 +143,7 @@ public class Inventory : MonoBehaviour
         detectItem();
         if (detectingObj != null && (backpack.Count < backpackMax || checkEmptySpace(backpack, backpackMax)))
         {
-            if (Input.GetKeyDown(KeyCode.C) || (Input.GetMouseButtonDown(0)))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 if (holdingObj != null)
                 {
@@ -278,39 +290,27 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
     void checkIfHeld(string name) //checks the name of the item that has been picked up. 
     //This should work, because if the item has been picked up before, the name would have "clone" in it (like Axe(CLone))
     {
-        if (name == "BowlingBall")
+        switch (name)
         {
-            Debug.Log("first time holding ball");
-            //trigger sister dialogue here
-        }
-        else if (name == "Axe")
-        {
-            Debug.Log("first time holding axe");
-            //trigger sister dialogue here
-        }
-        else if (name == "BearTrap")
-        {
-            Debug.Log("first time holding beartrap");
-            //trigger sister dialogue here
-        }
-        else if (name == "Key")
-        {
-            Debug.Log("first time holding key");
-            //trigger sister dialogue here
-        }
-        else if (name == "Shotgun")
-        {
-            Debug.Log("first time holding shotgun");
-            //trigger sister dialogue here
-        }
-        else if (name == "Plunger")
-        {
-            Debug.Log("first time holding plunger");
-            //trigger sister dialogue here
+            case "BowlingBall":
+            case "Axe":
+            case "BearTrap":
+            case "Key":
+            case "Shotgun":
+            case "Plunger":
+                TextAsset thisText = holdingObj.GetComponent<ActivateTextAtLine>().theText; //get TextAsset of object being held
+                theTextBox.ReloadScript(thisText); //reload textbox 
+                theTextBox.currentLine = startLine;
+                theTextBox.endAtLine = endLine;
+                theTextBox.EnableTextBox();
+                if (destroyWhenActivated)
+                {
+                    Destroy(thisText);
+                }
+                break;
         }
     }
 

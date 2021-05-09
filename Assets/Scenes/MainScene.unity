@@ -510,6 +510,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 0
   rat: {fileID: 1637436251}
 --- !u!61 &242073502
 BoxCollider2D:
@@ -970,6 +971,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!61 &387079491
 BoxCollider2D:
@@ -2148,6 +2150,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!61 &671247800
 BoxCollider2D:
@@ -2501,7 +2504,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 28.134819, y: 10.548454}
+  m_Offset: {x: 35.672157, y: 46.269096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2512,7 +2515,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 35.25992, y: 75.04431}
+  m_Size: {x: 49.024155, y: 32.441544}
   m_EdgeRadius: 0
 --- !u!4 &879539546
 Transform:
@@ -2546,6 +2549,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!1 &934960565
 GameObject:
@@ -2802,6 +2806,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!61 &942243331
 BoxCollider2D:
@@ -2816,7 +2821,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.7043076, y: -23.394455}
+  m_Offset: {x: -21.348972, y: -63.169724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2827,7 +2832,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 37.571457, y: 79.203705}
+  m_Size: {x: 42.543373, y: 43.15732}
   m_EdgeRadius: 0
 --- !u!4 &942243332
 Transform:
@@ -2958,6 +2963,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c353d8366d856894bb1caee3fefbf95f, type: 3}
+--- !u!1 &1033629172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6842587230920987998, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6842587231864324935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1033629173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033629172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: e03f5424c6d65404694ad74663f8ef8a, type: 3}
+  startLine: 0
+  endLine: 1
+  theTextBox: {fileID: 473074812}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
 --- !u!1 &1076510616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3584,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!4 &1372760242 stripped
 Transform:
@@ -4084,6 +4116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1469397791}
+  textBox: {fileID: 0}
+  theText: {fileID: 0}
+  theTextBox: {fileID: 0}
+  callingTheText: {fileID: 0}
+  startLine: 0
+  endLine: 0
+  destroyWhenActivated: 0
   detectingObj: {fileID: 0}
   holdingObj: {fileID: 0}
   backpackBG: {fileID: 293812253}
@@ -6340,6 +6379,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 420720114789815176, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &4175427848747058471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175427848747058469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: ab280ab548e6b48168967b677cb86def, type: 3}
+  startLine: 0
+  endLine: 2
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
+--- !u!114 &4175427848747058476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175427848747058469}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e2b163876b645bead62a7668df4852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: ab280ab548e6b48168967b677cb86def, type: 3}
+  startLine: 0
+  endLine: 2
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 0
+  requireButtonPress: 0
+  rat: {fileID: 0}
 --- !u!1001 &4763081355694707219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6587,6 +6665,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 5642108297774737694, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &5429071348837434462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429071348837434455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: 6d4d0f2f6dfab46d8b4bfb6174a4b966, type: 3}
+  startLine: 0
+  endLine: 0
+  theTextBox: {fileID: 473074812}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
 --- !u!1001 &6842587231864324935
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class ActivateTextAtLine : MonoBehaviour
 
     public bool destroyWhenActivated;
     public bool requireButtonPress;
+    public bool toBeTriggered;
     private bool waitForPress;
 
     public GameObject rat; //to stop rat chasing code when in a dialogue
@@ -38,7 +39,8 @@ public class ActivateTextAtLine : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.name == "Player"){
+        if(toBeTriggered){
+            if(other.gameObject.name == "Player"){
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
@@ -48,9 +50,9 @@ public class ActivateTextAtLine : MonoBehaviour
             rat.GetComponent<chasing_player>().speed = 0;
 
             if(destroyWhenActivated){
-                
                 Destroy(gameObject);
             }
+        }
             
             // if(requireButtonPress){
             //     waitForPress = true;
@@ -59,7 +61,7 @@ public class ActivateTextAtLine : MonoBehaviour
         }
     }
 
-    void onTriggerExit2D(Collider2D other){
+    void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.name == "Player"){
 
             rat.GetComponent<chasing_player>().resetSpeed();
