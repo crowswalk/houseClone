@@ -295,42 +295,52 @@ public class Inventory : MonoBehaviour
         if (name == "BowlingBall")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
+            theTextBox.ReloadScript(textFile);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
 
-            if(destroyWhenActivated){
-                Destroy(gameObject);
-            }
         }
         else if (name == "Axe")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(textFile);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
         }
         else if (name == "BearTrap")
         {
             //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
+            theTextBox.ReloadScript(textFile);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
 
-            if(destroyWhenActivated){
-                Destroy(gameObject);
-            }
         }
         else if (name == "Key")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(textFile);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
         }
         else if (name == "Shotgun")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(textFile);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
         }
         else if (name == "Plunger")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(textFile);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
         }
     }
 
