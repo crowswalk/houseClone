@@ -23,6 +23,7 @@ public class Dad : MonoBehaviour
         if (collision.tag == "Bullet")
         {
             anim.SetBool("dead", true);
+            GetComponent<dad_chase>().enabled = false;
             Destroy(collision.gameObject);
         }
     }
