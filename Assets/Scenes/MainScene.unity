@@ -5334,6 +5334,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 6747845878337087552, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &1950892350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950892348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: 3ad7efaf2b3ae456e9618aa006ceb0ff, type: 3}
+  startLine: 0
+  endLine: 1
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
 --- !u!1 &2028308694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5914,6 +5934,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: -1478468898875215192, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &23464617573831243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23464617573831241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: 071ca095ca6c1439499066c50d845916, type: 3}
+  startLine: 0
+  endLine: 1
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
 --- !u!1001 &626383725187585596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6166,6 +6206,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 8200309233594426530, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &2532385362881128134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532385362881128132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: a2e00b581dd0c433ab932a845d7e4ca9, type: 3}
+  startLine: 0
+  endLine: 1
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 1637436251}
 --- !u!1001 &2642846313718759158
 PrefabInstance:
   m_ObjectHideFlags: 0
