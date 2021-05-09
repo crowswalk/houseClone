@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2532385362981487019}
   - component: {fileID: 2532385362981487017}
   - component: {fileID: 3727819389376150486}
+  - component: {fileID: 2532385362881128133}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Item
@@ -128,3 +129,17 @@ MonoBehaviour:
   rangeX: 15
   rangeY: 5
   offsetX: 10
+--- !u!114 &2532385362881128133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532385362981487012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2495727e94e239a4ea9c7e90dafd4883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryIcon: {fileID: 8200309233594426530, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+    type: 3}
