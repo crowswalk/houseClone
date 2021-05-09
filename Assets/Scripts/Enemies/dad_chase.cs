@@ -11,8 +11,9 @@ public class dad_chase : MonoBehaviour
     public float playerDist; //distance sister is from player
     public GameObject player;
     private SpriteRenderer mySpriteRenderer;
-    public static int move_vertical;
-    public static int move_horizontal;
+    public static float move_vertical;
+    private int nearby;
+    public static float move_horizontal;
 
 
     public LayerMask barrier;
@@ -23,42 +24,46 @@ public class dad_chase : MonoBehaviour
         PlayerTriggers.sister_follow = true;
         animator = GetComponent<Animator>();
         dadhome = true;
+        nearby = 0;
+        move_vertical = 2;
+        move_horizontal = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, ray_distance, barrier);
+     
+
+  
+      
         Vector3 localPosition = player.transform.position - transform.position;
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, localPosition, ray_distance, barrier);
         localPosition = localPosition.normalized; // The normalized direction in LOCAL space
-        transform.Translate(localPosition.x * Time.deltaTime * speed * move_vertical, move_horizontal * localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
-
+        transform.Translate(localPosition.x * Time.deltaTime * speed * move_horizontal, move_vertical * localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
+       // Debug.Log(localPosition);
         if (Vector2.Distance(player.transform.position, transform.position) < playerDist)
         {
             move_vertical = 0;
             move_horizontal = 0;
-
+        
             animator.SetBool("walk", false);
-            animator.SetBool("dad_kill", true);
-            player.SetActive(false);
+            animator.SetBool("prepare", true);
+            StartCoroutine(preparekill());
+          //  player.SetActive(false);
         }
         else
         {
             animator.SetBool("walk", true);
-            if (hit.collider != null)
+            if (nearby==1)
             {
+               // Debug.Log("I am hit");
+             
+                //move_vertical = localPosition.y/localPosition.x;
+                //move_horizontal = -1*localPosition.x/localPosition.y;
 
-                move_vertical = 0;
-                move_horizontal = 4;
-
-
+               // StartCoroutine(ExampleCoroutine());
             }
-            else
-            {
-                move_vertical = 2;
-                move_horizontal = 2;
-            }
+         
         }
         if (player.transform.position.x > transform.position.x)
         {
@@ -68,6 +73,50 @@ public class dad_chase : MonoBehaviour
         {
             mySpriteRenderer.flipX = true;
         }
+
+       
+    }
+    IEnumerator ExampleCoroutine()
+    {
+        //yield on a new YieldInstruction that waits for 2 seconds.
+        yield return new WaitForSeconds(2.0f);
+        move_vertical = 2;
+        move_horizontal = 2;
+    }
+
+    IEnumerator preparekill()
+    {
+        //yield on a new YieldInstruction that waits for 2 seconds.
+        yield return new WaitForSeconds(1.7f);
+        if (Vector2.Distance(player.transform.position, transform.position) <playerDist)
+        {
+            move_vertical = 0;
+            move_horizontal = 0;
+
+            animator.SetBool("walk", false);
+            animator.SetBool("dad_kill", true);
+            player.SetActive(false);
+        }
+        else {
+            move_vertical = 2;
+            move_horizontal = 2;
+            animator.SetTrigger("escape1");
+            animator.SetBool("prepare", false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
+
+        nearby = nearby + 1;
+
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+
+        nearby = nearby - 1;
+
     }
 }
 

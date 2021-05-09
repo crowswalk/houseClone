@@ -12,8 +12,26 @@ public class PlayerTriggers : MonoBehaviour
     public static bool sister_follow;
     public GameObject sister;
     public GameObject dad;
+    private bool dadenter;
+    private Vector3 daddest;
     void Start() {
         mainCam = Camera.main;
+        daddest = gameObject.transform.position;
+    }
+
+     void Update()
+    {
+        //Debug.Log(Vector2.Distance(gameObject.transform.position, daddest));
+
+        if (dadenter&& Vector2.Distance(gameObject.transform.position, daddest) > 40)
+        {
+            dad.transform.position = daddest;
+
+            dadenter = false;
+        }
+
+        
+        
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -55,8 +73,8 @@ public class PlayerTriggers : MonoBehaviour
     IEnumerator Wait(ChangeRoom thisdoor)
     {
         yield return new WaitForSeconds(3);
-        
-       dad.transform.position = thisdoor.dest;
+        dadenter = true;
+        daddest = thisdoor.dest;
     }
 
 }

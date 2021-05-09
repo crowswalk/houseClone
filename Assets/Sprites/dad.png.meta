@@ -16,43 +16,46 @@ TextureImporter:
     second: dad_3
   - first:
       213: 3077558884415252561
-    second: killing_dad_4
+    second: dad_4
   - first:
       213: -9051477299541373266
-    second: killing_dad_5
+    second: dad_5
   - first:
       213: 2069315604931121747
-    second: killing_dad_6
+    second: dad_6
   - first:
       213: 5648143522676430566
-    second: killing_dad_7
+    second: dad_7
   - first:
       213: -9214267423993917763
-    second: killing_dad_8
+    second: dad_8
   - first:
       213: 4477471653921864154
-    second: killing_dad_9
+    second: dad_9
   - first:
       213: -8773614213733876258
-    second: dying_dad_10
+    second: dad_10
   - first:
       213: 8843640799009507493
-    second: dying_dad_11
+    second: dad_11
   - first:
       213: 9146926486950609096
-    second: dying_dad_12
+    second: dad_12
   - first:
       213: 6287136918447958552
-    second: dying_dad_13
+    second: dad_13
   - first:
       213: -2894745868861816406
-    second: dying_dad_14
+    second: dad_14
   - first:
       213: 2192726408772250090
-    second: dying_dad_15
+    second: dad_15
   - first:
       213: 2863433510099011727
-    second: dying_dad_16
+    second: dad_16
+  - first:
+      213: -816583759044962689
+    second: dad_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -153,12 +156,12 @@ TextureImporter:
       name: dad_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 195
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.22500001, y: 0}
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +177,12 @@ TextureImporter:
       name: dad_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 195.25
-        width: 79.8
-        height: 63.75
-      alignment: 9
-      pivot: {x: 0.2255639, y: 0}
+        x: 81
+        y: 195
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +198,12 @@ TextureImporter:
       name: dad_2
       rect:
         serializedVersion: 2
-        x: 160
-        y: 195.25
-        width: 79.8
-        height: 63.75
-      alignment: 9
-      pivot: {x: 0.2255639, y: 0}
+        x: 163
+        y: 195
+        width: 24
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +219,12 @@ TextureImporter:
       name: dad_3
       rect:
         serializedVersion: 2
-        x: 240
-        y: 195.25
-        width: 79.8
-        height: 63.75
-      alignment: 9
-      pivot: {x: 0.2255639, y: 0}
+        x: 245
+        y: 195
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,15 +237,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_4
+      name: dad_4
       rect:
         serializedVersion: 2
-        x: 320
-        y: 195.25
-        width: 79.8
-        height: 63.75
-      alignment: 9
-      pivot: {x: 0.2255639, y: 0}
+        x: 325
+        y: 195
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,15 +258,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_5
+      name: dad_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 130
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        x: 353
+        y: 195
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,15 +279,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_6
+      name: dad_6
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 130
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,15 +300,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_7
+      name: dad_7
       rect:
         serializedVersion: 2
-        x: 160
+        x: 82
         y: 130
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,15 +321,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_8
+      name: dad_8
       rect:
         serializedVersion: 2
-        x: 240
+        x: 163
         y: 130
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,15 +342,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: killing_dad_9
+      name: dad_9
       rect:
         serializedVersion: 2
-        x: 320
+        x: 244
         y: 130
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 66
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,15 +363,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_10
+      name: dad_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 65
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        x: 325
+        y: 130
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,15 +384,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_11
+      name: dad_11
       rect:
         serializedVersion: 2
-        x: 80
+        x: 2
         y: 65
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 23
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -402,15 +405,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_12
+      name: dad_12
       rect:
         serializedVersion: 2
-        x: 160
+        x: 81
         y: 65
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,15 +426,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_13
+      name: dad_13
       rect:
         serializedVersion: 2
-        x: 240
+        x: 165
         y: 65
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 22
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -444,15 +447,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_14
+      name: dad_14
       rect:
         serializedVersion: 2
-        x: 320
+        x: 246
         y: 65
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        width: 22
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -465,15 +468,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_15
+      name: dad_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 64
-      alignment: 9
-      pivot: {x: 0.225, y: 0}
+        x: 328
+        y: 65
+        width: 23
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -486,15 +489,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dying_dad_16
+      name: dad_16
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 0
-        width: 80
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,6 +505,27 @@ TextureImporter:
       bones: []
       spriteID: f88c6673b95fcb720800000000000000
       internalID: 2863433510099011727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dad_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7695c8c569eaa4f0800000000000000
+      internalID: -816583759044962689
       vertices: []
       indices: 
       edges: []
