@@ -5,11 +5,13 @@ using UnityEngine;
 public class plunger : MonoBehaviour
 {
     public static bool use;
+    public MovePlayer player;
 
     void Update()
     {
         if (use)
         {
+            player.showPlungeSprite();
             StartCoroutine(ExampleCoroutine());
         }
     }

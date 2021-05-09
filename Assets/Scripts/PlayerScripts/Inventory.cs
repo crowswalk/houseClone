@@ -284,26 +284,32 @@ public class Inventory : MonoBehaviour
     {
         if (name == "BowlingBall")
         {
+            Debug.Log("first time holding ball");
             //trigger sister dialogue here
         }
         else if (name == "Axe")
         {
+            Debug.Log("first time holding axe");
             //trigger sister dialogue here
         }
         else if (name == "BearTrap")
         {
+            Debug.Log("first time holding beartrap");
             //trigger sister dialogue here
         }
         else if (name == "Key")
         {
+            Debug.Log("first time holding key");
             //trigger sister dialogue here
         }
         else if (name == "Shotgun")
         {
+            Debug.Log("first time holding shotgun");
             //trigger sister dialogue here
         }
         else if (name == "Plunger")
         {
+            Debug.Log("first time holding plunger");
             //trigger sister dialogue here
         }
     }

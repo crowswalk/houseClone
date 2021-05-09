@@ -3789,6 +3789,7 @@ MonoBehaviour:
   - {fileID: -1032329839686586644, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
   - {fileID: 3155494390451400931, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
   - {fileID: 978662460964921689, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
+  plungingSprite: {fileID: 21300000, guid: c29f70b825d6bc14ba274ce5fc8a8679, type: 3}
 --- !u!50 &1469397792
 Rigidbody2D:
   serializedVersion: 4
@@ -6212,6 +6213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plunger
       objectReference: {fileID: 0}
+    - target: {fileID: 5429071349218682166, guid: 477c773f55f7e134c93bcb7157bfb394,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1469397791}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 477c773f55f7e134c93bcb7157bfb394, type: 3}
 --- !u!1 &5429071348837434455 stripped

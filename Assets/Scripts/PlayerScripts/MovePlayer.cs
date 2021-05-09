@@ -30,6 +30,8 @@ public class MovePlayer : MonoBehaviour
     public Sprite[] gunSprites = new Sprite[1];
     public Sprite[] trapSprites = new Sprite[1];
 
+    public Sprite plungingSprite;
+
     void Start()
     {
         walkingSprites = normalSprites;
@@ -157,5 +159,7 @@ public class MovePlayer : MonoBehaviour
         }
 
     }
-
+public void showPlungeSprite() {
+        currentSprite = plungingSprite;
+    }
 }
