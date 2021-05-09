@@ -11,7 +11,7 @@ public class PlayerTriggers : MonoBehaviour
     Camera mainCam;
     public static bool sister_follow;
     public GameObject sister;
-
+    public GameObject dad;
     void Start() {
         mainCam = Camera.main;
     }
@@ -27,6 +27,10 @@ public class PlayerTriggers : MonoBehaviour
                 if (sister_follow==true)
                 {
                     sister.transform.position= thisDoor.dest;
+                }
+                if(dad_chase.dadhome==true)
+                {
+                    StartCoroutine(Wait(thisDoor));
                 }
                 camera.roomBounds = thisDoor.roomBounds;
                 camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
@@ -48,5 +52,11 @@ public class PlayerTriggers : MonoBehaviour
 
         return new Vector3(camX, camY, -10); //return location
     }
-  
+    IEnumerator Wait(ChangeRoom thisdoor)
+    {
+        yield return new WaitForSeconds(3);
+        
+       dad.transform.position = thisdoor.dest;
+    }
+
 }
