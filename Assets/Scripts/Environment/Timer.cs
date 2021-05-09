@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     public bool loopTimeCountDown = false;
 
     public int clockCurrentTimeHr, clockCurrentTimeMin, clockStartTimeHr, clockStartTimeMin, clockEndTimeHr, clockEndTimeMin;
-
+    public static int currenttimeHr;
     //time loop clock showing on screen
     public GameObject clockText;
     public GameObject clockTextBG;
@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currenttimeHr = clockCurrentTimeHr;
         //time loop
         showClockText(); //set clock active on screen
         clockCountDown(); //make clock counting down
