@@ -9,7 +9,7 @@ public class plunger : MonoBehaviour
 
     void Update()
     {
-        if (use)
+        if (use && player.canMove)
         {
             player.showPlungeSprite();
             StartCoroutine(ExampleCoroutine());
@@ -18,7 +18,7 @@ public class plunger : MonoBehaviour
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 2 seconds.
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(.5f);
         use = false;
     }
 }

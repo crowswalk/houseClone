@@ -510,7 +510,7 @@ MonoBehaviour:
   theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
-  toBeTriggered: 0
+  toBeTriggered: 1
   rat: {fileID: 1637436251}
 --- !u!61 &242073502
 BoxCollider2D:

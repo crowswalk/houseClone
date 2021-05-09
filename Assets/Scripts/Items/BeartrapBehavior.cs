@@ -6,7 +6,7 @@ public class BeartrapBehavior : MonoBehaviour
 {
     public Inventory playerInv;
     public MovePlayer player;
-    
+
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
     public Sprite trapOpen;
@@ -23,7 +23,8 @@ public class BeartrapBehavior : MonoBehaviour
     private bool endText;
     // Start is called before the first frame update
     void Start()
-    { endText = false;
+    {
+        endText = false;
         myRender = GetComponent<SpriteRenderer>();
     }
 
@@ -31,15 +32,23 @@ public class BeartrapBehavior : MonoBehaviour
     void Update()
     {
         trapPos = new Vector2(transform.position.x + trapX, transform.position.y + trapY);
-        if (text.isActive) {
-            endText = true;
-        } else if (Input.GetKeyUp(KeyCode.Space)) {
-            endText = false;
+        if (playerInv.holdingObj == gameObject)
+        {
+            if (text.isActive)
+            {
+                endText = true;
+            }
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                endText = false;
+            }
+
+            if (!text.isActive && !endText)
+            { //only place trap if textbox is not active
+                placing();
+            }
         }
 
-        if (!text.isActive && !endText) { //only place trap if textbox is not active
-            placing();
-        }
     }
 
     void placing() //press [space] to place trap, making isPlaced = true
@@ -81,7 +90,7 @@ public class BeartrapBehavior : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "RatMonster" && isTrapPlaced)
+        if (collision.gameObject.name == "RatMonster" && isTrapPlaced)
         {
             collision.gameObject.GetComponent<RatMonster>().dead();
             Destroy(gameObject);

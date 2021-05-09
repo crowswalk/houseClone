@@ -97,11 +97,11 @@ public class Inventory : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (holdingObj.GetComponent<plunger>() != null)
+                if (holdingObj.name.Contains("Plunger"))
                 {
                     plunger.use = true;
                 }
-                if (holdingObj.GetComponent<axe>() != null)
+                if (holdingObj.name.Contains("Axe"))
                 {
                     axe.useaxe = true;
                 }
