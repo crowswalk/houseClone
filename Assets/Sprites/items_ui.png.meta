@@ -59,6 +59,12 @@ TextureImporter:
   - first:
       213: -8437384966788738912
     second: empty_item
+  - first:
+      213: 676250766267581333
+    second: Spacebar
+  - first:
+      213: 3694094099739252491
+    second: spacetouse
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -160,7 +166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 47
+        y: 61
         width: 118
         height: 32
       alignment: 0
@@ -181,7 +187,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 16
+        y: 30
         width: 9
         height: 18
       alignment: 7
@@ -202,7 +208,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 38
+        y: 52
         width: 7
         height: 3
       alignment: 0
@@ -223,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 21
+        y: 35
         width: 17
         height: 10
       alignment: 0
@@ -244,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 13
+        y: 27
         width: 23
         height: 16
       alignment: 9
@@ -265,7 +271,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 8
+        y: 22
         width: 24
         height: 21
       alignment: 0
@@ -286,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 111
-        y: 5
+        y: 19
         width: 24
         height: 24
       alignment: 0
@@ -307,7 +313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 117
-        y: 31
+        y: 45
         width: 26
         height: 7
       alignment: 0
@@ -328,7 +334,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 146
-        y: 35
+        y: 49
         width: 5
         height: 3
       alignment: 0
@@ -349,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 35
+        y: 49
         width: 9
         height: 9
       alignment: 9
@@ -370,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 121
-        y: 57
+        y: 71
         width: 30
         height: 22
       alignment: 0
@@ -391,7 +397,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 28
-        y: 1
+        y: 15
         width: 18
         height: 18
       alignment: 0
@@ -412,7 +418,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 39
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -433,7 +439,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 51
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -454,7 +460,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 63
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -475,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 75
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -496,7 +502,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 87
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -517,7 +523,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 99
-        y: 34
+        y: 48
         width: 9
         height: 9
       alignment: 0
@@ -537,8 +543,8 @@ TextureImporter:
       name: empty_item
       rect:
         serializedVersion: 2
-        x: 129
-        y: 45
+        x: 128
+        y: 62
         width: 8
         height: 8
       alignment: 0
@@ -550,6 +556,48 @@ TextureImporter:
       bones: []
       spriteID: 0a0165d631368ea80800000000000000
       internalID: -8437384966788738912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spacebar
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 38
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593077e2d76826900800000000000000
+      internalID: 676250766267581333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spacetouse
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 4
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0713d5f20f044330800000000000000
+      internalID: 3694094099739252491
       vertices: []
       indices: 
       edges: []
