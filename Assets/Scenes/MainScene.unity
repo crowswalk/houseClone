@@ -511,7 +511,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!61 &242073502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1046,7 +1045,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!61 &387079491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2225,7 +2223,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!61 &671247800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2624,7 +2621,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!1 &934960565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,7 +2877,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!61 &942243331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3137,7 +3132,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!1 &1076510616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,7 +3606,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 1
-  rat: {fileID: 1637436251}
 --- !u!4 &1372760242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5487318876602103814, guid: 5866b8dd5944123438e229026a88c2b9,
@@ -4489,6 +4482,7 @@ MonoBehaviour:
   barrier:
     serializedVersion: 2
     m_Bits: 0
+  textBox: {fileID: 473074812}
 --- !u!61 &1637436256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5353,7 +5347,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!1 &2028308694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5958,7 +5951,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!1001 &626383725187585596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6230,7 +6222,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!1001 &2642846313718759158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6492,7 +6483,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!114 &4175427848747058476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6778,7 +6768,6 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 1637436251}
 --- !u!1001 &6842587231864324935
 PrefabInstance:
   m_ObjectHideFlags: 0
