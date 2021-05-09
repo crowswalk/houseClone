@@ -6,6 +6,15 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public MovePlayer player;
+    
+    //sister dialogue activation vars
+    public GameObject textBox; //accesses text box obj
+    public Text theText; //accesses text obj
+    public TextAsset textFile; //TextAsset = block of text
+    public TextBoxManager theTextBox;
+    public int startLine;
+    public int endLine;
+    public bool destroyWhenActivated;
 
     public GameObject detectingObj; //the object that raycasting is detecting
     public GameObject holdingObj; //the object that player is holding
@@ -43,6 +52,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        theTextBox = FindObjectOfType<TextBoxManager>();
         List<GameObject> backpack = new List<GameObject>();
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -285,6 +295,14 @@ public class Inventory : MonoBehaviour
         if (name == "BowlingBall")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(theText);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
+
+            if(destroyWhenActivated){
+                Destroy(gameObject);
+            }
         }
         else if (name == "Axe")
         {
@@ -293,6 +311,14 @@ public class Inventory : MonoBehaviour
         else if (name == "BearTrap")
         {
             //trigger sister dialogue here
+            theTextBox.ReloadScript(theText);
+            theTextBox.currentLine = startLine;
+            theTextBox.endAtLine = endLine;
+            theTextBox.EnableTextBox();
+
+            if(destroyWhenActivated){
+                Destroy(gameObject);
+            }
         }
         else if (name == "Key")
         {

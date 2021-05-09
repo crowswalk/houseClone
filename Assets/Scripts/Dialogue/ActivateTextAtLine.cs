@@ -48,7 +48,6 @@ public class ActivateTextAtLine : MonoBehaviour
             rat.GetComponent<chasing_player>().speed = 0;
 
             if(destroyWhenActivated){
-                
                 Destroy(gameObject);
             }
             
