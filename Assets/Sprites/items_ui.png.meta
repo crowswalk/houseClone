@@ -65,6 +65,9 @@ TextureImporter:
   - first:
       213: 3694094099739252491
     second: spacetouse
+  - first:
+      213: -7051652948092538662
+    second: clockbg
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -564,7 +567,7 @@ TextureImporter:
       name: Spacebar
       rect:
         serializedVersion: 2
-        x: 41
+        x: 60
         y: 4
         width: 38
         height: 9
@@ -590,7 +593,7 @@ TextureImporter:
         width: 31
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -598,6 +601,27 @@ TextureImporter:
       bones: []
       spriteID: b0713d5f20f044330800000000000000
       internalID: 3694094099739252491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clockbg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0bb95410f732e90800000000000000
+      internalID: -7051652948092538662
       vertices: []
       indices: 
       edges: []

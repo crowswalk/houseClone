@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683719e48b3b4704fb9084520404b8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopTimeReset: 0.03
+  loopTimeReset: 0.8
   loopTimeCountDown: 0
   clockCurrentTimeHr: 0
   clockCurrentTimeMin: 0
