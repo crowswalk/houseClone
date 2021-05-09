@@ -18,6 +18,7 @@ public class bowling_ball_effectArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.GetComponent<Cat>() != null)
         {
             collision.gameObject.GetComponent<Cat>().dead();

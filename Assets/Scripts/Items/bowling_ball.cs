@@ -8,10 +8,13 @@ public class bowling_ball : MonoBehaviour
     public GameObject bowlingEffectArea;
     public Inventory playerInv;
 
+    public SoundManager sound;
+
     public void dropBowling()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
+            sound.playSound(SoundEffects.BowlingDrop);
             Instantiate(bowlingEffectArea, transform.position, transform.rotation);
         }
     }
