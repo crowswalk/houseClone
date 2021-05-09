@@ -88,5 +88,7 @@ public class SoundManager : MonoBehaviour
                 effectSource.loop = false;
                 break;
         }
+
+        effectSource.Play();
     }
 }

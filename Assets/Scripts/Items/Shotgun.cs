@@ -7,6 +7,7 @@ public class Shotgun : MonoBehaviour
     public GameObject shotgunEffectArea; //this is the triigering box that check whether bullet hits enemy
 
     public MovePlayer player; //use to check which direction player is facing
+    public SoundManager sound;
 
     Vector2 effectAreaPos;
 
@@ -33,6 +34,7 @@ public class Shotgun : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            sound.playSound(SoundEffects.ShotGunFire);
             if (player.dir.x > 0)
             {
                 effectAreaPos = new Vector2(transform.position.x + rangeX, transform.position.y + rangeY);

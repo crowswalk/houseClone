@@ -18,8 +18,10 @@ public class bowling_ball_effectArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("something");
         if (collision.gameObject.GetComponent<Cat>() != null)
         {
+            Debug.Log("cat");
             collision.gameObject.GetComponent<Cat>().dead();
         }
     }
@@ -28,6 +30,7 @@ public class bowling_ball_effectArea : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Cat>() != null)
         {
+            Debug.Log("still cat");
             collision.gameObject.GetComponent<Cat>().dead();
         }
     }

@@ -7,6 +7,8 @@ public class open_fridge : MonoBehaviour
     // Start is called before the first frame update
     int nearby;
     public static Animator animator;
+
+    public SoundManager sound;
     void Start()
     {
         nearby = 0;
@@ -20,6 +22,7 @@ public class open_fridge : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                sound.playSound(SoundEffects.Fridge);
                 animator.SetBool("open",true);
             }
         }

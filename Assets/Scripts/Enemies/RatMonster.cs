@@ -6,6 +6,9 @@ public class RatMonster : MonoBehaviour
 {
     Animator animator;
     bool isDead;
+
+    public SoundManager sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class RatMonster : MonoBehaviour
 
     public void dead()
     {
+        sound.playSound(SoundEffects.RatDead);
         animator.SetBool("dead", true);
         this.gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
         isDead = true;
@@ -40,10 +44,11 @@ public class RatMonster : MonoBehaviour
         //Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other) //kill player when collide with player
     {
         if (other.gameObject.tag == "Player" && !isDead)
         {
+            sound.playSound(SoundEffects.RatKill);
             animator.SetBool("eat", true);
             this.gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
             other.gameObject.SetActive(false);
