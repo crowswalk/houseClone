@@ -2822,11 +2822,11 @@ MonoBehaviour:
   theText: {fileID: 4900000, guid: e03f5424c6d65404694ad74663f8ef8a, type: 3}
   startLine: 0
   endLine: 1
-  theTextBox: {fileID: 0}
+  theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 0}
+  rat: {fileID: 1637436251}
 --- !u!1 &1076510616
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,7 +6050,7 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 0}
+  rat: {fileID: 1637436251}
 --- !u!114 &4175427848747058476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6331,7 +6331,7 @@ MonoBehaviour:
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
-  rat: {fileID: 0}
+  rat: {fileID: 1637436251}
 --- !u!1001 &6842587231864324935
 PrefabInstance:
   m_ObjectHideFlags: 0

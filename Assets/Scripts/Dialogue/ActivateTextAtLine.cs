@@ -61,7 +61,7 @@ public class ActivateTextAtLine : MonoBehaviour
         }
     }
 
-    void onTriggerExit2D(Collider2D other){
+    void OnTriggerExit2D(Collider2D other){
         if(other.gameObject.name == "Player"){
 
             rat.GetComponent<chasing_player>().resetSpeed();

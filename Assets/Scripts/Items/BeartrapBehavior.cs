@@ -20,9 +20,10 @@ public class BeartrapBehavior : MonoBehaviour
     float trapX, trapY, trapXOffset; //indicates how far beartrap placed from player
 
     Vector2 trapPos;
+    private bool endText;
     // Start is called before the first frame update
     void Start()
-    {
+    { endText = false;
         myRender = GetComponent<SpriteRenderer>();
     }
 
@@ -30,7 +31,13 @@ public class BeartrapBehavior : MonoBehaviour
     void Update()
     {
         trapPos = new Vector2(transform.position.x + trapX, transform.position.y + trapY);
-        if (!text.isActive) { //only place trap if textbox is not active
+        if (text.isActive) {
+            endText = true;
+        } else if (Input.GetKeyUp(KeyCode.Space)) {
+            endText = false;
+        }
+
+        if (!text.isActive && !endText) { //only place trap if textbox is not active
             placing();
         }
     }

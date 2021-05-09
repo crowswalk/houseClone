@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public MovePlayer player;
-    
+
     //sister dialogue activation vars
     public GameObject textBox; //accesses text box obj
     public TextAsset theText; //accesses text obj
@@ -53,7 +53,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        callingTheText = FindObjectOfType<ActivateTextAtLine>();   
+        callingTheText = FindObjectOfType<ActivateTextAtLine>();
         theTextBox = FindObjectOfType<TextBoxManager>();
         List<GameObject> backpack = new List<GameObject>();
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
@@ -143,7 +143,7 @@ public class Inventory : MonoBehaviour
         detectItem();
         if (detectingObj != null && (backpack.Count < backpackMax || checkEmptySpace(backpack, backpackMax)))
         {
-            if (Input.GetKeyDown(KeyCode.C) || (Input.GetMouseButtonDown(0)))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 if (holdingObj != null)
                 {
@@ -290,65 +290,27 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
     void checkIfHeld(string name) //checks the name of the item that has been picked up. 
     //This should work, because if the item has been picked up before, the name would have "clone" in it (like Axe(CLone))
     {
-        if (name == "BowlingBall")
+        switch (name)
         {
-            //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-
-        }
-        else if (name == "Axe")
-        {
-            //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-        }
-        else if (name == "BearTrap")
-        {
-            //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-
-        }
-        else if (name == "Key")
-        {
-            //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-        }
-        else if (name == "Shotgun")
-        {
-            //trigger sister dialogue here
-            theTextBox.ReloadScript(theText);
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-        }
-        else if (name == "Plunger")
-        {
-            //trigger sister dialogue here
-
-            theTextBox.ReloadScript(theText);
-            Debug.Log("this is running");
-            theTextBox.currentLine = startLine;
-            theTextBox.endAtLine = endLine;
-            theTextBox.EnableTextBox();
-
-            if(destroyWhenActivated){
-                Destroy(theText);
-            }
+            case "BowlingBall":
+            case "Axe":
+            case "BearTrap":
+            case "Key":
+            case "Shotgun":
+            case "Plunger":
+                TextAsset thisText = holdingObj.GetComponent<ActivateTextAtLine>().theText; //get TextAsset of object being held
+                theTextBox.ReloadScript(thisText); //reload textbox 
+                theTextBox.currentLine = startLine;
+                theTextBox.endAtLine = endLine;
+                theTextBox.EnableTextBox();
+                if (destroyWhenActivated)
+                {
+                    Destroy(thisText);
+                }
+                break;
         }
     }
 
