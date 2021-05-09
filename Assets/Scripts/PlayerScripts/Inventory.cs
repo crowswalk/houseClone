@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         clearLastEmpty(); //remove all empty space at the end of the list
         pickUp(); //press [c] or [left click] to changing detectingObj to holdingObj
@@ -153,7 +153,8 @@ public class Inventory : MonoBehaviour
                 holdingObj.layer = 2; //making object on hand ignore raycasting
                 holdingObj.transform.position = gameObject.transform.position;
                 string objName = holdingObj.name;
-                player.changeSprites(holdingObj.name);
+                player.changeSprites(objName);
+                checkIfHeld(objName); //check if played has picked up this object before - if not, sister will say something
 
                 //when picking up, object goes into icon
                 int iconIndex = getNearestEmpty(backpack, backpackMax);
@@ -161,8 +162,9 @@ public class Inventory : MonoBehaviour
                 {
                     backpack.Insert(iconIndex, holdingObj);
                     clearInsert(backpack, iconIndex);
-                    drawIcon(holdingObj, iconIndex);
                     selectObj(iconIndex);
+                    drawIcon(holdingObj, iconIndex);
+                    
                 }
             }
         }
@@ -187,13 +189,12 @@ public class Inventory : MonoBehaviour
             player.changeSprites("default");
         }
 
-        if (backpack.Count >= index + 1 && backpack[index] != null)
+        if (backpack.Count >= index + 1)
         {
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
             string objName = holdingObj.name;
             player.changeSprites(objName); //change player sprite to match currently held object
-            checkIfHeld(objName); //check if played has picked up this object before - if not, sister will say something
         }
         else
         {
@@ -203,7 +204,7 @@ public class Inventory : MonoBehaviour
 
     void selectObjInBackpack() //allows player to use [1] ~ [0] to select items in icon
     {
-        for (int i = 1; i < backpackMax; i++)
+        for (int i = 1; i <= backpackMax; i++)
         {
             if (Input.GetKeyDown(keys[i - 1])) { selectObj(i - 1); }
         }
