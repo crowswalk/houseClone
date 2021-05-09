@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cat : MonoBehaviour
 {
+    public SoundManager sound;
     Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,14 @@ public class Cat : MonoBehaviour
 
     public void dead()
     {
+        sound.playSound(SoundEffects.CatDead);
         animator.SetBool("dead", true);
         StartCoroutine(ExampleCoroutine());
     }
 
     public void kill(GameObject g)
     {
+        sound.playSound(SoundEffects.CatKill);
         animator.SetBool("kill", true);
         g.gameObject.SetActive(false);
     }
