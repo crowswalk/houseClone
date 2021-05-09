@@ -55,6 +55,7 @@ public class TextBoxManager : MonoBehaviour
             if(!isTyping){
                 currentLine += 1; //move to the next line
                 if(currentLine > endAtLine){ //once you've reached the end of the lines...
+                    FindObjectOfType<chasing_player>().resetSpeed(); //reset rat's speed
                     DisableTextBox();//go to the DisableTextBox
                 } 
                 else{ //otherwise, the text will scroll

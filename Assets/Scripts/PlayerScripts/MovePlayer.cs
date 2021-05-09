@@ -54,18 +54,25 @@ public class MovePlayer : MonoBehaviour
    public void changeSprites(string currentItem) {
         if (currentItem.Contains("BowlingBall")) {
             walkingSprites = ballSprites;
+            stillSprite = walkingSprites[0];
         } else if (currentItem.Contains("Axe")) {
             walkingSprites = axeSprites;
+            stillSprite = walkingSprites[0];
         } else if (currentItem.Contains("BearTrap")) {
             walkingSprites = trapSprites;
+            stillSprite = walkingSprites[0];
         } else if (currentItem.Contains("Key")) {
             walkingSprites = keySprites;
+            stillSprite = walkingSprites[0];
         } else if (currentItem.Contains("Shotgun")) {
             walkingSprites = gunSprites;
+            stillSprite = walkingSprites[0];
         } else if (currentItem.Contains("Plunger")) {
             walkingSprites = plungeSprites;
+            stillSprite = walkingSprites[0];
         } else {
             walkingSprites = normalSprites;
+            stillSprite = walkingSprites[0];
         }
     }
 

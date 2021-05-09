@@ -5,12 +5,15 @@ using UnityEngine;
 public class BeartrapBehavior : MonoBehaviour
 {
     public Inventory playerInv;
+    public MovePlayer player;
     
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
     public Sprite trapOpen;
     public Sprite trapClosed;
     SpriteRenderer myRender;
+
+    public TextBoxManager text; //check if text is active before letting player drop bear trap.
 
     [SerializeField]
     [Range(0.0f, 20.0f)]
@@ -27,7 +30,9 @@ public class BeartrapBehavior : MonoBehaviour
     void Update()
     {
         trapPos = new Vector2(transform.position.x + trapX, transform.position.y + trapY);
-        placing();
+        if (!text.isActive) { //only place trap if textbox is not active
+            placing();
+        }
     }
 
     void placing() //press [space] to place trap, making isPlaced = true
@@ -40,6 +45,9 @@ public class BeartrapBehavior : MonoBehaviour
                 myRender.sprite = trapClosed; //sprite become beartrap_closed when holding on hand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    playerInv.holdingObj.GetComponent<SpriteRenderer>().enabled = true;//reset configuration
+                    player.changeSprites("default");
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
                     playerInv.holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
