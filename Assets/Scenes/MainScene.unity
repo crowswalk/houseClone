@@ -3910,8 +3910,8 @@ MonoBehaviour:
   player: {fileID: 1469397791}
   textBox: {fileID: 0}
   theText: {fileID: 0}
-  textFile: {fileID: 0}
   theTextBox: {fileID: 0}
+  callingTheText: {fileID: 0}
   startLine: 0
   endLine: 0
   destroyWhenActivated: 0
@@ -6031,7 +6031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 420720114789815176, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
---- !u!114 &4175427848747058476
+--- !u!114 &4175427848747058471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6039,6 +6039,26 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4175427848747058469}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: ab280ab548e6b48168967b677cb86def, type: 3}
+  startLine: 0
+  endLine: 2
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
+  rat: {fileID: 0}
+--- !u!114 &4175427848747058476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175427848747058469}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99e2b163876b645bead62a7668df4852, type: 3}
   m_Name: 
@@ -6307,7 +6327,7 @@ MonoBehaviour:
   theText: {fileID: 4900000, guid: 6d4d0f2f6dfab46d8b4bfb6174a4b966, type: 3}
   startLine: 0
   endLine: 0
-  theTextBox: {fileID: 0}
+  theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0

@@ -346,7 +346,7 @@ public class Inventory : MonoBehaviour
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
 
-        if(destroyWhenActivated){
+            if(destroyWhenActivated){
                 Destroy(theText);
             }
         }
