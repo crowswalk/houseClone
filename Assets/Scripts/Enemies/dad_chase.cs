@@ -95,6 +95,7 @@ public class dad_chase : MonoBehaviour
 
             animator.SetBool("walk", false);
             animator.SetBool("dad_kill", true);
+            respwan.isdead = true;
             player.SetActive(false);
         }
         else {

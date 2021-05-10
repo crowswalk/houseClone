@@ -30,6 +30,7 @@ public class Cat : MonoBehaviour
         sound.playSound(SoundEffects.CatKill);
         animator.SetBool("kill", true);
         g.gameObject.SetActive(false);
+        respwan.isdead = true;
     }
 
     IEnumerator ExampleCoroutine()

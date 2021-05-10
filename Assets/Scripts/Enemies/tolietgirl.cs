@@ -47,6 +47,7 @@ public class tolietgirl : MonoBehaviour
             sound.playSound(SoundEffects.TolietgirlKill);
             animator.SetBool("eat", true);
             player.SetActive(false);
+            respwan.isdead= true;
         }
     }
 }
