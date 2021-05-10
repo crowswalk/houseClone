@@ -6,6 +6,7 @@ public class BeartrapBehavior : MonoBehaviour
 {
     public Inventory playerInv;
     public MovePlayer player;
+    private int inside;
 
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
@@ -26,6 +27,7 @@ public class BeartrapBehavior : MonoBehaviour
     {
         endText = false;
         myRender = GetComponent<SpriteRenderer>();
+        inside = 0;
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class BeartrapBehavior : MonoBehaviour
                 placing();
             }
         }
+
 
     }
 
@@ -86,6 +89,7 @@ public class BeartrapBehavior : MonoBehaviour
             collision.gameObject.GetComponent<RatMonster>().dead();
             Destroy(gameObject);
         }
+     
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -94,6 +98,7 @@ public class BeartrapBehavior : MonoBehaviour
         {
             collision.gameObject.GetComponent<RatMonster>().dead();
             Destroy(gameObject);
+
         }
     }
 }
