@@ -32,6 +32,8 @@ public class MovePlayer : MonoBehaviour
 
     public Sprite plungingSprite;
 
+    public SoundManager sound;
+
     void Start()
     {
         walkingSprites = normalSprites;
@@ -80,6 +82,11 @@ public class MovePlayer : MonoBehaviour
 
     void walkCycle()
     {
+        if (!sound.effectSource.isPlaying)
+        {
+            //sound.playSound(SoundEffects.Step); //play step sounds when walking
+        }
+
         stillSprite = walkingSprites[0];
         if ((int)currentFrame < walkingSprites.Length)
         {

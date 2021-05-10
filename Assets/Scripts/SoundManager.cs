@@ -10,11 +10,13 @@ public class SoundManager : MonoBehaviour
 {
 
     [SerializeField]
-    AudioSource effectSource, musicSource;
+    public AudioSource effectSource, musicSource;
 
     [SerializeField]
-    AudioClip step, pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, fridge; 
+    AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, fridge;
 
+    [SerializeField]
+    List<AudioClip> steps;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,7 @@ public class SoundManager : MonoBehaviour
         switch(sound)
         {
             case SoundEffects.Step:
-                effectSource.clip = step;
+                effectSource.clip = steps[Random.Range(0, steps.Count)];
                 effectSource.loop = false;
                 break;
             case SoundEffects.Pick:

@@ -8,6 +8,8 @@ public class blockeddoor : MonoBehaviour
     public Sprite newSprite;
     public static bool blockdoor;
     private bool cond;
+
+    public SoundManager sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class blockeddoor : MonoBehaviour
         //Debug.Log(cond);
         if (cond && axe.useaxe == true)
         {
+            sound.playSound(SoundEffects.AxeBreakWood);
             spriteRenderer.sprite = newSprite;
             blockdoor = true;
         }

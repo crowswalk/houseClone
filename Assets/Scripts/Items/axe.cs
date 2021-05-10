@@ -6,8 +6,6 @@ public class axe : MonoBehaviour
 {
     // Start is called before the first frame update
     public static bool useaxe;
-
-    public SoundManager sound;
     void Start()
     {
         useaxe = false;
@@ -25,7 +23,6 @@ public class axe : MonoBehaviour
     }
     IEnumerator ExampleCoroutine()
     {
-        sound.playSound(SoundEffects.AxeBreakWood);
         //yield on a new YieldInstruction that waits for 2 seconds.
         yield return new WaitForSeconds(1.0f);
 

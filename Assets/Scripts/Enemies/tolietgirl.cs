@@ -10,6 +10,7 @@ public class tolietgirl : MonoBehaviour
     public int girlDist;
 
     public SoundManager sound;
+    private bool deadSoundPlayed = false; //checking the dead sound has played already
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,20 @@ public class tolietgirl : MonoBehaviour
         }
         if (Vector2.Distance(player.transform.position, transform.position) < 30 && player_move.dir.x < 0 && plunger.use)
         {
-            sound.playSound(SoundEffects.TolietgirlDead);
+            if (!deadSoundPlayed)
+            {
+                sound.playSound(SoundEffects.TolietgirlDead);
+                deadSoundPlayed = true;
+            }
             animator.SetBool("dead", true);
             //StartCoroutine(ExampleCoroutine());
             Destroy(GetComponent<BoxCollider2D>());
         }
 
+        if (Input.GetKeyDown(KeyCode.R)) //if restart, change the dead sound played to false
+        {
+            deadSoundPlayed = false;
+        }
 ;
     }
     IEnumerator ExampleCoroutine()

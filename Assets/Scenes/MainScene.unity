@@ -1238,11 +1238,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 610759e667f26c9438d2846526cc6012, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1338,7 +1338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectSource: {fileID: 418470082}
   musicSource: {fileID: 418470083}
-  step: {fileID: 8300000, guid: c05cb38701689fa459f2a589eb8161bc, type: 3}
   pick: {fileID: 8300000, guid: be64ce92d24809a4cb9026440974612b, type: 3}
   bowlingDrop: {fileID: 8300000, guid: 4cf6d9df3efe7964ca5b3a89c8da6409, type: 3}
   shotGunFire: {fileID: 8300000, guid: 0623dff101c4a2140a9db5a0fd76f9ac, type: 3}
@@ -1352,6 +1351,12 @@ MonoBehaviour:
   doorOpen: {fileID: 8300000, guid: 484db6f3ecf1f604fa1a0baf6e9c75e4, type: 3}
   keyOpen: {fileID: 8300000, guid: 9fdc36b8e72daa34da4db36fcdce73bf, type: 3}
   fridge: {fileID: 8300000, guid: 1dd4440b557813f4a930597faadedd24, type: 3}
+  steps:
+  - {fileID: 8300000, guid: c05cb38701689fa459f2a589eb8161bc, type: 3}
+  - {fileID: 8300000, guid: 7d502432c0969b44bbb97658d80a2cec, type: 3}
+  - {fileID: 8300000, guid: 8d92928f44fc02c42a2d02842d58d8d1, type: 3}
+  - {fileID: 8300000, guid: 6ab3d8b24df785f448716f1997fbbb66, type: 3}
+  - {fileID: 8300000, guid: 69161caa49cec0344b9e9c32dba88671, type: 3}
 --- !u!1001 &464088966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3732,6 +3737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newSprite: {fileID: 2827652582312845999, guid: 8a6b5ce96b21968469de914c8abf1854,
     type: 3}
+  sound: {fileID: 418470084}
 --- !u!1 &1280101597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,6 +4257,7 @@ MonoBehaviour:
   - {fileID: 3155494390451400931, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
   - {fileID: 978662460964921689, guid: 11263b0ecb266864c9c856db604c60db, type: 3}
   plungingSprite: {fileID: 21300000, guid: c29f70b825d6bc14ba274ce5fc8a8679, type: 3}
+  sound: {fileID: 418470084}
 --- !u!50 &1469397792
 Rigidbody2D:
   serializedVersion: 4
