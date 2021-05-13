@@ -98,7 +98,7 @@ public class Inventory : MonoBehaviour
                 holdingObj.GetComponent<SpriteRenderer>().enabled = true;
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !theTextBox.isActive)
             {
                 if (holdingObj.name.Contains("Plunger"))
                 {
@@ -311,11 +311,15 @@ public class Inventory : MonoBehaviour
                 theTextBox.ReloadScript(thisText); //reload textbox 
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
-                theTextBox.EnableTextBox();
+
+                    theTextBox.EnableTextBox();
+                
                 if (destroyWhenActivated)
                 {
+                    Debug.Log("destroying");
                     Destroy(thisText);
                 }
+                
                 break;
         }
     }

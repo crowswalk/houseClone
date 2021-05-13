@@ -48,7 +48,8 @@ public class ActivateTextAtLine : MonoBehaviour
             
 
             if(destroyWhenActivated){
-                Destroy(gameObject);
+                    Debug.Log("Destroying");
+                    Destroy(gameObject);
             }
         }
             

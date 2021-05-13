@@ -17,6 +17,9 @@ public class PlayerTriggers : MonoBehaviour
     public Image spaceToUse;
     private Inventory inventory;
     public SoundManager sound;
+    public GameObject doorLock;
+    public Sprite lockIcon;
+    public Sprite unlockIcon;
     void Start()
     {
         daddest = gameObject.transform.position;
@@ -33,8 +36,21 @@ public class PlayerTriggers : MonoBehaviour
             dad.transform.position = daddest;
             dadenter = false;
         }
-
-
+        if (inventory.holdingObj != null)
+        {
+            if (inventory.holdingObj.name.Contains("Key"))
+            {
+                doorLock.GetComponent<SpriteRenderer>().sprite = unlockIcon;
+            }
+            else
+            {
+                doorLock.GetComponent<SpriteRenderer>().sprite = lockIcon;
+            }
+        }
+        else
+        {
+            doorLock.GetComponent<SpriteRenderer>().sprite = lockIcon;
+        }
 
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -60,6 +76,7 @@ public class PlayerTriggers : MonoBehaviour
                 //sound fx for doors
                 if (thisDoor.gameObject.name == "BottomDoor") //play key open sound when player use key to open the basement
                 {
+
                     sound.playSound(SoundEffects.KeyOpen);
                 }
                 else
