@@ -32,7 +32,13 @@ public class MovePlayer : MonoBehaviour
 
     public Sprite plungingSprite;
 
+
+    //plyayer step sound effects
     public SoundManager sound;
+    [SerializeField]
+    [Range(0.0f, 2.0f)]
+    private float resetTime;
+    private float currentTime;
 
     void Start()
     {
@@ -42,6 +48,7 @@ public class MovePlayer : MonoBehaviour
         sprRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<BoxCollider2D>();
         inventory = GetComponent<Inventory>();
+        currentTime = resetTime;
     }
 
     void FixedUpdate()
@@ -82,9 +89,9 @@ public class MovePlayer : MonoBehaviour
 
     void walkCycle()
     {
-        if (!sound.effectSource.isPlaying)
+        if (!sound.stepSource.isPlaying)
         {
-            //sound.playSound(SoundEffects.Step); //play step sounds when walking
+            playStepSound();
         }
 
         stillSprite = walkingSprites[0];
@@ -166,7 +173,20 @@ public class MovePlayer : MonoBehaviour
         }
 
     }
-public void showPlungeSprite() {
+    public void showPlungeSprite() {
         currentSprite = plungingSprite;
     }
+
+    void playStepSound() //only player when step timer >= 0, so the sounds effects can fit the animation
+    {
+        if (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+        } else
+        {
+            sound.playStepSound();
+            currentTime = resetTime;
+        }
+    }
 }
+

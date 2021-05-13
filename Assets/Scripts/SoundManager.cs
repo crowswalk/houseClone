@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 {
 
     [SerializeField]
-    public AudioSource effectSource, musicSource;
+    public AudioSource effectSource, musicSource, stepSource;
 
     [SerializeField]
     AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, fridge;
@@ -92,5 +92,11 @@ public class SoundManager : MonoBehaviour
         }
 
         effectSource.Play();
+    }
+    public void playStepSound()
+    {
+        stepSource.clip = steps[Random.Range(0, steps.Count)];
+        stepSource.loop = false;
+        stepSource.Play();
     }
 }
