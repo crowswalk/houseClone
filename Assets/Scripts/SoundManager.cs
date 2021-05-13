@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SoundEffects{
-    Step, Pick, BowlingDrop, ShotGunFire, AxeBreakWood, TolietgirlKill, TolietgirlDead, RatKill, RatDead, CatKill, CatDead, DoorOpen, KeyOpen, Fridge
+    Step, Pick, BowlingDrop, ShotGunFire, AxeBreakWood, TolietgirlKill, TolietgirlDead, RatKill, RatDead, CatKill, CatDead, DoorOpen, KeyOpen, KeyLocked, Fridge
 }
 
 public class SoundManager : MonoBehaviour
@@ -13,10 +13,14 @@ public class SoundManager : MonoBehaviour
     public AudioSource effectSource, musicSource, stepSource;
 
     [SerializeField]
-    AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, fridge;
+    AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, keyLocked, fridge;
 
     [SerializeField]
     List<AudioClip> steps;
+
+    [SerializeField]
+    [Range(0, 1.0f)]
+    private float soundEffectVolume;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,7 @@ public class SoundManager : MonoBehaviour
 
     public void playSound(SoundEffects sound)
     {
+        effectSource.volume = 1;
         switch(sound)
         {
             case SoundEffects.Step:
@@ -83,6 +88,10 @@ public class SoundManager : MonoBehaviour
                 break;
             case SoundEffects.KeyOpen:
                 effectSource.clip = keyOpen;
+                effectSource.loop = false;
+                break;
+            case SoundEffects.KeyLocked:
+                effectSource.clip = keyLocked;
                 effectSource.loop = false;
                 break;
             case SoundEffects.Fridge:

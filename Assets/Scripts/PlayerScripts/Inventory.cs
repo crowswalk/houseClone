@@ -34,7 +34,8 @@ public class Inventory : MonoBehaviour
     private KeyCode[] keys = { KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6 };
 
     //raycasting
-    public float sight; //distance of raycasting
+    [SerializeField]
+    float sight; //distance of raycasting
 
     //holdingObj position
     [SerializeField]

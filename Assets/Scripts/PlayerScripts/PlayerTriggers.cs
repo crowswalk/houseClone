@@ -14,6 +14,8 @@ public class PlayerTriggers : MonoBehaviour
     public GameObject dad;
     private bool dadenter;
     private Vector3 daddest;
+
+    public SoundManager sound;
     void Start() {
         mainCam = Camera.main;
         daddest = gameObject.transform.position;
@@ -52,6 +54,22 @@ public class PlayerTriggers : MonoBehaviour
                 }
                 camera.roomBounds = thisDoor.roomBounds;
                 camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
+
+                //sound fx for doors
+                if (thisDoor.gameObject.name == "BottomDoor") //play key open sound when player use key to open the basement
+                {
+                    sound.playSound(SoundEffects.KeyOpen);
+                }
+                else
+                {
+                    sound.playSound(SoundEffects.DoorOpen); //play door open sound fx
+                }            
+            } else
+            {
+                if (thisDoor.gameObject.name == "BottomDoor") //play key locked sound when player doesn't have key and trying to open the basement
+                {
+                    sound.playSound(SoundEffects.KeyLocked);
+                }
             }
         }
     }

@@ -50,7 +50,7 @@ public class RatMonster : MonoBehaviour
         {
             sound.playSound(SoundEffects.RatKill);
             animator.SetBool("eat", true);
-            this.gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
+            gameObject.GetComponent<chasing_player>().enabled = false; //stop chasing player
             respwan.isdead = true;
             other.gameObject.SetActive(false);
             //Destroy(other.gameObject);

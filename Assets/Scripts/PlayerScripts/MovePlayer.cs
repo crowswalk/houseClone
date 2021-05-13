@@ -37,7 +37,7 @@ public class MovePlayer : MonoBehaviour
     public SoundManager sound;
     [SerializeField]
     [Range(0.0f, 2.0f)]
-    private float resetTime;
+    private float resetTime; //this will decide how fast the step sound fx will be played
     private float currentTime;
 
     void Start()
