@@ -76,7 +76,6 @@ public class PlayerTriggers : MonoBehaviour
                 //sound fx for doors
                 if (thisDoor.gameObject.name == "BottomDoor") //play key open sound when player use key to open the basement
                 {
-
                     sound.playSound(SoundEffects.KeyOpen);
                 }
                 else

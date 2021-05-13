@@ -1352,7 +1352,7 @@ MonoBehaviour:
   catDead: {fileID: 8300000, guid: 6b86aa72250db174e90ba3dc119d4600, type: 3}
   doorOpen: {fileID: 8300000, guid: 484db6f3ecf1f604fa1a0baf6e9c75e4, type: 3}
   keyOpen: {fileID: 8300000, guid: 9fdc36b8e72daa34da4db36fcdce73bf, type: 3}
-  keyLocked: {fileID: 0}
+  keyLocked: {fileID: 8300000, guid: 4008d1e85aaaf1e4290de76bca6ee6d4, type: 3}
   fridge: {fileID: 8300000, guid: 1dd4440b557813f4a930597faadedd24, type: 3}
   steps:
   - {fileID: 8300000, guid: c05cb38701689fa459f2a589eb8161bc, type: 3}
