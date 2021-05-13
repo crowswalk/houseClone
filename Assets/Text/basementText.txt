@@ -1,7 +1,7 @@
 [When entering a room]
-Remember when we were playing hide and seek down here? 
-You were bitten by that rat and your hand got all red and oozy. 
-It was gross.
+Sister: "Playing hide and seek down here used to be fun.
+Though, you were bitten by a rat that one time and your hand got all red and oozy. 
+It was gross."
 
 [When picking up items]
 Are you sure you can swing that? 

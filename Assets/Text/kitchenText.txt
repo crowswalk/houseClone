@@ -1,6 +1,6 @@
 [When entering a room]
-The fridge smells weird. 
-I think she’s been in there for too long.
+Sister: "The fridge smells weird. 
+I think she’s been in there for too long."
 
 [When picking up items]
 That should be useful.
