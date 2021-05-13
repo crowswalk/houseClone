@@ -1,39 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
 This script is responsible for detecting triggers that the player collides with.
 */
 public class PlayerTriggers : MonoBehaviour
 {
-    public CamFollow camera;
-    Camera mainCam;
+    public CamFollow thisCam;
     public static bool sister_follow;
     public GameObject sister;
     public GameObject dad;
     private bool dadenter;
     private Vector3 daddest;
-
+    public Image spaceToUse;
+    private Inventory inventory;
     public SoundManager sound;
-    void Start() {
-        mainCam = Camera.main;
+    void Start()
+    {
         daddest = gameObject.transform.position;
+        spaceToUse.enabled = false;
+        inventory = gameObject.GetComponent<Inventory>();
     }
 
-     void Update()
+    void Update()
     {
         //Debug.Log(Vector2.Distance(gameObject.transform.position, daddest));
 
-        if (dadenter&& Vector2.Distance(gameObject.transform.position, daddest) > 40)
+        if (dadenter && Vector2.Distance(gameObject.transform.position, daddest) > 40)
         {
             dad.transform.position = daddest;
-
             dadenter = false;
         }
 
-        
-        
+
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -41,19 +43,19 @@ public class PlayerTriggers : MonoBehaviour
         if (other.gameObject.tag == "Door")
         {
             ChangeRoom thisDoor = other.gameObject.GetComponent<ChangeRoom>(); //get the "ChangeRoom" script of this door
-            if (thisDoor.open==true)
+            if (thisDoor.open == true)
             {
                 gameObject.transform.position = thisDoor.dest; //teleport player to new destination
-                if (sister_follow==true)
+                if (sister_follow == true)
                 {
-                    sister.transform.position= thisDoor.dest;
+                    sister.transform.position = thisDoor.dest;
                 }
-                if(dad_chase.dadhome==true)
+                if (dad_chase.dadhome == true)
                 {
                     StartCoroutine(Wait(thisDoor));
                 }
-                camera.roomBounds = thisDoor.roomBounds;
-                camera.transform.position = teleportCam(thisDoor); //teleport camera to new location, without causing lerp movement
+                thisCam.roomBounds = thisDoor.roomBounds;
+                thisCam.transform.position = teleportCam(thisDoor); //teleport thisCam to new location, without causing lerp movement
 
                 //sound fx for doors
                 if (thisDoor.gameObject.name == "BottomDoor") //play key open sound when player use key to open the basement
@@ -63,8 +65,9 @@ public class PlayerTriggers : MonoBehaviour
                 else
                 {
                     sound.playSound(SoundEffects.DoorOpen); //play door open sound fx
-                }            
-            } else
+                }
+            }
+            else
             {
                 if (thisDoor.gameObject.name == "BottomDoor") //play key locked sound when player doesn't have key and trying to open the basement
                 {
@@ -72,17 +75,37 @@ public class PlayerTriggers : MonoBehaviour
                 }
             }
         }
+        if (inventory.holdingObj != null)
+        {
+            if (other.gameObject.name == "bear_trap_checker" && inventory.holdingObj.name.Contains("BowlingBall"))
+            {
+                spaceToUse.enabled = true;
+            }
+            else if (other.gameObject.name == "PlungeTrigger" && inventory.holdingObj.name.Contains("Plunger"))
+            {
+                spaceToUse.enabled = true;
+            }
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.name == "bear_trap_checker" || other.gameObject.name == "PlungeTrigger")
+        {
+            spaceToUse.enabled = false;
+        }
     }
 
     Vector3 teleportCam(ChangeRoom thisDoor)
-    { //location to teleport the camera to the new room without any lerp movement
+    { //location to teleport the thisCam to the new room without any lerp movement
         BoxCollider2D roomBounds = thisDoor.roomBounds;
         float xMin = roomBounds.bounds.min.x; //left
         float xMax = roomBounds.bounds.max.x; //right
         float yMin = roomBounds.bounds.min.y; //top
         float yMax = roomBounds.bounds.max.y; //bottom
-        float camSize = mainCam.orthographicSize; //half of camera height
-        float camRatio = camSize * mainCam.aspect; //half of camera width
+        float camSize = Camera.main.orthographicSize; //half of thisCam height
+        float camRatio = camSize * Camera.main.aspect; //half of thisCam width
         float camY = Mathf.Clamp(thisDoor.dest.y, yMin + camSize, yMax - camSize); //keep y position inside room bounds
         float camX = Mathf.Clamp(thisDoor.dest.x, xMin + camRatio, xMax - camRatio); //keep x position inside room bounds
 

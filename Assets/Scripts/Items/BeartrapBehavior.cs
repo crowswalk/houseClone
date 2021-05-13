@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BeartrapBehavior : MonoBehaviour
 {
     public Inventory playerInv;
     public MovePlayer player;
-    private int inside;
+    //private int inside;
 
     public bool isTrapPlaced = false; //true if the bear trap is been placed
 
@@ -22,12 +22,13 @@ public class BeartrapBehavior : MonoBehaviour
 
     Vector2 trapPos;
     private bool endText;
+    public Image spaceToUse;
     // Start is called before the first frame update
     void Start()
     {
         endText = false;
         myRender = GetComponent<SpriteRenderer>();
-        inside = 0;
+        //inside = 0;
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class BeartrapBehavior : MonoBehaviour
         trapPos = new Vector2(transform.position.x + trapX, transform.position.y + trapY);
         if (playerInv.holdingObj == gameObject)
         {
+            spaceToUse.enabled = true;
             if (text.isActive)
             {
                 endText = true;
@@ -64,8 +66,9 @@ public class BeartrapBehavior : MonoBehaviour
                 myRender.sprite = trapClosed; //sprite become beartrap_closed when holding on hand
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    spaceToUse.enabled = false;
                     playerInv.holdingObj.GetComponent<SpriteRenderer>().enabled = true;//reset configuration
-                    player.changeSprites("default");
+                    //player.changeSprites("default");
                     gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     isTrapPlaced = true;
                     playerInv.holdingObj.layer = 0;
@@ -89,7 +92,7 @@ public class BeartrapBehavior : MonoBehaviour
             collision.gameObject.GetComponent<RatMonster>().dead();
             Destroy(gameObject);
         }
-     
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public MovePlayer player;
 
+    private Image spaceToUse;
     //sister dialogue activation vars
     public GameObject textBox; //accesses text box obj
     public TextAsset theText; //accesses text obj
@@ -58,6 +59,7 @@ public class Inventory : MonoBehaviour
         theTextBox = FindObjectOfType<TextBoxManager>();
         List<GameObject> backpack = new List<GameObject>();
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
+        spaceToUse = gameObject.GetComponent<PlayerTriggers>().spaceToUse;
     }
 
     // Update is called once per frame
@@ -106,6 +108,7 @@ public class Inventory : MonoBehaviour
                 {
                     axe.useaxe = true;
                 }
+                
             }
 
             if (checkShotgun())
@@ -154,7 +157,7 @@ public class Inventory : MonoBehaviour
                 holdingObj.layer = 2; //making object on hand ignore raycasting
                 holdingObj.transform.position = gameObject.transform.position;
                 string objName = holdingObj.name;
-                player.changeSprites(objName);
+                //player.changeSprites(objName);
                 checkIfHeld(objName); //check if played has picked up this object before - if not, sister will say something
 
                 //when picking up, object goes into icon
@@ -187,7 +190,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            player.changeSprites("default");
+            //player.changeSprites("default");
         }
 
         if (backpack.Count >= index + 1)
@@ -195,11 +198,12 @@ public class Inventory : MonoBehaviour
             holdingObj = backpack[index];
             holdingObj.SetActive(true);
             string objName = holdingObj.name;
-            player.changeSprites(objName); //change player sprite to match currently held object
+            //player.changeSprites(objName); //change player sprite to match currently held object
         }
         else
         {
             holdingObj = null;
+            spaceToUse.enabled = false;
         }
     }
 
@@ -235,7 +239,7 @@ public class Inventory : MonoBehaviour
             int removeIndex = backpack.IndexOf(holdingObj);
             icons[removeIndex].sprite = emptyIcon;
             Destroy(backpack[removeIndex]);
-            player.changeSprites("default");
+            //player.changeSprites("default");
         }
     }
 

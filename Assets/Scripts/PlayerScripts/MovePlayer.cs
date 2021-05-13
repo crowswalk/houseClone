@@ -51,37 +51,57 @@ public class MovePlayer : MonoBehaviour
         currentTime = resetTime;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-
-         if(!canMove){
-             sprRenderer.sprite = stillSprite;
+        if (inventory.holdingObj != null)
+        {
+            changeSprites(inventory.holdingObj.name);
+        }
+        else { changeSprites("default"); }
+        
+        if (!canMove)
+        {
+            sprRenderer.sprite = stillSprite;
             return;
         }
         sprRenderer.sprite = currentSprite; //show sprite that was calculated in walkCycle
         checkKey(); //check key input
     }
 
-   public void changeSprites(string currentItem) {
-        if (currentItem.Contains("BowlingBall")) {
+    public void changeSprites(string currentItem)
+    {
+        if (currentItem.Contains("BowlingBall"))
+        {
             walkingSprites = ballSprites;
             stillSprite = walkingSprites[0];
-        } else if (currentItem.Contains("Axe")) {
+        }
+        else if (currentItem.Contains("Axe"))
+        {
             walkingSprites = axeSprites;
             stillSprite = walkingSprites[0];
-        } else if (currentItem.Contains("BearTrap")) {
+        }
+        else if (currentItem.Contains("BearTrap"))
+        {
             walkingSprites = trapSprites;
             stillSprite = walkingSprites[0];
-        } else if (currentItem.Contains("Key")) {
+        }
+        else if (currentItem.Contains("Key"))
+        {
             walkingSprites = keySprites;
             stillSprite = walkingSprites[0];
-        } else if (currentItem.Contains("Shotgun")) {
+        }
+        else if (currentItem.Contains("Shotgun"))
+        {
             walkingSprites = gunSprites;
             stillSprite = walkingSprites[0];
-        } else if (currentItem.Contains("Plunger")) {
+        }
+        else if (currentItem.Contains("Plunger"))
+        {
             walkingSprites = plungeSprites;
             stillSprite = walkingSprites[0];
-        } else {
+        }
+        else
+        {
             walkingSprites = normalSprites;
             stillSprite = walkingSprites[0];
         }
@@ -166,14 +186,18 @@ public class MovePlayer : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.A)) {
+        if (Input.GetKey(KeyCode.A))
+        {
             sprRenderer.flipX = true;
-        } else if (Input.GetKey(KeyCode.D)) {
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
             sprRenderer.flipX = false;
         }
 
     }
-    public void showPlungeSprite() {
+    public void showPlungeSprite()
+    {
         currentSprite = plungingSprite;
     }
 
@@ -182,7 +206,8 @@ public class MovePlayer : MonoBehaviour
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;
-        } else
+        }
+        else
         {
             sound.playStepSound();
             currentTime = resetTime;

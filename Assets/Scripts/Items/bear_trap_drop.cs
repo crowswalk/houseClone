@@ -26,7 +26,7 @@ public class bear_trap_drop : MonoBehaviour
         {
             beartrap.transform.position = beartrap.transform.position + new Vector3(0, -1, 0);
         }
-        if (beartrap.transform.position.y<-244)
+        if (beartrap.transform.position.y < -244)
         {
             Destroy(gameObject);
         }
@@ -36,7 +36,6 @@ public class bear_trap_drop : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-
             inside = 0;
         }
     }
@@ -45,7 +44,6 @@ public class bear_trap_drop : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-          
             inside = 1;
         }
     }
