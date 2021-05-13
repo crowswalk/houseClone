@@ -1626,6 +1626,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 941535795}
     m_Modifications:
+    - target: {fileID: 1416469765759792547, guid: 5866b8dd5944123438e229026a88c2b9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
         type: 3}
       propertyPath: roomBounds
@@ -2242,6 +2247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416469765759792547, guid: 5866b8dd5944123438e229026a88c2b9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
         type: 3}
@@ -4676,7 +4686,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 32700
   m_Sprite: {fileID: -6996205736383764033, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6909,6 +6919,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 787640736}
     m_Modifications:
+    - target: {fileID: 1416469765759792547, guid: 5866b8dd5944123438e229026a88c2b9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1900391668063479041, guid: 5866b8dd5944123438e229026a88c2b9,
         type: 3}
       propertyPath: roomBounds
