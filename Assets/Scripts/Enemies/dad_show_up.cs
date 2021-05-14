@@ -14,7 +14,7 @@ public class dad_show_up : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Timer.currenttimeHr >= 23)
+        if (Timer.currenttimeHr >= 3)
         {
             dad.SetActive(true);
             Destroy(gameObject);

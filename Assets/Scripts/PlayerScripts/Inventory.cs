@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour
     public GameObject backpackBG;
     public GameObject indicator; //indicates which item player is selecting
 
+    private bool textboxchecker;
     public List<GameObject> backpack; //all objects that player picked up will be in backpack
     public Image[] icons = new Image[3]; //this is the objects's icon that shows in backpackBG, has the same index with them in List backpack
     public Sprite emptyIcon; //empty image that shows when there is no item in this backpack slot
@@ -65,11 +66,20 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (textBox.activeSelf)
+        {
+            textboxchecker = false;
+        }
+        else {
+            StartCoroutine(delaytext());
+        }
         clearLastEmpty(); //remove all empty space at the end of the list
         pickUp(); //press [c] or [left click] to changing detectingObj to holdingObj
         selectObjInBackpack(); //use [1] to [0] to select items in backpack
-        useHoldingObj(); //currently only for testing: press [x] to use item
-
+        if (textboxchecker)
+        {
+            useHoldingObj(); //currently only for testing: press [x] to use item
+        }
         //making holdingObj always stay with player
         if (holdingObj != null)
         {
@@ -85,7 +95,7 @@ public class Inventory : MonoBehaviour
             {
                 Key.haskey = false;
             }
-            if (Input.GetKeyDown(KeyCode.X))//when holding object, press x to drop object
+            if (Input.GetKeyDown(KeyCode.X) && textboxchecker)//when holding object, press x to drop object
             {
                 holdingObj.layer = 0;
                 holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
@@ -98,7 +108,7 @@ public class Inventory : MonoBehaviour
                 holdingObj.GetComponent<SpriteRenderer>().enabled = true;
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
             }
-            if (Input.GetKeyDown(KeyCode.Space) && !theTextBox.isActive)
+            if (Input.GetKeyDown(KeyCode.Space) && textboxchecker)
             {
                 if (holdingObj.name.Contains("Plunger"))
                 {
@@ -108,7 +118,11 @@ public class Inventory : MonoBehaviour
                 {
                     axe.useaxe = true;
                 }
-                
+                if (holdingObj.GetComponent<bowling_ball>() != null)
+                {               
+                    usebowlingball();
+                }
+
             }
 
             if (checkShotgun())
@@ -116,10 +130,10 @@ public class Inventory : MonoBehaviour
                 holdingObj.GetComponent<Shotgun>().shoot();
             }
 
-            if (checkBowling())
+           /* if (checkBowling())
             {
-                holdingObj.GetComponent<bowling_ball>().dropBowling();
-            }
+               holdingObj.GetComponent<bowling_ball>().dropBowling();
+            }*/
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -230,7 +244,20 @@ public class Inventory : MonoBehaviour
         }
         return -1;
     }
+    void usebowlingball()
+    {
 
+      
+        int removeIndex = backpack.IndexOf(holdingObj);
+        icons[removeIndex].sprite = emptyIcon;
+        Destroy(backpack[removeIndex]);
+        holdingObj.GetComponent<SpriteRenderer>().enabled = true;
+        holdingObj.GetComponent<BoxCollider2D>().enabled = true;
+        holdingObj.layer = 0;
+        bowling_ball.drop = true;
+       Instantiate(holdingObj, player.transform.position, Quaternion.identity);
+       
+    }
     void useHoldingObj() //press [x] to use item
     {
         if (holdingObj != null && Input.GetKeyDown(KeyCode.X))
@@ -295,6 +322,12 @@ public class Inventory : MonoBehaviour
             return true;
         }
         return false;
+    }
+    IEnumerator delaytext()
+    {
+        //yield on a new YieldInstruction that waits for 2 seconds.
+        yield return new WaitForSeconds(0.1f);
+        textboxchecker = true;
     }
     void checkIfHeld(string name) //checks the name of the item that has been picked up. 
     //This should work, because if the item has been picked up before, the name would have "clone" in it (like Axe(CLone))

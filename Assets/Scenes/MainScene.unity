@@ -1567,6 +1567,7 @@ MonoBehaviour:
   currentLine: 0
   endAtLine: 0
   player: {fileID: 0}
+  shotgun: {fileID: 0}
   isActive: 0
   stopPlayerMovement: 0
   typeSpeed: 0.03
@@ -4521,7 +4522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1469397791}
-  textBox: {fileID: 0}
+  textBox: {fileID: 1517350425}
   theText: {fileID: 0}
   theTextBox: {fileID: 0}
   callingTheText: {fileID: 0}
@@ -5851,6 +5852,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1496630930164970751, guid: c65cd002e3119a94eadbf55d98800f86,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 15.640503
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496630930164970751, guid: c65cd002e3119a94eadbf55d98800f86,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 19.628754
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496630930164970751, guid: c65cd002e3119a94eadbf55d98800f86,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.664093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496630930164970751, guid: c65cd002e3119a94eadbf55d98800f86,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6572418
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c65cd002e3119a94eadbf55d98800f86, type: 3}
 --- !u!1 &1950892348 stripped
@@ -7058,6 +7079,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4175427849450831281, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 17.478073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175427849450831281, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.910706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175427849450831281, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.11167908
+      objectReference: {fileID: 0}
+    - target: {fileID: 4175427849450831281, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6145325
+      objectReference: {fileID: 0}
     - target: {fileID: 4175427849450831283, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
         type: 3}
       propertyPath: sound
@@ -7423,13 +7464,23 @@ PrefabInstance:
       objectReference: {fileID: 995681214}
     - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
+      propertyPath: m_Size.x
+      value: 34.624725
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
       propertyPath: m_Size.y
-      value: 28.678726
+      value: 35.985977
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6842587230920987994, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.3393631
+      value: -0.67154694
       objectReference: {fileID: 0}
     - target: {fileID: 6842587230920987996, guid: 8fd280839ac2cd4449a5168eac8a0b4f,
         type: 3}
