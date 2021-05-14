@@ -16,6 +16,12 @@ public class TextBoxManager : MonoBehaviour
 
     public MovePlayer player;
     
+    //disable shooting while text is on screen
+    public Shotgun shotgun;
+    private float resetShootingTime;
+    private float currentShootingTime;
+    private bool startCountDown;
+    
     public bool isActive;
     public bool stopPlayerMovement;
 
@@ -27,6 +33,7 @@ public class TextBoxManager : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<MovePlayer>(); //setting up to stop the player from moving
+        shotgun = FindObjectOfType<Shotgun>(); //setting up to stop the player from using shotgun
 
         if(textFile != null){ //if there's a text file that exists...
             textLines = (textFile.text.Split('\n')); //grab the text and split it into seperate pieces wherever you see \n (an indent/when [return] has been pressed)
@@ -42,6 +49,10 @@ public class TextBoxManager : MonoBehaviour
             Debug.Log("not active");
             DisableTextBox(); 
         }
+
+        resetShootingTime = 2.0f;
+        currentShootingTime = resetShootingTime;
+        startCountDown = false;
     }
 
     void Update()
@@ -91,6 +102,7 @@ public class TextBoxManager : MonoBehaviour
         
         //if(stopPlayerMovement){
             player.canMove = false; //stops the player from moving when the text is on screen
+        shotgun.canShoot = false; //stops the player from shooting when the text is on screen
         //}
 
         StartCoroutine(TextScroll(textLines[currentLine])); 
@@ -101,6 +113,8 @@ public class TextBoxManager : MonoBehaviour
         textBox.SetActive(false); //get rid of the text box once you've reached the end of the lines. it's set to > rather than = so it doesn't just delete as soon as the last line shows up
         isActive = false;
         player.canMove = true;
+        shotgun.reloading = true;
+        shotgun.canShoot = true;
     }
 
     public void ReloadScript(TextAsset theText) //going to make it so I can use different text files

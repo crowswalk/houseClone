@@ -26,12 +26,15 @@ public class Shotgun : MonoBehaviour
     [Range(0, 2.0f)]
     float waitTime;
 
+    public bool canShoot; //player cannot shoot while in dialogue
+
     // Start is called before the first frame update
     void Start()
     {
         effectAreaPos = transform.position;
         reloading = false;
         currentReloadingTime = reloadingTime;
+        canShoot = true;
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class Shotgun : MonoBehaviour
 
     public void shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !reloading)
+        if (Input.GetKeyDown(KeyCode.Space) && !reloading && canShoot)
         {
             sound.playSound(SoundEffects.ShotGunFire);
             if (player.dir.x > 0)
