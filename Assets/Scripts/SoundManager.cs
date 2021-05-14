@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource effectSource, musicSource, stepSource;
 
     [SerializeField]
-    AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, keyLocked, fridge;
+    AudioClip pick, bowlingDrop, shotGunFire, axeBreakWood, tolietgirlKill, tolietgirlDead, ratKill, ratDead, catKill, catDead, doorOpen, keyOpen, keyLocked, fridge, bossMusic;
 
     [SerializeField]
     List<AudioClip> steps;
@@ -21,6 +21,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     [Range(0, 1.0f)]
     private float soundEffectVolume;
+
+    public Timer time;
+
+    private bool isBossMusic = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +34,7 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        changeToBossMusic();
     }
 
     public void playSound(SoundEffects sound)
@@ -107,5 +111,26 @@ public class SoundManager : MonoBehaviour
         stepSource.clip = steps[Random.Range(0, steps.Count)];
         stepSource.loop = false;
         stepSource.Play();
+    }
+
+    void switchBGM(AudioClip music)
+    {
+        musicSource.clip = music;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    void changeToBossMusic()
+    {
+        if (time.clockEndTimeHr - time.clockCurrentTimeHr == 1 && !isBossMusic)
+        {
+            musicSource.volume = (60.0f - time.clockCurrentTimeMin)/100.0f;
+            if (musicSource.volume <= 0.05f)
+            {
+                musicSource.volume = 1;
+                switchBGM(bossMusic);
+                isBossMusic = true;
+            }
+        }
     }
 }

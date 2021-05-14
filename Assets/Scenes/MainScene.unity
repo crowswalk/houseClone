@@ -1354,6 +1354,7 @@ MonoBehaviour:
   keyOpen: {fileID: 8300000, guid: 9fdc36b8e72daa34da4db36fcdce73bf, type: 3}
   keyLocked: {fileID: 8300000, guid: 4008d1e85aaaf1e4290de76bca6ee6d4, type: 3}
   fridge: {fileID: 8300000, guid: 1dd4440b557813f4a930597faadedd24, type: 3}
+  bossMusic: {fileID: 8300000, guid: 8fdfdaf656b82704b9c7960d9d0a7f86, type: 3}
   steps:
   - {fileID: 8300000, guid: c05cb38701689fa459f2a589eb8161bc, type: 3}
   - {fileID: 8300000, guid: 7d502432c0969b44bbb97658d80a2cec, type: 3}
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ab3d8b24df785f448716f1997fbbb66, type: 3}
   - {fileID: 8300000, guid: 69161caa49cec0344b9e9c32dba88671, type: 3}
   soundEffectVolume: 0
+  time: {fileID: 451149141}
 --- !u!82 &418470085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1457,6 +1459,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &451149141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2076231463}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683719e48b3b4704fb9084520404b8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &464088966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3542,8 +3556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128, y: 85}
-  m_SizeDelta: {x: 48, y: 14}
+  m_AnchoredPosition: {x: 123.65, y: 85}
+  m_SizeDelta: {x: 56.683342, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076510618
 MonoBehaviour:
@@ -3882,8 +3896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 128, y: 85}
-  m_SizeDelta: {x: 46, y: 12}
+  m_AnchoredPosition: {x: 123.65, y: 85}
+  m_SizeDelta: {x: 54.321556, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1235579434 stripped
 GameObject:
@@ -6250,7 +6264,12 @@ PrefabInstance:
     - target: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
         type: 3}
       propertyPath: loopTimeReset
-      value: 0.95
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
+        type: 3}
+      propertyPath: clockEndTimeHr
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 5380471994151045079, guid: 3bab9b8102587c245a940b5ed1998bb3,
         type: 3}
