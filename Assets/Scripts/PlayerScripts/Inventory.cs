@@ -105,7 +105,7 @@ public class Inventory : MonoBehaviour
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {
                     bowling_ball.drop = true;
-                    sound.playSound(SoundEffects.BowlingDrop);
+                    holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
 
                 holdingObj.GetComponent<SpriteRenderer>().enabled = true;
@@ -124,7 +124,7 @@ public class Inventory : MonoBehaviour
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {               
                     usebowlingball();
-                    sound.playSound(SoundEffects.BowlingDrop);
+                    holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
 
             }
