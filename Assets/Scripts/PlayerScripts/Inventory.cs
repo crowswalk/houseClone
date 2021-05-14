@@ -104,6 +104,7 @@ public class Inventory : MonoBehaviour
                 {
                     bowling_ball.drop = true;
                 }
+                holdingObj.GetComponent<BeartrapBehavior>().enabled = true;
 
                 holdingObj.GetComponent<SpriteRenderer>().enabled = true;
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);

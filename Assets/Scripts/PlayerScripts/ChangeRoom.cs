@@ -29,6 +29,7 @@ public class ChangeRoom : MonoBehaviour
             if (Key.haskey)
             {
                 open = true;
+                
             }
             else {
                 open = false;  
