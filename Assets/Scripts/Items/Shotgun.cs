@@ -51,15 +51,22 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !reloading && canShoot)
         {
             sound.playSound(SoundEffects.ShotGunFire);
-            if (player.dir.x > 0)
+            if (player.dir.x > 0) //facing right
             {
                 effectAreaPos = new Vector2(transform.position.x + rangeX, transform.position.y + rangeY);
             }
-            else
+            else //facing left
             {
                 effectAreaPos = new Vector2(transform.position.x - rangeX - offsetX, transform.position.y + rangeY);
             }
-            Instantiate(shotgunEffectArea, effectAreaPos, transform.rotation);
+            GameObject bul = Instantiate(shotgunEffectArea, effectAreaPos, transform.rotation);
+            if (player.dir.x > 0)
+            {
+                bul.GetComponent<SpriteRenderer>().flipX = false;
+            } else
+            {
+                bul.GetComponent<SpriteRenderer>().flipX = true;
+            }
             reloading = true;
         }
     }
