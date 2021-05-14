@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
     public GameObject backpackBG;
     public GameObject indicator; //indicates which item player is selecting
 
-    private bool textboxchecker;
+    private bool textboxchecker; //false when text box is active/player cant use item
     public List<GameObject> backpack; //all objects that player picked up will be in backpack
     public Image[] icons = new Image[3]; //this is the objects's icon that shows in backpackBG, has the same index with them in List backpack
     public Sprite emptyIcon; //empty image that shows when there is no item in this backpack slot
@@ -72,7 +72,8 @@ public class Inventory : MonoBehaviour
         {
             textboxchecker = false;
         }
-        else {
+        else
+        {
             StartCoroutine(delaytext());
         }
         clearLastEmpty(); //remove all empty space at the end of the list
@@ -101,13 +102,18 @@ public class Inventory : MonoBehaviour
             {
                 holdingObj.layer = 0;
                 holdingObj.GetComponent<BoxCollider2D>().enabled = true;//reset configuration
+                holdingObj.GetComponent<SpriteRenderer>().enabled = true;//reset configuration
 
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {
                     bowling_ball.drop = true;
                     holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
-                holdingObj.GetComponent<BeartrapBehavior>().enabled = true;
+                else if (holdingObj.name.Contains("BearTrap"))
+                {
+                    holdingObj.GetComponent<BeartrapBehavior>().enabled = true;
+                }
+
 
                 holdingObj.GetComponent<SpriteRenderer>().enabled = true;
                 Instantiate(holdingObj, player.transform.position, Quaternion.identity);
@@ -123,7 +129,7 @@ public class Inventory : MonoBehaviour
                     axe.useaxe = true;
                 }
                 if (holdingObj.GetComponent<bowling_ball>() != null)
-                {               
+                {
                     usebowlingball();
                     holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
@@ -135,10 +141,10 @@ public class Inventory : MonoBehaviour
                 holdingObj.GetComponent<Shotgun>().shoot();
             }
 
-           /* if (checkBowling())
-            {
-               holdingObj.GetComponent<bowling_ball>().dropBowling();
-            }*/
+            /* if (checkBowling())
+             {
+                holdingObj.GetComponent<bowling_ball>().dropBowling();
+             }*/
         }
         initPos = new Vector2(backpackBG.transform.position.x - initX, backpackBG.transform.position.y - initY);
     }
@@ -187,7 +193,7 @@ public class Inventory : MonoBehaviour
                     clearInsert(backpack, iconIndex);
                     selectObj(iconIndex);
                     drawIcon(holdingObj, iconIndex);
-                    
+
                 }
             }
         }
@@ -252,7 +258,7 @@ public class Inventory : MonoBehaviour
     void usebowlingball()
     {
 
-      
+
         int removeIndex = backpack.IndexOf(holdingObj);
         icons[removeIndex].sprite = emptyIcon;
         Destroy(backpack[removeIndex]);
@@ -260,8 +266,8 @@ public class Inventory : MonoBehaviour
         holdingObj.GetComponent<BoxCollider2D>().enabled = true;
         holdingObj.layer = 0;
         bowling_ball.drop = true;
-       Instantiate(holdingObj, player.transform.position, Quaternion.identity);
-       
+        Instantiate(holdingObj, player.transform.position, Quaternion.identity);
+
     }
     void useHoldingObj() //press [x] to use item
     {
@@ -350,14 +356,14 @@ public class Inventory : MonoBehaviour
                 theTextBox.currentLine = startLine;
                 theTextBox.endAtLine = endLine;
 
-                    theTextBox.EnableTextBox();
-                
+                theTextBox.EnableTextBox();
+
                 if (destroyWhenActivated)
                 {
                     Debug.Log("destroying");
                     Destroy(thisText);
                 }
-                
+
                 break;
         }
     }
