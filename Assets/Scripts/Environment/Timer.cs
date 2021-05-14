@@ -77,20 +77,20 @@ public class Timer : MonoBehaviour
         {
             if (clockCurrentTimeMin < 10)
             {
-                clockTextComponent.text = "0" + clockCurrentTimeHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + " a.m.";
+                clockTextComponent.text = "0" + clockCurrentTimeHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + "a.m.";
             }
             else
             {
-                clockTextComponent.text = "0" + clockCurrentTimeHr.ToString() + ":" + clockCurrentTimeMin.ToString() + " a.m.";
+                clockTextComponent.text = "0" + clockCurrentTimeHr.ToString() + ":" + clockCurrentTimeMin.ToString() + "a.m.";
             }
         } else if (clockCurrentTimeHr<=12)
         {
             if (clockCurrentTimeMin < 10)
             {
-                clockTextComponent.text = clockCurrentTimeHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + " a.m.";
+                clockTextComponent.text = clockCurrentTimeHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + "a.m.";
             } else
             {
-                clockTextComponent.text = clockCurrentTimeHr.ToString() + ":" + clockCurrentTimeMin.ToString() + " a.m.";
+                clockTextComponent.text = clockCurrentTimeHr.ToString() + ":" + clockCurrentTimeMin.ToString() + "a.m.";
             }
         } else
         {
@@ -99,21 +99,21 @@ public class Timer : MonoBehaviour
             {
                 if (clockCurrentTimeMin < 10)
                 {
-                    clockTextComponent.text = "0" + currentHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + " p.m.";
+                    clockTextComponent.text = "0" + currentHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + "p.m.";
                 }
                 else
                 {
-                    clockTextComponent.text = "0" + currentHr.ToString() + ":" + clockCurrentTimeMin.ToString() + " p.m.";
+                    clockTextComponent.text = "0" + currentHr.ToString() + ":" + clockCurrentTimeMin.ToString() + "p.m.";
                 }
             } else
             {
                 if (clockCurrentTimeMin < 10)
                 {
-                    clockTextComponent.text = currentHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + " p.m.";
+                    clockTextComponent.text = currentHr.ToString() + ":" + "0" + clockCurrentTimeMin.ToString() + "p.m.";
                 }
                 else
                 {
-                    clockTextComponent.text = currentHr.ToString() + ":" + clockCurrentTimeMin.ToString() + " p.m.";
+                    clockTextComponent.text = currentHr.ToString() + ":" + clockCurrentTimeMin.ToString() + "p.m.";
                 }
             }
         }

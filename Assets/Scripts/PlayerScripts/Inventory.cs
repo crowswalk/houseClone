@@ -53,6 +53,8 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     int gapX, gapY; //use to determine gap between icons
 
+    public SoundManager sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +105,7 @@ public class Inventory : MonoBehaviour
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {
                     bowling_ball.drop = true;
+                    holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
                 holdingObj.GetComponent<BeartrapBehavior>().enabled = true;
 
@@ -122,6 +125,7 @@ public class Inventory : MonoBehaviour
                 if (holdingObj.GetComponent<bowling_ball>() != null)
                 {               
                     usebowlingball();
+                    holdingObj.GetComponent<bowling_ball>().dropBowling();
                 }
 
             }

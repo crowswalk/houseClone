@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2532385362981487017}
   - component: {fileID: 3727819389376150486}
   - component: {fileID: 2532385362881128133}
+  - component: {fileID: 265298799464077537}
+  - component: {fileID: 2532385362881128134}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Item
@@ -126,9 +128,15 @@ MonoBehaviour:
   shotgunEffectArea: {fileID: 1105430158610012239, guid: 4aa618d76cbce3148b43ff3a96c0a9e9,
     type: 3}
   player: {fileID: 0}
-  rangeX: 15
-  rangeY: 5
+  sound: {fileID: 0}
+  reloading: 0
+  reloadingTime: 2
+  currentReloadingTime: 0
+  rangeX: 25
+  rangeY: 8
   offsetX: 10
+  waitTime: 0
+  canShoot: 0
 --- !u!114 &2532385362881128133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +151,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryIcon: {fileID: 8200309233594426530, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
     type: 3}
+--- !u!114 &265298799464077537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532385362981487012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2495727e94e239a4ea9c7e90dafd4883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryIcon: {fileID: 8200309233594426530, guid: 08fc1f845d9d86c4bbb4ee7c7d3e59de,
+    type: 3}
+--- !u!114 &2532385362881128134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532385362981487012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7149aed8d484036b379726b5fbebef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 4900000, guid: a2e00b581dd0c433ab932a845d7e4ca9, type: 3}
+  startLine: 0
+  endLine: 1
+  theTextBox: {fileID: 0}
+  destroyWhenActivated: 1
+  requireButtonPress: 0
+  toBeTriggered: 0
