@@ -4559,8 +4559,6 @@ MonoBehaviour:
   theText: {fileID: 0}
   theTextBox: {fileID: 0}
   callingTheText: {fileID: 0}
-  startLine: 0
-  endLine: 0
   destroyWhenActivated: 0
   detectingObj: {fileID: 0}
   holdingObj: {fileID: 0}
@@ -5962,7 +5960,7 @@ MonoBehaviour:
   theText: {fileID: 4900000, guid: 3ad7efaf2b3ae456e9618aa006ceb0ff, type: 3}
   startLine: 0
   endLine: 3
-  theTextBox: {fileID: 0}
+  theTextBox: {fileID: 473074812}
   destroyWhenActivated: 1
   requireButtonPress: 0
   toBeTriggered: 0
@@ -7064,6 +7062,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4175427848747058471, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
+        type: 3}
+      propertyPath: theTextBox
+      value: 
+      objectReference: {fileID: 473074812}
     - target: {fileID: 4175427849450831280, guid: f791eed40ac6dbe4d8ccd1d589a914ec,
         type: 3}
       propertyPath: m_RootOrder

@@ -14,8 +14,7 @@ public class Inventory : MonoBehaviour
     //public TextAsset textFile; //TextAsset = block of text
     public TextBoxManager theTextBox;
     public ActivateTextAtLine callingTheText;
-    public int startLine;
-    public int endLine;
+
     public bool destroyWhenActivated;
 
     public GameObject detectingObj; //the object that raycasting is detecting
@@ -351,11 +350,11 @@ public class Inventory : MonoBehaviour
             case "Key":
             case "Shotgun":
             case "Plunger":
-                TextAsset thisText = holdingObj.GetComponent<ActivateTextAtLine>().theText; //get TextAsset of object being held
+                ActivateTextAtLine activator = holdingObj.GetComponent<ActivateTextAtLine>();
+                TextAsset thisText = activator.theText; //get TextAsset of object being held
+                theTextBox.currentLine = 0;
+                theTextBox.endAtLine = activator.endLine;
                 theTextBox.ReloadScript(thisText); //reload textbox 
-                theTextBox.currentLine = startLine;
-                theTextBox.endAtLine = endLine;
-
                 theTextBox.EnableTextBox();
 
                 if (destroyWhenActivated)
