@@ -353,7 +353,7 @@ public class Inventory : MonoBehaviour
                 ActivateTextAtLine activator = holdingObj.GetComponent<ActivateTextAtLine>();
                 TextAsset thisText = activator.theText; //get TextAsset of object being held
                 theTextBox.currentLine = 0;
-                theTextBox.endAtLine = activator.endLine;
+                theTextBox.endAtLine = activator.endLine - 1;
                 theTextBox.ReloadScript(thisText); //reload textbox 
                 theTextBox.EnableTextBox();
 
